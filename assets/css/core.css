@@ -88,10 +88,10 @@ a:focus {
   bottom: 0px;
   color: #ccc;
   text-align: left !important;
-  padding: 0px 30px;
+  padding: 0px 2px;
   position: absolute;
   right: 0px;
-  left: 240px;
+  left: 164px;
 }
 #wrapper {
   height: 100%;
@@ -170,6 +170,9 @@ File: Helper clasess
 }
 .m-0 {
   margin: 0px !important;
+}
+.m-r-0 {
+  margin-right: 0px !important;
 }
 .m-r-5 {
   margin-right: 5px !important;
@@ -1186,30 +1189,30 @@ File: Topbar,Left-sidebar,Right-sidebar
 .side-menu {
   bottom: 0;
   top: 0;
-  width: 240px;
+  width: 160px;
   z-index: 2;
 }
 .side-menu.left {
   background: #ffffff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: 60px;
+  top: 65px;
 }
 body.fixed-left .side-menu.left {
   bottom: 50px;
   height: 100%;
   margin-bottom: -70px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   padding-bottom: 70px;
   position: fixed;
 }
 .content-page {
-  margin-left: 240px;
+  margin-left: 145px;
   overflow: hidden;
 }
 .content-page > .content {
-  margin-bottom: 20px;
-  margin-top: 60px;
+  margin-bottom: 5px;
+  margin-top: 45px;
   padding: 20px 5px 15px 5px;
 }
 .button-menu-mobile {
@@ -1286,9 +1289,9 @@ body.fixed-left .side-menu.left {
 #sidebar-menu > ul > li > a {
   color: #36404a;
   display: block;
-  padding: 12px 20px;
-  margin: 4px 0px;
-  border-left: 3px solid #ffffff;
+  padding: 2px 20px;
+  margin: 5px 0px;
+  /*  border-left: 3px solid #ffffff;*/
 }
 #sidebar-menu > ul > li > a:hover {
   color: #5fbeaa;
@@ -1320,14 +1323,14 @@ body.fixed-left .side-menu.left {
   color: #5fbeaa !important;
 }
 .menu-title {
-  padding: 12px 20px !important;
+  padding: 6px 12px !important;
   letter-spacing: .035em;
   pointer-events: none;
   cursor: default;
-  font-size: 13px;
+  font-size: 16px;
 }
 /* Small Menu */
-.side-menu-sm {
+/*.side-menu-sm {
   width: 180px;
   text-align: center;
 }
@@ -1358,7 +1361,7 @@ body.fixed-left .side-menu.left {
 }
 .side-menu-sm + .content-page {
   margin-left: 180px;
-}
+}*/
 /* Header 2 */
 .page-header-2 {
   background: #E3E7EC;
@@ -1366,7 +1369,7 @@ body.fixed-left .side-menu.left {
   margin: -25px -20px 22px -20px;
   padding: 25px 20px 0px 20px;
 }
-#wrapper.enlarged .menu-title {
+/*#wrapper.enlarged .menu-title {
   display: none;
 }
 #wrapper.enlarged #sidebar-menu ul ul {
@@ -1489,7 +1492,7 @@ body.fixed-left .side-menu.left {
 }
 #wrapper.enlarged .tips-box {
   display: none;
-}
+}*/
 .tips-box .portlet {
   -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.05);

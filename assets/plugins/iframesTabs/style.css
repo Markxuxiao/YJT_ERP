@@ -51,7 +51,7 @@
 .ui-tabs {position: relative;zoom: 1;} 
 .ui-tabs .ui-tabs-nav {border-bottom: 0;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);}
 .ui-tabs .ui-tabs-nav li {border-radius: 5px 5px 0 0;list-style: none;background-color: #DCDCDC;float: left;position: relative;top: 1px;margin: 0 .2em 1px 0;border-bottom: 0 !important;padding: 0;white-space: nowrap;}
-.ui-tabs .ui-tabs-nav li a {float: left;border-radius: 0;border: none;color: #505461 !important;cursor: pointer;line-height: 34px;padding-left: 20px;padding-right: 20px;letter-spacing: 0.03em;font-weight: 600;text-transform: uppercase;/* text-decoration: none; */}
+.ui-tabs .ui-tabs-nav li a {float: left;border-radius: 0;border: none;color: #505461 !important;cursor: pointer;line-height: 26px;padding-left: 20px;padding-right: 20px;letter-spacing: 0.03em;font-weight: 600;text-transform: uppercase;/* text-decoration: none; */}
 .ui-tabs .ui-tabs-nav li span{position: absolute; right: 0}
 .ui-tabs .ui-tabs-nav li.ui-state-active {background-color: #fff;}
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }

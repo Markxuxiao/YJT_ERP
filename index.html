@@ -38,7 +38,7 @@
     </head>
 
 
-    <body class="fixed-left bg-2">
+    <body class="fixed-left bg-1">
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -95,13 +95,14 @@
 			                </form> -->
 
 							<div class="m-l-15 pull-left navbar-img">
-								<img src="assets/images/culture-bar.png"/>
+								<!-- <img src="assets/images/culture-bar.png"/> -->
+                                <h2 style="color:#fff;">       世界的  中国的  建材的</h2>
 							</div>
 							
                             <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="hidden-xs">
+                                <!-- <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
-                                </li>
+                                </li> -->
                                 <li class="hidden-xs">
                                     <a href="#" class="right-bar-toggle waves-effect waves-light"><i class="icon-list"></i></a>
                                 </li>
@@ -156,20 +157,18 @@
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
-
                         	<li class="text-muted menu-title">应用栏目一</li>
-                            	
                             <!--一级列表-->
                             <li class="has_sub">
-                                <a href="javascrapt:;" data-url="index2.html" class="waves-effect" data-title="首页">
-                                    <i class="ti-dashboard"></i>
-                                    <span>首页</span>
+                                <a href="javascrapt:;" data-url="index2.html" class="waves-effect" data-title="我的桌面">
+                                    <!-- <i class="ti-dashboard"></i> -->
+                                    <span>我的桌面</span>
                                 </a>
                             </li>
                             <li class="has_sub">
                                 <a href="javascrapt:;" data-url="page-1.html" class="waves-effect" data-title="功能第1项">
-                                    <i class="ti-menu-alt"></i>
-                                    <span>功能第1项</span>
+                                    <!-- <i class="ti-menu-alt"></i> -->
+                                    <span>功能第一项的</span>
                                 </a>
                             </li>
                             <li class="text-muted menu-title">应用栏目二</li>
@@ -177,25 +176,25 @@
                             <!--一级列表-->
                             <li class="has_sub">
                                 <a href="javascrapt:;" data-url="page-2.html" class="waves-effect" data-title="功能第2项">
-                                    <i class="ti-location-pin"></i>
-                                    <span>功能第2项</span>
+                                    <!-- <i class="ti-location-pin"></i> -->
+                                    <span>功能第2项的的</span>
                                 </a>
                             </li>
                             <li class="has_sub">
                                 <a href="javascrapt:;" data-url="page-3.html" class="waves-effect" data-title="功能第3项">
-                                    <i class="ti-files"></i>
+                                    <!-- <i class="ti-files"></i> -->
                                     <span>功能第3项</span>
                                 </a>
                             </li>
                             <li class="has_sub">
                                 <a href="javascrapt:;" data-url="page-4.html" class="waves-effect" data-title="功能第4项">
-                                    <i class="ti-pencil-alt"></i>
+                                    <!-- <i class="ti-pencil-alt"></i> -->
                                     <span>功能第4项</span>
                                 </a>
                             </li>
                             <li class="has_sub">
                                 <a href="javascrapt:;" data-url="page-5.html" class="waves-effect" data-title="功能第5项">
-                                    <i class="ti-widget"></i>
+                                    <!-- <i class="ti-widget"></i> -->
                                     <span>功能第5项</span>
                                 </a>
                             </li>
@@ -215,13 +214,13 @@
             <!-- ============================================================== -->
             <div class="content-page">
                 <!-- Start content -->
-                <div class="content">
-                    <div class="container">
+                <div class="content m-r-0 p-r-0">
+                    <div class="container m-r-0 p-r-0">
 
                         <!-- Page-Title -->
-                        <div class="row">
+                        <div class="row m-r-0 p-r-0">
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-12 m-r-0 p-r-0">
                               <div style="">
 
                                 <div id="tabs" style="margin: 0px;">
@@ -237,7 +236,8 @@
                 </div> <!-- content -->
 
                 <footer class="footer text-right">
-                    2016 © Anywell.
+                    <span>2016 © Anywell.</span>
+                    <span style="float: right;">权限信息：其他信息，其他信息：其他信息，其他信息：其他信息</span>
                 </footer>
 
             </div>
@@ -250,8 +250,7 @@
 
             <!-- Right Sidebar -->
             <div class="side-bar right-bar nicescroll">
-                <h4 class="text-center">其它</h4>
-                <div class="contact-list nicescroll">
+                <div class="contact-list nicescroll m-t-10">
                     <ul class="list-group">
                         <li class="list-group-item">
                             <a href="#" class="item-link">
@@ -345,8 +344,10 @@
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
         <script src="assets/js/appLayout.js"></script>
-        <!-- 换肤 -->
+        
         <script type="text/javascript">
+
+            // 换肤
             $(function () {
                 var unlock=true;
                 $('#site-bg').on('click',function(){

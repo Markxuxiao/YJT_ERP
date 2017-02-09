@@ -56,13 +56,13 @@ function IframeTabs(self, options) {
         IframeTabs.prototype.resizePanelContainer = function () {
             
             var w =$(window).height();
-            console.log(w);
-            console.log(el.height())
-            console.log(self.height())
+            // console.log(w);
+            // console.log(el.height())
+            // console.log(self.height())
 
             if (pc.attr('id').indexOf('cleverTabsPanelContainer') === 0) {
             //     var height = self.height() - el.height() - 30;
-                    var height = w - 150
+                    var height = w - 112
                 pc.css('height', height + 'px');
             }
         }

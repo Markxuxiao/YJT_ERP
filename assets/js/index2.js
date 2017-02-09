@@ -1,4 +1,5 @@
 $(function(){
+  // 点击眼睛按钮是否显示更多
   function toggle (btn) {
     this.unlock = true;
     this.btn = btn;
@@ -9,11 +10,11 @@ $(function(){
   }
   toggle.prototype.onclick = function() {
     if (this.unlock){
-      this.btn.find('i').removeClass('fa-eye').addClass('fa-eye-slash');
+      this.btn.find('i').removeClass('fa-eye-slash').addClass('fa-eye');
       this.content.addClass('on');
       this.unlock = false;
     }else{
-      this.btn.find('i').removeClass('fa-eye-slash').addClass('fa-eye');
+      this.btn.find('i').removeClass('fa-eye').addClass('fa-eye-slash');
       this.content.removeClass('on');
       this.unlock = true;
     }
