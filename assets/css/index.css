@@ -1,0 +1,397 @@
+/*
+/*
+Template Name: Anyweall Dashboard
+Author: HsuCBeing
+Email: hsu.cbeing@gmail.com
+File: Common
+*/
+
+body{
+    background-color: #ebeff2;
+}
+.bg-color1 {
+    background-color: #f5f7f9 !important;
+}
+.bg-color1 h3 {
+    color: #505461 !important;
+}
+.logo img {
+	width: 150px;
+}
+.logo .icon-c-logo img {
+    width: 50px;
+}
+.button-menu-mobile {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.navbar-default {
+    background-color: #36404a;
+    background: -webkit-linear-gradient(top,#255b50,#307768);
+    background: linear-gradient(0deg,#255b50,#307768);
+}
+.navbar-img {
+	display: inline-block;
+    position: relative;
+	line-height: 60px;
+}
+.navbar-img img {
+	width: 300px;
+}
+.hoverdown-menu {
+	position: absolute;
+	display: none;
+    padding: 4px 0;
+    min-width: 200px;
+    
+    -webkit-transition: all 300ms ease;
+	   -moz-transition: all 300ms ease;
+  	    -ms-transition: all 300ms ease;
+    	 -o-transition: all 300ms ease;
+    		transition: all 300ms ease;
+    		
+    opacity: 0;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.hoverdown .dropdown-menu,
+.hoverdown .btn  {
+    font-size: 12px;
+}
+.hoverdown:hover .hoverdown-menu {
+	display: block;
+	opacity: 1;
+}
+.hoverdown:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*ÃƒÂ¤Ã‚Â¾Ã‚Â§ÃƒÂ¨Ã‚Â¾Ã‚Â¹ÃƒÂ¦Ã‚Â Ã‚Â*/
+.side-menu.left {
+    /*background: rgba(255,255,255,.8) url(../images/index-section-bg.png);*/
+   background: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
+   box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+#sidebar-menu {
+    padding-top: 10px;
+}
+#sidebar-menu > ul > li > a {
+    padding: 5px 20px;
+}
+#sidebar-menu .subdrop {
+    background: rgba(255,255,255,.5) !important;
+    border-left: 3px solid #435757;
+    color: #435757 !important;
+}
+#wrapper.enlarged #sidebar-menu ul ul {
+    background: rgba(255,255,255,.85) url(../images/index-section-bg.png);
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > ul a {
+     background: transparent; 
+}
+#sidebar-menu ul ul a {
+    font-weight: 700;
+}
+#sidebar-menu .item-disabled {
+    background: none !important;
+    border-left: none;
+    color: #999999 !important;
+    font-weight: 400;
+}
+#sidebar-menu ul ul a.item-disabled:hover {
+    color: #999999;
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu ul ul ul li:hover > ul {
+    width: 500px;
+    height: 500px;
+    overflow-y: auto;
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu ul ul ul li:hover > ul li {
+	display: inline-block;
+    width: 150px;
+    border-bottom: 1px #eee dotted;
+}
+/*ÃƒÂ¤Ã‚Â¾Ã‚Â§ÃƒÂ¨Ã‚Â¾Ã‚Â¹ÃƒÂ¦Ã‚Â Ã‚Â END*/
+
+/*.content-page {
+		transition: all 0.3s ease;
+}*/
+.nav.nav-tabs + .tab-content {
+    padding: 15px;
+}
+
+.side-bar {
+    width: 200px;
+}
+.slimScrollDiv {
+	padding-right: 15px;
+}
+.contact-list .list-group-item {
+    padding: 0;
+}
+.item-link {
+    padding: 10px 15px;
+	display: block;
+	color: #333;
+	letter-spacing: 1px;
+}
+.tabs {
+    background-color: transparent;
+}
+.tabs li.tab {
+    background-color: rgba(255,255,255,.5);
+}
+.nav.nav-tabs > li.active > a {
+    background-color: rgba(255,255,255,.6);
+}
+.nav.nav-tabs + .tab-content {
+    background-color: rgba(255,255,255,.8);
+}
+.tab-content .btn-white,
+.tab-content .btn-white:hover {
+    background-color: transparent;
+}
+.msg-section,
+.msg-section * {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.msg-section,
+.msg-comment,
+.msg-original,
+.msg-detail {
+	padding: 5px;
+}
+.msg-section {
+	width: 100%;
+	border: 1px solid #ccc;
+	background-color: rgba(255,255,255,.5);
+	overflow: hidden;
+}
+.msg-comment {
+    font-size: 14px;
+    color: #000;
+}
+.msg-original {
+	font-size: 14px;
+	color: #999;
+	border: 1px solid #eee;
+}
+.msg-original p,
+.msg-comment p {
+    color: inherit;
+}
+.msg-original p {
+    margin: 0;
+}
+.msg-comment p {
+    padding: 0 5px;
+    margin: 5px 10px 0;
+}
+.comment-title {
+	border-left: 5px solid #00913a;
+}
+.msg-detail span {
+	padding-top: 5px;
+	display: block;
+    font-size: 12px;
+}
+.msg-link {
+    float: left;
+}
+.msg-link-confirm {
+    float: right;
+}
+.msg-link,
+.msg-link-confirm {
+    margin-right: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #4fb377;
+    text-decoration: none;
+}
+.msg-link:hover {
+    color: #00913a;
+	text-decoration: underline;
+}
+.msg-link-confirm,
+.msg-link-confirm:hover {
+	padding: 3px 10px;
+	color: #fff;
+	background: #e25856;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.link-content {
+	margin-bottom: 30px;
+}
+
+.link-content .link-content-link {
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.link-content h5 {
+	width: 100px;
+	margin-left: 10px;
+    padding-left: 5px;
+    border-left: 3px solid #00913a;
+    border-bottom: 1px solid #a4bfae;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.link-content .btn.btn-white {
+	border: none !important;
+}
+.link-content .btn.btn-white i {
+	font-size: 20px;
+}
+.link-content-title {
+	display: inline-block;
+}
+.ms-container {
+    width: 100%;
+}
+
+.link-content .link-content-link a {
+    display: inline-block;
+    margin: 5px;
+    width: 72px;
+    height: 88px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+.link-content .link-content-link a img{
+    width: 72px;
+    height: 72px;
+    border-radius: 5px;
+}
+.link-content .link-content-link a h6{
+    margin: 3px 0;
+    text-align: center;
+}
+.card-box {
+    background-color: rgba(0,0,0,.5);
+}
+
+#wrapper.enlarged .left.side-menu #sidebar-menu ul ul li:hover > ul {
+    margin-left: 0 !important;
+    left: 106px;
+}
+#wrapper.enlarged .left.side-menu #sidebar-menu ul > li {
+    position: relative;
+    white-space: normal;
+}
+
+
+.psa-t-5 {
+	position: absolute;
+	top: 5px;
+}
+.item-disabled {
+	cursor: not-allowed;
+	color: #999999;
+}
+
+.side-menu {    
+    animation: fade-in;  
+    animation-duration: 2s;  
+    -webkit-animation: fade-in 1.5s;  
+}  
+
+/*.nav-tabs,
+.tab-content {
+	animation: fade-in;  
+    animation-duration: 6s;  
+    -webkit-animation: fade-in 5.5s;  
+}*/
+
+/*xx*/
+/*应用排序组件*/
+.link-content-link .item.other {
+    display: none;
+    
+}
+.link-content-link.on .item.other{
+    display: inline-block;
+}
+.button-menu-seach {
+	position: relative;
+}
+.gridly {
+	position: relative;
+}
+.gridly .item {
+	display: inline-block;
+	position: relative;
+	margin-right: 5px;
+    margin-bottom: 5px;
+	width: 72px;
+	height: 88px;
+	overflow: hidden;
+}
+.gridly .item img{
+    width: 72px;
+    height: 72px;
+    border-radius: 5px;
+}
+.gridly .item h6 {
+    margin: 3px 0;
+    text-align: center;
+}
+.gridly .active {
+    display: block;
+    color: #f00;
+    background: rgba(255, 250, 250, 0.7);
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+
+.allapp .item{
+	display: inline-block;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 72px;
+    height: 88px;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.allapp .item img{
+    width: 72px;
+    height: 72px;
+    border-radius: 5px;
+}
+.allapp .item h6 {
+    margin: 3px 0;
+    text-align: center;
+}
+.allapp .active {
+    display: block;
+    color: #f00;
+    background: rgba(255, 250, 250, 0.7);
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+}
+/*应用排序组件*/
