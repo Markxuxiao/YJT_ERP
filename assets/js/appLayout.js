@@ -1,10 +1,3 @@
-// 全局配置
-var CONFIG = CONFIG||{};
-//配置输出默认tab页面并锁定，并激活第一个
-CONFIG.TABS = [{'url':'index2.html','label':'我的桌面'}
-              ,{'url':'page-404.html','label':'我的消息'}
-              ,{'url':'page-400.html','label':'智能看板'}];
-
 // iframesTabs框架
 var tabs;
 $(function () {

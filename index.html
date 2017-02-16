@@ -174,7 +174,7 @@
                             	
                             <!--一级列表-->
                             <li class="has_sub">
-                                <a href="javascrapt:;" data-url="page-2.html" class="waves-effect" data-title="功能第2项">
+                                <a href="javascrapt:;" data-url="page-404.html" class="waves-effect" data-title="功能第2项">
                                     <!-- <i class="ti-location-pin"></i> -->
                                     <span>功能第2项的的</span>
                                 </a>
@@ -309,6 +309,13 @@
 
         <script>
             var resizefunc = [];
+
+            // 全局配置
+            var CONFIG = CONFIG||{};
+            //配置输出默认tab页面并锁定，并激活第一个
+            CONFIG.TABS = [{'url':'index2.html','label':'我的桌面'}
+                          ,{'url':'myMassage.html','label':'我的消息'}
+                          ,{'url':'dashboard.html','label':'智能看板'}];
         </script>
 
         <!-- jQuery  -->
@@ -323,22 +330,10 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
 
-        <!-- <script src="assets/plugins/peity/jquery.peity.min.js"></script> -->
 
-        <!-- jQuery  -->
-        <!-- <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
-        <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
-
-        <script src="assets/plugins/multiselect/js/jquery.multi-select.js"></script>
-        <script src="assets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
-
-        <script src="assets/plugins/morris/morris.min.js"></script>
-        <script src="assets/plugins/raphael/raphael-min.js"></script> -->
-
-        <!-- <script src="assets/plugins/jquery-knob/jquery.knob.js"></script> -->
         <script src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
         <script src="assets/plugins/iframesTabs/iframesTabs.js"></script>
-        <!-- <script src="assets/pages/jquery.dashboard.js"></script> -->
+
 
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
