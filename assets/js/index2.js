@@ -1,5 +1,5 @@
+// 点击眼睛按钮是否显示更多
 $(function(){
-  // 点击眼睛按钮是否显示更多
   function toggle (btn) {
     this.unlock = true;
     this.btn = btn;
@@ -27,6 +27,8 @@ $(function(){
 
 });
 
+
+//应用排序
 (function(){
   "use strict"
 
@@ -124,7 +126,7 @@ $(function(){
 $(function(){
   $('#myModal2').appManage()
 });
-
+//应用排序end
 
 // (function(){
   
