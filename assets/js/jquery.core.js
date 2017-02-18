@@ -1,4 +1,7 @@
-//portlets
+/**
+ * Portlet
+ * 可最小化、关闭、刷新面板
+ */
 !function($) {
     "use strict";
 
@@ -47,6 +50,7 @@
 
 /**
  * Notifications
+ * 通知面板
  */
 function($) {
     "use strict";
@@ -169,6 +173,7 @@ function($) {
 
 /**
  * Components
+ * html api 方式初始化各种插件
  */
 function($) {
     "use strict";

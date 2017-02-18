@@ -78,7 +78,9 @@
     
 }(window.jQuery),
 
-
+/**
+ * FullScreen
+ */
 function($) {
     "use strict";
 
@@ -237,7 +239,15 @@ var changeptype = function(){
   }
   toggle_slimscroll(".slimscrollleft");
 }
-
+function toggle_slimscroll(item){
+    if($("#wrapper").hasClass("enlarged")){
+      $(item).css("overflow","inherit").parent().css("overflow","inherit");
+      $(item). siblings(".slimScrollBar").css("visibility","hidden");
+    }else{
+      $(item).css("overflow","hidden").parent().css("overflow","hidden");
+      $(item). siblings(".slimScrollBar").css("visibility","visible");
+    }
+}
 
 var debounce = function(func, wait, immediate) {
   var timeout, result;
@@ -280,163 +290,9 @@ function initscrolls(){
       });
   }
 }
-function toggle_slimscroll(item){
-    if($("#wrapper").hasClass("enlarged")){
-      $(item).css("overflow","inherit").parent().css("overflow","inherit");
-      $(item). siblings(".slimScrollBar").css("visibility","hidden");
-    }else{
-      $(item).css("overflow","hidden").parent().css("overflow","hidden");
-      $(item). siblings(".slimScrollBar").css("visibility","visible");
-    }
-}
-
-var wow = new WOW(
-  {
-    boxClass: 'wow', // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset: 50, // distance to the element when triggering the animation (default is 0)
-    mobile: false        // trigger animations on mobile devices (true is default)
-  }
-);
-wow.init();
 
 
 
-// xx
-
-//应用编辑
-// $(function(){
-//     var reordered = function($elements) {
-//           // Called after the drag and drop ends with the elements in their ending position.
-//           var a= []
-//               ,data={}
-//               ,l = $elements.length;
-
-//           data.id = $elements.prevObject[0].id;
-
-//           for(var i = 0;i<l;i++){
-//             a.push($($elements[i]).data("id"))
-//           };
-//           data.n = a;
-//           console.log(data)
-//         };
-
-//   $('.gridly').gridly({
-//     base: 25, // px 
-//     gutter: 5, // px
-//     columns: 18,
-//     callbacks: {  reordered: reordered }
-//   });
-//   //删除app
-//   $('.gridly').on("click", ".active", function(event) {
-
-//       event.preventDefault();
-//       event.stopPropagation();
-//       var $ele = $(this).closest('.item');
-//       $ele.attr('style','').find('.active').html('+');
-//       // $ele.remove();
-//       $('.allapp').append($ele)
-//       return $('.gridly').gridly('layout');
-//   });
-
-//   //添加app
-//   $('.allapp').on("click", ".active", function(event) {
-//     event.preventDefault();
-//     event.stopPropagation();
-//     var $ele = $(this).parent();
-//     $ele.find('.active').html('×');
-
-//     $('.gridly').append($ele);
-//     return $('.gridly').gridly();
-//   });
-//   return $('.gridly').gridly();
-
-// });
-
-// //滚动加载
-// $(document).ready(function(){
-//   var range = 50;             //距下边界长度/单位px
-//   var lock = true;
-//   var maxnum = 6;            //设置加载最多次数
-//   var num = 1;
-//   var totalheight = 0; 
-//   var main = $("#home-2");                     //主体元素
-//   $("#tab-content").scroll(function(){
-//     //当前面板
-
-    
-//      var srollPos = $("#tab-content").scrollTop();
-
-//      totalheight = parseFloat($("#tab-content").height()) + parseFloat(srollPos);
-//      console.log($("#scroller").height()-range);
-//          console.log(totalheight);
-//      if(num != maxnum) {
-//         if(!(($("#scroller").height()-range) <= totalheight))return;
-//                main.append('<div class="m-b-20 m-r-10 msg-section"><div class="msg-original"><p>原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。</p><div class="msg-detail"><span>制訂人：安倍五十六</span><span>制訂日期：2016-02-30</span><span>计划完成日期：2016-02-30</span></div></div><a class="msg-link-confirm" href="#">确认 </a><a class="msg-link" href="#">查看詳情 &gt;&gt;</a></div>');
-//          num++;
-//          console.log($("#scroller").height()-range);
-//          console.log(totalheight)
-//          console.log(num);
-//      }else{
-
-//       if(lock){main.append('<div>no more</div>');lock = false;}
-//      }
-//   });
-// });
-
-// // 头部搜索
-// $(function () {
-//   var lock = true;
-//   $(".button-menu-seach .button-menu-mobile").click(function(){
-//     if(lock){
-//       $(".button-menu-seach").addClass('open')
-//       lock=false;
-//     }else{
-//       $(".button-menu-seach").removeClass('open')
-//       lock=true;
-//     }
-   
-//   })
-// })
-// // 框架
-// var tabs;
-// var tmpCount = 0;
-
-// $(function () {
-
-//     tabs = $('#tabs').cleverTabs();
-//     $(window).bind('resize', function () {
-//         tabs.resizePanelContainer();
-//     });
-
-//     tabs.add({
-//         url: 'index2.html',
-//         label: 'baidu'
-//     });
-
-//     tabs.add({
-//         url: 'index.html',
-//         label: 'hao123'
-//     });
-
-    
-//     var tab = tabs.getTabByUrl('index2.html');
-//                     //参数true为锁定，false或不提供值为解锁
-//                     tab.setLock(true);
-//                     tab.activate();
-//     // $('input[type="button"]').button();
-
-//     $('#btnAddMore').click(function () {
-//         // tabs.add({
-//         //     url: 'tmp.htm?' + tmpCount++,
-//         //     label: 'tab' + tmpCount
-//         // });
-//         location.reload();
-//     });
 
 
-//     $('body').on('click','#wode',function(){
-//         alert(1);
-//         location.reload();
-//     });
-// });
+
