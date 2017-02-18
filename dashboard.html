@@ -42,41 +42,25 @@
                     <div class="col-sm-12">
                         <div class="card-box">
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <form class="form-inline" role="form">
-                                        <div class="form-group">
-                                            <select class="selectpicker" data-style="btn-white">
-                                                    <option>Mustard</option>
-                                                    <option>Ketchup</option>
-                                                    <option>Relish</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="selectpicker" data-style="btn-white">
-                                                    <option>Mustard</option>
-                                                    <option>Ketchup</option>
-                                                    <option>Relish</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="selectpicker" data-style="btn-white">
-                                                    <option>Mustard</option>
-                                                    <option>Ketchup</option>
-                                                    <option>Relish</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div> 
                                 <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <select class="selectpicker" data-style="btn-white">
+                                                <option value ="dashboard.html">全部</option>
+                                                <option value ="dashboard-nav.html">客户管理</option>
+                                                <option value ="dashboard-nav.html">库存分析</option>
+                                        </select>
+                                    </div>
+                                </div> 
+                                <div class="col-sm-3 col-sm-offset-6">
                                     <form role="form">
-                                        <div class="form-group">
+                                        <div class="">
                                             <div class="input-group">
-                                                <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control" placeholder="Search">
+                                                <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control" placeholder="搜索">
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn waves-effect btn-white"><i class="fa fa-search"></i></button>
                                                 </span>
                                             </div>
-                                        </div> <!-- form-group -->
+                                        </div>
                                     </form>
                                 </div> 
                             </div>
@@ -347,6 +331,12 @@
 
         <script src="assets/js/jquery.core.js"></script>
 
-
+        <script type="text/javascript">
+            $('.selectpicker').on('change',function () {
+                var that= $(this);
+                var url = that.val();
+                window.location.href = url;
+            })
+        </script>
     </body>
 </html>
