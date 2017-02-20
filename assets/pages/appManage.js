@@ -30,7 +30,7 @@
     this.$apps.gridly({
       base: 25,
       gutter: 5,
-      columns: 18,
+      columns: 28,
       callbacks: {  layout: that.retData }
     })
     //删除按钮事件

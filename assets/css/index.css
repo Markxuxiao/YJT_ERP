@@ -177,7 +177,8 @@ body{
 .msg-original {
 	font-size: 14px;
 	color: #999;
-	border: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 5px;
 }
 .msg-original p,
 .msg-comment p {
