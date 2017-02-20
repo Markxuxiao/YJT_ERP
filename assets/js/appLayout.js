@@ -38,16 +38,48 @@ $(function () {
 
 });
 
-
-function iframecallback (active) {
+/**
+* 子框架操作父页面tab
+* 
+**/
+function iframecallback (active,options) {
     switch(active){
+        /**
+        * 新开标签页
+        * iframecallback("add_tab",{url:"appManage.html",label:"修改应用"})
+        **/
+        case 'add_tab':
+            if(options&&options.url){
+                tabs.add(options);
+            }
+        break;
+        /**
+        * 移除某个tab或当前tab
+        * iframecallback("remove_tab",{url:"appManage.html"}) 或 iframecallback("remove_tab")
+        **/
+        case 'remove_tab':
+            var tab;
+            if(options&&options.url){
+                tab = tabs.getTabByUrl(options.url)
+            }else{
+                tab = tabs.getCurrentTab();
+            }
+            tab&& new IframeTab(tab.tabs, tab.id).kill();
+        break;
+        /**
+        * 刷新某个tab或当前tab
+        * iframecallback("refresh_tab",{url:"appManage.html"}) 或 iframecallback("refresh_tab")
+        **/
         case 'refresh_tab':
-            var tab = tabs.getTabByUrl("index2.html")
-            tab.refresh();
+            var tab;
+            if(options&&options.url){
+                tab = tabs.getTabByUrl(options.url)
+            }else{
+                tab = tabs.getCurrentTab();
+            }
+            tab&&tab.refresh();
         break;
-        case 2:
 
-        break;
         default:
         return;
     }
