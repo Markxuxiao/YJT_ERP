@@ -27,19 +27,17 @@
 
   appManage.prototype.int=function () {
     var that = this
-    this.$apps.gridly({
-      base: 25,
-      gutter: 5,
-      columns: 28,
-      callbacks: {  layout: that.retData }
-    })
+    Sortable.create(sortable, {
+      animation: 200
+    });
+
     //删除按钮事件
     this.$apps.on("click", ".active", function(e) {
       e.preventDefault()
       e.stopPropagation()
       var ele = $(e.target).parent()
       that.remove(ele)
-      return that.$apps.gridly('layout')
+      
     })
     //添加按钮事件
     this.$allapp.on("click", ".active", function(e) {
@@ -47,11 +45,14 @@
       e.stopPropagation()
       var ele = $(e.target).parent()
       that.add(ele)
-      return that.$apps.gridly('layout')
+      
     })
     //保存按钮事件
     this.$save.on('click',function() {
+      var ele = that.$apps.find('.item');
+      that.retData(ele);
       var that_resout = resout;
+      
       that.saveCallbacks&&that.saveCallbacks(that_resout)
     })
   }
@@ -62,7 +63,7 @@
   }
   //删除排序内app
   appManage.prototype.remove=function ($ele) {
-    $ele.attr('style','position: relative;left:0;top:0;').find('.active').html('+')
+    $ele.find('.active').html('+')
     this.$allapp.append($ele)
   }
   //返回排序结果
@@ -98,9 +99,11 @@
 })();
 
 $(function(){
+
   $('#appManage').appManage({saveCallbacks:function(resout){
     // setTimeout(function(){ window.parent.iframecallback('refresh_tab') },2000)
     alert(resout +"保存后需要后端处理")
   }})
 });
+
 
