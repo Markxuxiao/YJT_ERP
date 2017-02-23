@@ -1,11 +1,4 @@
 /*
-/*
-Template Name: Anyweall Dashboard
-Author: HsuCBeing
-Email: hsu.cbeing@gmail.com
-File: Common
-*/
-
 body.bg-0{
 	background: url(../images/theme/v1/bg-0.jpg) no-repeat top center fixed;
     -moz-background-size: cover;
@@ -54,7 +47,25 @@ body.bg-6{
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}*/
+
+.bg-0 #wrapper{background-image: url(../images/theme/v1/bg-0.jpg);}
+.bg-1 #wrapper{background-image: url(../images/theme/v1/bg-1.jpg);}
+.bg-2 #wrapper{background-image: url(../images/theme/v1/bg-2.jpg);}
+.bg-3 #wrapper{background-image: url(../images/theme/v1/bg-3.jpg);}
+.bg-4 #wrapper{background-image: url(../images/theme/v1/bg-4.jpg);}
+.bg-5 #wrapper{background-image: url(../images/theme/v1/bg-5.jpg);}
+.bg-6 #wrapper{background-image: url(../images/theme/v1/bg-6.jpg);}
+#wrapper{
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
 }
+
+
+
 .logo img {
 	width: 120px;
 }
