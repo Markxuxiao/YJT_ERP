@@ -1,6 +1,6 @@
 /**
 * 应用图标排序组件
-* 依赖：plugins/jquery.gridly/jquery.gridly.js
+* 依赖：Sortable.js
 * 
 **/
 (function(){

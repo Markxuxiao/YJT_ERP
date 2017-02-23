@@ -1568,25 +1568,25 @@ div.dataTables_info {
   border-color: #5fbeaa;
 }
 /* Transaction */
-.transaction-list li {
+.transaction-list>li {
   padding: 7px 0px;
   border-bottom: 1px solid #ebeff2;
   clear: both;
   position: relative;
 }
 .transaction-list i {
-  width: 20px;
-  position: absolute;
-  top: 10px;
-  font-size: 12px;
+  /* width: 20px; */
+  /* position: absolute; */
+  /* top: 10px; */
+  /* font-size: 12px; */
 }
 .transaction-list .tran-text {
-  padding-left: 25px;
-  white-space: nowrap;
+  /* padding-left: 25px; */
+  /* white-space: nowrap; */
   display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 115px;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* width: 115px; */
 }
 .transaction-list .tran-price {
   margin-left: 30px;
