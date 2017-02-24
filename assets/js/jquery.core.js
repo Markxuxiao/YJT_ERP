@@ -1,3 +1,14 @@
+!function() {
+    var YJT={};
+    YJT.tabsControl = function (active,op){
+        window.parent.iframecallback(active,op);
+    }
+
+
+    window.YJT = YJT;
+}();
+
+
 /**
  * Portlet
  * 可最小化、关闭、刷新面板
@@ -303,7 +314,6 @@ function($) {
     "use strict";
     $.Components.init();
 }(window.jQuery);
-
 
 
 
