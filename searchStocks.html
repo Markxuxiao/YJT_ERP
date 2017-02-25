@@ -8,7 +8,7 @@
         <meta name="description" content="万维软件新界面">
 
         <title>Anywell - 万维软件</title>
-
+        <!-- commen css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -25,6 +25,7 @@
         <![endif]-->
 
         <script src="assets/js/modernizr.min.js"></script>
+        <!-- page css -->
         <style>
             .transaction-list.on .others{
                 display: none;
@@ -509,14 +510,58 @@
         </script>
 
 
-        <!-- jQuery  -->
+        <!-- common js  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.core.js"></script>
+        <!-- jQueryPlugin  -->
         <script src="assets/js/masonry-docs.min.js"></script>
         <script src="assets/js/template.js"></script>
-        <!-- jQuery  -->
-        
-        <script src="assets/js/jquery.core.js"></script>
+        <!-- page js  -->
         <script src="assets/pages/searchPage.js"></script>
+        <script>
+            var data = {
+                list: [
+                    {'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                ]
+            };
+
+            $(function(){
+                // 接口示例
+                // var defaluts = {
+                //     container: $('#masonry'),
+                //     item : '.item',//滚动加载容器item
+                //     loading : $('#imloading'),//加载提示dom
+                //     max_item : 999, //最大条数
+                //     scroll_distance :50, //距离下边多少距离加载
+                //     callback: null
+                //   };
+              $('#masonry').masonryOnScroll({callback:function(){
+                var html = template('template_item',data);
+
+                var $newElems = $(html).css({ opacity: 0}).appendTo($('#masonry'));
+                    $newElems.animate({ opacity: 1},800);
+              }});
+            });
+        </script>
+
     </body>
 </html>

@@ -11,10 +11,7 @@
 
         <title>Anywell - 万维软件</title>
 
-        <!--Morris Chart CSS -->
-        <link rel="stylesheet" href="assets/plugins/morris/morris.css">
-        <link href="assets/plugins/multiselect/css/multi-select.css"  rel="stylesheet" type="text/css" />
-        <link href="assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+        <!-- commen css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -48,10 +45,10 @@
                            
                             <div id="bg-primary" class="panel-collapse collapse in">
                        
-                                    <div class="link-content" id="myapps">
+                                    <div class="link-content " id="myapps">
                                         <h5 class="link-content-title">已添加应用</h5>
                                         
-                                        <div id="sortable" class="gridly grid">
+                                        <div id="sortable" class="gridly grid p-l-r-10">
                                             <a href="javascript:;" class="item" title="工作日志" data-app-id="7">
                                                 <img src="./assets/images/index/1 (1).png" alt="">
                                                 <h6>最多六个字啊</h6>
@@ -86,10 +83,13 @@
 
 
                                     </div>
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary waves-effect waves-light appManageSave">保存修改</button>
+                                    </div>
                                     <div class="link-content">
                                         <h5 class="link-content-title">未添加应用</h5>
                                         
-                                        <div class="allapp clearfix" style="max-height: 300px;overflow-y: scroll;">
+                                        <div class="allapp clearfix p-l-r-10">
                                             <a href="javascript:;" class="item" title="工作日志" data-app-id="1">
                                                 <img src="./assets/images/index/1 (1).png" alt="" >
                                                 <h6>最多六个字啊</h6>
@@ -376,26 +376,20 @@
                          
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <button type="button" class="btn btn-primary waves-effect waves-light appManageSave">保存修改</button>
-                    </div>
+                    </div> 
+                    
                 </div>
 
             </div> <!-- container -->
 
         </div> <!-- content -->
-
-        <script>
-            var resizefunc = [];
-        </script>
-
-        <!-- jQuery  -->
+        <!-- common js  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <!-- jQueryPlugin js -->
         <script src="assets/js//Sortable.js"></script>
 
-        <!-- jQuery  -->
+        <!-- page js -->
         <script src="assets/pages/appManage.js"></script>
 
     

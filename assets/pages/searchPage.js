@@ -32,97 +32,46 @@ $(function(){
 
 });
 
-
-var data = {
-    list: [
-        {'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-       ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
-    ]
-};
-
-
-var container = $('#masonry');
-
-var loading=$('#imloading');
-
-// 初始化loading状态
-
-loading.data("on",true);
-
-
-$(window).scroll(function(){
-    
-    if(!loading.data("on")) return;
-
-    // 计算所有瀑布流块中距离顶部最大
-    var containerItem = container.find('.item');
-    var itemNum=containerItem.length;
-
-    var itemArr=[];
-
-    itemArr[0]=containerItem.eq(itemNum-1).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
-
-    itemArr[1]=containerItem.eq(itemNum-2).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
-
-    itemArr[2]=containerItem.eq(itemNum-3).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
-
-    var maxTop=Math.max.apply(null,itemArr);
-    // console.log(maxTop)
-    // console.log($(window).height())
-    // console.log($(document).scrollTop())
-    if(maxTop<$(window).height()+$(document).scrollTop()+50){
-
-        //加载更多数据
-
-        loading.data("on",false).fadeIn(800);
-
-        (function(sqlJson){
-
-            /*这里会根据后台返回的数据来判断是否你进行分页或者数据加载完毕这里假设大于30就不在加载数据*/
-
-            if(itemNum>230){
-
-                loading.text('就有这么多了！');
-
-            }else{
-
-                var html = template('template_item',sqlJson);
-
-                /*模拟ajax请求数据时延时800毫秒*/
-
-                var time=setTimeout(function(){
-                    
-                    var $newElems = $(html).css({ opacity: 0}).appendTo(container);
-
-                        $newElems.animate({ opacity: 1},800);
-
-                        loading.data("on",true).fadeOut();
-
-                        clearTimeout(time);
-
-                },800)
-
+(function ($) {
+    var defaluts = {
+        container: $('#masonry'),
+        item : '.item',//滚动加载容器item
+        loading : $('#imloading'),//加载提示dom
+        max_item : 999, //最大条数
+        scroll_distance :50, //距离下边多少距离加载
+        callback: null
+      };
+    $.fn.extend({
+        "masonryOnScroll": function (options) {
+            var opts = $.extend({}, defaluts, options);
+            //初始加载提示
+            opts.loading.data("on",true);
+            function scroll (){
+              var opt = opts;
+              if(!opt.loading.data("on")) return;
+              // 计算所有瀑布流块中距离顶部最大
+              var containerItem = opt.container.find(opt.item);
+              var itemNum=containerItem.length;
+              var itemArr=[];
+              itemArr[0]=containerItem.eq(itemNum-1).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
+              itemArr[1]=containerItem.eq(itemNum-2).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
+              itemArr[2]=containerItem.eq(itemNum-3).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
+              var maxTop=Math.max.apply(null,itemArr);
+              if(maxTop<$(window).height() + $(document).scrollTop() + opt.scroll_distance){
+                opt.loading.data("on",false).fadeIn(800);
+                if(itemNum > opt.max_item){
+                  opt.loading.text('没有更多了！');
+                }else{
+                  opt.callback&&opt.callback();
+                  opt.loading.data("on",true).fadeOut();
+                }
+              }
             }
+            //事件绑定
+            $(window).scroll(scroll);
+        }//end masonryOnScroll
+    }); 
+})(window.jQuery);
 
-        })(data);
 
-    }
 
-});
