@@ -53,8 +53,21 @@
                 </div>    
                 
                 <div id="masonry" class="row">
+
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="thumbnail">
+                          <img src="http://lorempixel.com/200/200/abstract" alt="">
+                          <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                          </div>
+                        </div>
+                      </div><!--/.item  -->
+
+
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月销售分析(汇总)
@@ -121,7 +134,7 @@
                     </div>
 
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当年市场客户成交分析
@@ -156,7 +169,7 @@
                     </div>
 
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -193,7 +206,7 @@
 
 
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -302,7 +315,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -337,7 +350,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -372,7 +385,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -407,7 +420,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -442,7 +455,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -488,18 +501,44 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <!-- jQueryPlugin js -->
-        <script src="assets/js/masonry-docs.min.js"></script>
+        <!-- <script src="assets/js/masonry-docs.min.js"></script> -->
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/imagesLoaded.js"></script>
+        <script type="text/javascript" src="http://libs.useso.com/js/masonry/3.1.5/masonry.pkgd.min.js"></script>
         <!-- page js -->
         <script type="text/javascript">
-            $(function() {
-                $('#masonry').imagesLoaded(function() {
-                    $('#masonry').masonry({
-                            itemSelector: '.item',
-                            columnWidth: '.item',
-                            isAnimated: true
-                        });
-                 });
+            /* Demo Scripts for Making Twitter Bootstrap 3 Tab Play Nicely With The Masonry Library
+        * on SitePoint by Maria Antonietta Perna
+        */
+
+        //Initialize Masonry inside Bootstrap 3 Tab component 
+
+        (function( $ ) {
+
+            var $container = $('#masonry');
+            $container.imagesLoaded( function () {
+                $container.masonry({
+                    columnWidth: '.item',
+                    itemSelector: '.item'
+                });
             });
+            
+            //Reinitialize masonry inside each panel after the relative tab link is clicked - 
+            $('a[data-toggle=tab]').each(function () {
+                var $this = $(this);
+
+                $this.on('click', function () {
+                
+                    $container.imagesLoaded( function () {
+                        $container.masonry({
+                            columnWidth: '.item',
+                            itemSelector: '.item'
+                        });
+                    });
+
+                }); //end shown
+            });  //end each
+            
+        })(jQuery);
         </script>
     </body>
 </html>

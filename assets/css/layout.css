@@ -112,6 +112,11 @@ body.bg-6{
 .navbar-img img {
 	width: 238px;
 }
+
+.nav.pull-right .open>a{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .hoverdown-menu {
 	position: absolute;
 	display: none;

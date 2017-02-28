@@ -100,10 +100,10 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li> -->
                                 <li class="hidden-xs">
-                                    <a href="#" class="right-bar-toggle waves-effect waves-light"><i class="icon-list"></i></a>
+                                    <a href="#" class="right-bar-toggle"><i class="icon-list"></i></a>
                                 </li>
                                 <li class="hidden-xs" id="site-bg">
-                                    <a href="#" class="waves-effect waves-light "><i class="icon-settings" ></i></a>
+                                    <a href="#" class=""><i class="icon-settings" ></i></a>
                                     <ul class="dropdown-menu">
                                         <li id="bg-0"><a href="#"><i class="fa fa-circle" style="color: #365277;"></i> 天空蓝</a></li>
                                         <li id="bg-1"><a href="#"><i class="fa fa-circle" style="color: #277953;"></i> 小草绿</a></li>
@@ -377,17 +377,8 @@
                 </div><!-- content -->
 
                 <footer class="footer">
-
-                    <span class="pull-left">2016 © Anywell.</span>
+                    <iframe src="footer.html" frameborder="0" style="height: 20;overflow: hidden;width: 100%;"></iframe>
                     
-
-                    <span class="pull-right">权限信息：其他信息，其他信息：其他信息，其他信息：其他信息</span>
-                    <div class="checkbox checkbox-white pull-right m-0">
-                        <input id="checkbox2" type="checkbox">
-                        <label for="checkbox2">
-                            刷新什么东西!
-                        </label>
-                    </div>
                 </footer>
 
             </div>
@@ -403,33 +394,47 @@
                 <div class="contact-list nicescroll m-t-10">
                     <ul class="list-group">
                         <li class="list-group-item">
+                            <a href="#" class="item-link">
+                                <i class="fa fa-star m-r-5"></i> 我的收藏
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+                        <li class="list-group-item">
                             <a href="javascript:iframecallback('add_tab',{url:'myFocus.html',label:'我的关注'});" class="item-link">
-                                <i class="fa fa-check-square-o m-r-5"></i> 我的关注
+                                <i class="fa fa-calendar-plus-o m-r-5"></i> 我的关注
                             </a>
                             <span class="clearfix"></span>
+                        </li>
+                        <li class="list-group-item">
+                           <a href="javascript:iframecallback('add_tab',{url:'myOffences.html',label:'我的违章'});" class="item-link">
+                               <i class="fa fa-exclamation-circle m-r-5"></i> 我的违章
+                           </a>
+                           <span class="clearfix"></span>
                         </li>
                         <li class="list-group-item">
                             <a href="#" class="item-link">
-                                <i class="fa fa-check-square-o m-r-5"></i> 我的收藏
+                                <i class="fa fa-area-chart m-r-5"></i> 我的报表
                             </a>
                             <span class="clearfix"></span>
                         </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-check-square-o m-r-5"></i> 我的报表
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="javascript:iframecallback('add_tab',{url:'myOffences.html',label:'我的违章'});" class="item-link">
-                                <i class="fa fa-check-square-o m-r-5"></i> 我的违章
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li role="separator" class="divider"></li>
                         <li class="list-group-item">
                             <a href="#" class="item-link">
                                 <i class="fa fa-check-square-o m-r-5"></i> 已审工作
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+
+                        <li role="separator" class="divider"></li>
+
+                        <li class="list-group-item">
+                            <a href="#" class="item-link">
+                                <i class="fa fa-bookmark-o m-r-5"></i> 智能秘书
+                            </a>
+                            <span class="clearfix"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="item-link">
+                                <i class="fa fa-search-plus m-r-5"></i> 智能体检
                             </a>
                             <span class="clearfix"></span>
                         </li>
@@ -445,19 +450,9 @@
                             </a>
                             <span class="clearfix"></span>
                         </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                            	<i class="fa fa-bookmark-o m-r-5"></i> 智能秘书
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                            	<i class="fa fa-search-plus m-r-5"></i> 智能体检
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
+                        
                         <li role="separator" class="divider"></li>
+
                         <li class="list-group-item">
                             <a href="#" class="item-link">
                             	<i class="fa fa-comment-o m-r-5"></i> 万维微信

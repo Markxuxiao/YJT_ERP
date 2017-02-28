@@ -24,11 +24,9 @@ $(function(){
   **/
   $('#masonry').imagesLoaded(function() {
       $('#masonry').masonry({
-              itemSelector: '.item',
-              columnWidth: '.item'
-
+              itemSelector: '.item'
           });
-  });
+   });
 
 });
 
@@ -41,7 +39,7 @@ $(function(){
         scroll_distance :50, //距离下边多少距离加载
         callback: null
       };
-    //初始加载提示 解锁
+    //初始加载提示
       defaluts.loading.data("on",true);
     $.fn.extend({
         "masonryOnScroll": function (options) {
@@ -58,16 +56,16 @@ $(function(){
               itemArr[1]=containerItem.eq(itemNum-2).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
               itemArr[2]=containerItem.eq(itemNum-3).offset().top+containerItem.eq(itemNum-1)[0].offsetHeight;
               var maxTop=Math.max.apply(null,itemArr);
-              var w_height = $(window).height();
-              var d_height = $(document).scrollTop();
+        var w_height = $(window).height();
+        var d_height = $(document).scrollTop();
         
               if(maxTop< w_height + d_height + opt.scroll_distance){
                 opt.loading.data("on",false).fadeIn(800);
-                opt.callback&&opt.callback();
-                itemNum=opt.container.find(opt.item).length;
+        opt.callback&&opt.callback();
+        itemNum=opt.container.find(opt.item).length;
                 if(itemNum >= opt.max_item){
                   opt.loading.text('没有更多了！');
-                  //上锁
+          //上锁
                   opt.loading.data("on",false);
                 }else{
                   opt.loading.data("on",true).fadeOut();
