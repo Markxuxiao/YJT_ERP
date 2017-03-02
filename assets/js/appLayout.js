@@ -21,8 +21,12 @@ $(function () {
     (function(){
         if(CONFIG.TABS != undefined ){
             for (var i = 0; i < CONFIG.TABS.length; i++) {
-                tabs.add(CONFIG.TABS[i]).setLock(true);
+                    tabs.add(CONFIG.TABS[i]).setLock(true);
+                    console.log(CONFIG.TABS[i])
+                // tabs.getTabByUrl(CONFIG.TABS[i].url).activate();
             }
+            // tabs.getTabByUrl(CONFIG.TABS[2].url).activate();
+            // tabs.getTabByUrl(CONFIG.TABS[1].url).activate();
             tabs.getTabByUrl(CONFIG.TABS[0].url).activate();
         }else{
             var ele = $('#sidebar-menu').find('li.has_sub').first()
