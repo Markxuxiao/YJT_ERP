@@ -264,13 +264,14 @@ body{
     display: inline-block;
     margin: 5px 11px;
     width: 72px;
-    height: 90px;
+    height: 82px;
+    text-align: center;
     overflow: hidden;
     transition: all .3s ease-in-out;
 }
 .link-content .link-content-link a img{
-    width: 72px;
-    height: 72px;
+    width: 66px;
+    height: 66px;
     border-radius: 5px;
 }
 .link-content .link-content-link a h6{
@@ -329,15 +330,16 @@ body{
 .gridly .item {
 	display: inline-block;
 	position: relative;
-	margin-right: 5px;
-    margin-bottom: 5px;
+	margin-right: 20px;
+    margin-bottom: 15px;
+    text-align: center;
 	width: 72px;
-	height: 90px;
+	height: 82px;
 	overflow: hidden;
 }
 .gridly .item img{
-    width: 72px;
-    height: 72px;
+    width: 66px;
+    height: 66px;
     border-radius: 5px;
 }
 .gridly .item h6 {
@@ -366,15 +368,15 @@ body{
     margin-right: 10px;
     margin-bottom: 10px;
     width: 72px;
-    height: 90px;
+    height: 82px;
     padding: 0;
     overflow: hidden;
     top: 0;
     left: 0;
 }
 .allapp .item img{
-    width: 72px;
-    height: 72px;
+    width: 66px;
+    height: 66px;
     border-radius: 5px;
 }
 .allapp .item h6 {
@@ -392,5 +394,11 @@ body{
     position: absolute;
     text-align: center;
     line-height: 20px;
+}
+
+
+.btn-ee8742 {
+    background-color: #ee8742;
+    color: #fff;
 }
 /*应用排序组件*/

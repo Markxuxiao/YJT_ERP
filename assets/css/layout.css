@@ -232,10 +232,8 @@ body.bg-6{
     background-color: #e5e5e5;
 }
 .item-link {
-    padding: 10px 15px;
-	display: block;
-	color: #333;
-	letter-spacing: 1px;
+    padding: 8px 15px;
+    display: block;
 }
 .tabs {
     background-color: transparent;

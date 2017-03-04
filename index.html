@@ -171,7 +171,8 @@
                             	
                             <!--一级列表-->
                             <li class="has_sub">
-                                <a href="javascript:;" data-url="addressBook.html" class="waves-effect" data-title="通讯录">
+                                <a href="javascript:iframecallback('add_tab',{url:'addressBook.html',label:'修改应用'});" data-url="addressBook.html" class="waves-effect" data-title="通讯录">
+                                <!-- <a href="javascript:;" data-url="addressBook.html" class="waves-effect" data-title="通讯录"> -->
                                     <!-- <i class="ti-location-pin"></i> -->
                                     <span>通讯录</span>
                                 </a>
@@ -371,7 +372,7 @@
                 </div><!-- content -->
 
                 <footer class="footer">
-                    <iframe src="footer.html" frameborder="0" style="height: 20;overflow: hidden;width: 100%;"></iframe>
+                    <iframe src="footer.html" frameborder="0" style="height: 20px;overflow: hidden;width: 100%;"></iframe>
                     
                 </footer>
 
@@ -487,11 +488,11 @@
             var CONFIG = CONFIG||{};
             //配置输出默认tab页面并锁定，并激活第一个
             CONFIG.TABS = [
-                        // {'url':'dashboard.html','label':'智能看板'}
-                        {'url':'index2.html','label':'我的桌面'}
+                        {'url':'http://amazeui.github.io/masonry/docs/panel.html','label':'智能看板'}
+                        ,{'url':'index2.html','label':'我的桌面'}
                         ,{'url':'myMassage.html','label':'我的消息'}
                         ,{'url':'dashboard.html','label':'智能看板'}
-                        // ,{'url':'../testScoll/test.html','label':'test'}
+                        // ,{'url':'http://amazeui.github.io/masonry/docs/panel.html','label':'test'}
                           ];
 
             // 换肤功能

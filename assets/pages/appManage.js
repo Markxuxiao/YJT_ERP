@@ -103,6 +103,11 @@ $(function(){
   $('#appManage').appManage({saveCallbacks:function(resout){
     // setTimeout(function(){ window.parent.iframecallback('refresh_tab') },2000)
     alert(resout +"保存后需要后端处理")
+    // window.parent.iframecallback('refresh_tab',{"url":"index2.html"});
+    // window.parent.iframecallback('refresh_tab',{"url":"mymassage.html"});          
+    // window.parent.iframecallback('remove_tab',{"url":"appManage.html"});
+    var Current_tab = "#" + window.parent.tabs.getCurrentTab().headerId;
+    window.parent.$(Current_tab).find('.ui-icon-close').trigger('click');
   }})
 });
 

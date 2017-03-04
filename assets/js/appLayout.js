@@ -10,13 +10,14 @@ $(function () {
         tabs.resizePanelContainer();
     });
     // 导航事件绑定
-    $('#sidebar-menu').on('click','li.has_sub',function(){
-        var obj = {}
-        var that = $(this).find("a")
-        obj.url = that.data('url')
-        obj.label = that.data('title')
-        tabs.add(obj)
-    });
+    // $('#sidebar-menu').on('click','li.has_sub',function(){
+
+    //     var obj = {};
+    //     var that = $(this).find("a");
+    //     obj.url = that.data('url');
+    //     obj.label = that.data('title');
+    //     tabs.add(obj);
+    // });
     // 初始化默认打开的选项卡
     (function(){
         if(CONFIG.TABS != undefined ){
@@ -68,7 +69,8 @@ function iframecallback (active,options) {
             }else{
                 tab = tabs.getCurrentTab();
             }
-            tab&& new IframeTab(tab.tabs, tab.id).kill();
+            // tab&& new IframeTab(tab.tabs, tab.id).kill();
+            tab&& tab.kill();
         break;
         /**
         * 刷新某个tab或当前tab
