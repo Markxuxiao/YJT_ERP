@@ -10,19 +10,24 @@ $(function () {
         tabs.resizePanelContainer();
     });
     // 导航事件绑定
-    $('#sidebar-menu').on('click','li.has_sub',function(){
-        var obj = {}
-        var that = $(this).find("a")
-        obj.url = that.data('url')
-        obj.label = that.data('title')
-        tabs.add(obj)
-    });
+    // $('#sidebar-menu').on('click','li.has_sub',function(){
+
+    //     var obj = {};
+    //     var that = $(this).find("a");
+    //     obj.url = that.data('url');
+    //     obj.label = that.data('title');
+    //     tabs.add(obj);
+    // });
     // 初始化默认打开的选项卡
     (function(){
         if(CONFIG.TABS != undefined ){
             for (var i = 0; i < CONFIG.TABS.length; i++) {
-                tabs.add(CONFIG.TABS[i]).setLock(true);
+                    tabs.add(CONFIG.TABS[i]).setLock(true);
+                    console.log(CONFIG.TABS[i])
+                // tabs.getTabByUrl(CONFIG.TABS[i].url).activate();
             }
+            // tabs.getTabByUrl(CONFIG.TABS[2].url).activate();
+            // tabs.getTabByUrl(CONFIG.TABS[1].url).activate();
             tabs.getTabByUrl(CONFIG.TABS[0].url).activate();
         }else{
             var ele = $('#sidebar-menu').find('li.has_sub').first()
@@ -64,7 +69,8 @@ function iframecallback (active,options) {
             }else{
                 tab = tabs.getCurrentTab();
             }
-            tab&& new IframeTab(tab.tabs, tab.id).kill();
+            // tab&& new IframeTab(tab.tabs, tab.id).kill();
+            tab&& tab.kill();
         break;
         /**
         * 刷新某个tab或当前tab

@@ -29,7 +29,6 @@
 
     </head>
 
-
     <body class="fixed-left">
 
         <!-- Start content -->
@@ -38,7 +37,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="portlet">
-                            <div class="portlet-heading portlet-default">
+                            <div class="portlet-heading portlet-default m-b-10">
                                 <h3 class="portlet-title text-dark">
                                     智能看板
                                 </h3>
@@ -53,8 +52,9 @@
                 </div>    
                 
                 <div id="masonry" class="row">
+
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月销售分析(汇总)
@@ -121,7 +121,7 @@
                     </div>
 
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当年市场客户成交分析
@@ -156,7 +156,7 @@
                     </div>
 
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -193,7 +193,7 @@
 
 
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -302,7 +302,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -337,7 +337,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -372,7 +372,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -407,7 +407,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -442,7 +442,7 @@
                     </div>
                     
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="portlet">
+                        <div class="portlet thumbnail">
                             <div class="portlet-heading portlet-default">
                                 <h3 class="portlet-title text-dark">
                                     当月市场客户装修趋势分析
@@ -487,17 +487,24 @@
         <!-- common js  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <!-- jQueryPlugin js -->
+        <!-- <script src="assets/js/masonry-docs.min.js"></script> -->
+        <script src="assets/js/imagesLoaded.js"></script>
+        <script src="assets/js/masonry.pkgd.min.js"></script>
         <!-- page js -->
         <script type="text/javascript">
-            $(function() {
-                $('#masonry').imagesLoaded(function() {
-                    $('#masonry').masonry({
-                            itemSelector: '.item',
-                            gutter: 0,
-                            isAnimated: true,
-                        });
-                 });
+        // (function( $ ) {
+            $('#masonry').ready(function(){
+                var $container = $('#masonry');
+                $container.imagesLoaded( function () {
+                    $container.masonry({
+                        columnWidth: '.item',
+                        itemSelector: '.item'
+                    });
+                });
             });
+
+        // })(jQuery);
         </script>
     </body>
 </html>

@@ -62,7 +62,7 @@ function IframeTabs(self, options) {
 
             if (pc.attr('id').indexOf('cleverTabsPanelContainer') === 0) {
             //     var height = self.height() - el.height() - 30;
-                    var height = w - 112
+                    var height = w - 120;
                 pc.css('height', height + 'px');
             }
         }
