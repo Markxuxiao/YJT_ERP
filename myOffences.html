@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="万维软件新界面">
+
+        <title>Anywell - 万维软件</title>
+        <!-- commen css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="assets/js/modernizr.min.js"></script>
+        <!-- page css -->
+        <style>
+            .transaction-list.on .others{
+                display: none;
+            }
+            .transaction-list.on>li{
+                border-bottom: 0px;
+            }
+
+        </style>
+
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-sm-3 col-sm-offset-9">
+                                    <form role="form">
+                                        <div class="">
+                                            <div class="input-group">
+                                                <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control" placeholder="搜索">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn waves-effect btn-white"><i class="fa fa-search"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div> 
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+                
+
+
+
+
+                <div id="masonry" class="row table-list">
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <ul class="list-unstyled transaction-list m-b-0 on">
+                                <li>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="tran-text">单号：<a href="#">WZ1512210092</a></span>
+                                            <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                        </li>
+                                        <li><span class="tran-text">违章日期：2015-11-01 12:00:46</span></li>
+                                        <li><span class="tran-text">员工姓名：周星星</span></li>
+                                        <li><span class="tran-text">所属部门：xxxxxxx部门</span></li>
+                                        <li><span class="tran-text">违反条例：员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）</span></li>
+                                        <li><span class="tran-text text-danger">处理结果：由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销</span></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="others">
+                                    <ul class="list-unstyled">
+
+                                        <li><span class="tran-text">罚款金额：0.00</span></li>
+                                        <li><span class="tran-text">处罚分数: 20.00</span></li>
+                                        <li><span class="tran-text">其他罚款：0.00</span></li>
+                                        <li><span class="tran-text">状态：99生效/归档</span></li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-right">
+                                    <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                    <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+                </div><!-- end row -->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <!-- searchPage.js 滚动加载必备 loading按钮自己通过样式调整 -->
+        <div id="imloading" style="width:150px;height:30px;line-height:30px;font-size:16px;text-align:center;border-radius:3px;opacity:0.7;background:#000;margin:10px auto 30px;color:#fff;display:none">
+            I'm Loading.....
+        </div>
+        <!-- 不用前端渲染可删除 -->
+        <script id="template_item" type="text/html">
+            {{each list as value i}}
+                <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="card-box">
+                        <ul class="list-unstyled transaction-list m-b-0 on">
+                            <li>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <span class="tran-text">单号：<a href="#">{{value.dh}}</a></span>
+                                        <i class="show_btn pull-right fa fa-angle-down fa-lg"></i>
+                                    </li>
+                                    <li><span class="tran-text">违章日期：{{value.wzrq}}</span></li>
+                                    <li><span class="tran-text">员工姓名：{{value.ygxm}}</span></li>
+                                    <li><span class="tran-text">所属部门：{{value.ssbm}}</span></li>
+                                    <li><span class="tran-text">违反条例：{{value.wftl}}</span></li>
+                                    <li><span class="tran-text text-danger">处理结果：{{value.cljg}}</span></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="others">
+                                <ul class="list-unstyled">
+
+                                    <li><span class="tran-text">罚款金额：{{value.fkje}}</span></li>
+                                    <li><span class="tran-text">处罚分数: {{value.cffs}}</span></li>
+                                    <li><span class="tran-text">其他罚款：{{value.qtfk}}</span></li>
+                                    <li><span class="tran-text">状态：{{value.zt}}</span></li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-box-foot clearfix m-t-5">
+                            <div class="pull-right">
+                                <button class="btn btn-default waves-effect waves-light btn-xs">确认</button>
+                                <button class="btn btn-danger waves-effect waves-light btn-xs">其他功能</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+        <!-- end 不用前端渲染可删除 -->
+
+        <!-- common js  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- jQueryPlugin js -->
+        <script src="assets/js/masonry-docs.min.js"></script>
+        <!-- 不用前端渲染可删除 -->
+        <script src="assets/js/template.js"></script>
+        <!-- end 不用前端渲染可删除 -->
+        <!-- page js -->
+        <script src="assets/pages/searchPage.js"></script>
+
+        <script>
+        // 不用前端渲染可删除
+            var data = {
+                list: [
+                    {'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                   ,{'dh':'WZ1512210092','wzrq':'2015-11-01 12:00:46','ygxm':'周星星','ssbm':'xxxxxxx部门','wftl':'员工日常奖罚体系：全体员工（除总经理外）每天填写当天工作日志和第二工作日的计划，（违章范围：漏填（日志或计划）、未如实填写工作内容，包括所有加班、值班都需要填写工作日志\计划；除临时加班（下班之后决定加班的）情况不需要填写计划外,计划内加班的是需要填写计划的。）','cljg':'由于您没有填写2017-02-05 的工作日志（RZ1701271972），因此扣基本绩效分20分。） 冲销原因：常委开会到很晚，故冲销','fkje':'0.00','cffs':'20.00','qtfk':'0.00','zt':'99生效/归档'}
+                ]
+            };
+        // end 不用前端渲染可删除
+
+            $(function(){
+
+                if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){  
+                    // $('#masonry').css('width','1200')
+                } 
+                // 接口示例
+                // var defaluts = {
+                //     container: $('#masonry'),
+                //     item : '.item',//滚动加载容器item
+                //     loading : $('#imloading'),//加载提示dom
+                //     max_item : 999, //最大条数
+                //     scroll_distance :50, //距离下边多少距离加载
+                //     callback: null
+                //   };
+              $('#masonry').masonryOnScroll({callback:function(){
+                var elem = $(template('template_item',data));
+                $('#masonry').masonry()
+                  .append( elem )
+                  .masonry( 'appended', elem );
+              }});
+            });
+        </script>
+    </body>
+</html>

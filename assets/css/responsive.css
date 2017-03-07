@@ -1,9 +1,4 @@
-/*
-Template Name: Anyweall Dashboard
-Author: HsuCBeing
-Email: hsu.cbeing@gmail.com
-File: Responsive
-*/
+
 @media only screen and (max-width: 6000px) and (min-width: 700px) {
   .wrapper.right-bar-enabled .right-bar {
     right: 0;
@@ -115,3 +110,10 @@ File: Responsive
   }
 }
 
+/*#masonry .col-xs-12,
+#masonry .col-sm-6,
+#masonry .col-md-6,
+#masonry .col-lg-4,{
+    padding-left: 0px;
+    padding-right: 0px;
+}*/
