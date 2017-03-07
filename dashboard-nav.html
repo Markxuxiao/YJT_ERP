@@ -42,12 +42,24 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <select class="selectpicker" data-style="btn-white">
-                                                <option value ="dashboard.html">全部</option>
-                                                <option value ="dashboard-nav.html">客户管理</option>
-                                                <option value ="dashboard-nav.html">库存分析</option>
-                                        </select>
+                                   
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <a class="btn btn-white" href="#" role="button"><i class="fa fa-angle-left fa-lg"></i> 返回</a>
+                                        </div>
+                                        <div class="form-group">
+                                            
+                                            <!-- <select class="selectpicker" data-style="btn-white">
+                                                    <option value ="dashboard.html">全部</option>
+                                                    <option value ="a">客户管理</option>
+                                                    <option value ="b">库存分析</option>
+                                            </select> -->
+                                            <select class="form-control" id="asdf">
+                                              <option value ="a('adf','sdfdsf')">全部</option>
+                                              <option value ="b('addfdf','s222dfdsf')">客户管理</option>
+                                              <option value ="a">库存分析</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div> 
                                 <div class="col-sm-3 col-sm-offset-6">
@@ -133,10 +145,9 @@
         <!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
+        <!-- <script src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script> -->
         <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
         <script src="assets/pages/jquery.dashboard_3.js"></script>
-
 
 
 
@@ -146,10 +157,17 @@
         <script src="assets/js/jquery.core.js"></script>
 
         <script type="text/javascript">
-            $('.selectpicker').on('change',function () {
+        function a (a,b){
+            console.log(a+b)
+        }
+        function b (a,b){
+            console.log(a+b)
+        }
+            $('#asdf').on('change',function () {
                 var that= $(this);
-                var url = that.val();
-                window.location.href = url;
+                var data = that.val();
+                var n = 
+                eval(data)
             })
         </script>
 
