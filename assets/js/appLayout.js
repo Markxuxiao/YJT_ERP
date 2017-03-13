@@ -85,7 +85,17 @@ function iframecallback (active,options) {
             }
             tab&&tab.refresh();
         break;
-
+        /**
+        * 激活某个tab或当前tab
+        * iframecallback('activate_tab',{url:'appManage.html'})
+        **/
+        case 'activate_tab':
+            var tab;
+            if(options&&options.url){
+                tab = tabs.getTabByUrl(options.url);
+                tab.activate();
+            }
+        break;
         default:
         return;
     }

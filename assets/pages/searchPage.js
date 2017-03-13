@@ -66,9 +66,7 @@ $(function(){
                 opt.callback&&opt.callback();
                 itemNum=opt.container.find(opt.item).length;
                 if(itemNum >= opt.max_item){
-                  opt.loading.text('没有更多了！');
-                  //上锁
-                  opt.loading.data("on",false);
+                  opt.loading.data("on",false).find('i').hide().end().find('span').text('没有更多了！');
                 }else{
                   opt.loading.data("on",true).fadeOut();
                 }
