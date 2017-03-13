@@ -95,6 +95,10 @@
                                         </li>
                                         <li><span class="tran-text">广州主仓-无仓位 色号：1</span></li>
                                         <li><span class="tran-text">￥42.90元</span> <span class="pull-right text-success">可用数：100000.00片</span></li>
+                                        <li><span class="tran-text">￥42.90元</span> <span class="pull-right text-success">可用数：100000.00片</span></li>
+                                        <li><span class="tran-text">￥42.90元</span> <span class="pull-right text-success">可用数：100000.00片</span></li>
+                                        <li><span class="tran-text">￥42.90元</span> <span class="pull-right text-success">可用数：100000.00片</span></li>
+                                        <li><span class="tran-text">￥42.90元</span> <span class="pull-right text-success">可用数：100000.00片</span></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -486,7 +490,8 @@
 
         <!-- searchPage.js 滚动加载必备 loading按钮自己通过样式调整 -->
         <div id="imloading" style="width:150px;height:30px;line-height:30px;font-size:16px;text-align:center;border-radius:3px;opacity:0.7;background:#000;margin:10px auto 30px;color:#fff;display:none">
-            I'm Loading.....
+           <i class="fa fa-spinner fa-spin"></i>
+           <span>  Loading.....</span>
         </div>
         <!-- 不用前端渲染可删除 -->
         <script id="template_item" type="text/html">
@@ -511,6 +516,7 @@
         <!-- end 不用前端渲染可删除 -->
 
         <!-- common js  -->
+        <!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script> -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.core.js"></script>
@@ -525,7 +531,7 @@
         // 不用前端渲染可删除
             var data = {
                 list: [
-                    {'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                    {'name':'ewrerwerwerwerwrwrwerwer','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
                    ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
                    ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
                    ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
@@ -549,6 +555,17 @@
         // end 不用前端渲染可删除
 
             $(function(){
+
+                // 初始化瀑布流
+                var $masonry = $('#masonry');
+                $masonry.imagesLoaded(function() {
+                    $masonry.masonry({
+                        itemSelector: '.item',
+                        columnWidth: '.item'
+                    });
+                });
+
+                // 滚动加载瀑布流
                 // 接口示例
                 // var defaluts = {
                 //     container: $('#masonry'),
@@ -558,12 +575,23 @@
                 //     scroll_distance :50, //距离下边多少距离加载
                 //     callback: null
                 //   };
-              $('#masonry').masonryOnScroll({callback:function(){
-                var html = template('template_item',data);
+                $masonry.masonryOnScroll({callback:function(){
+                    //加载上锁
+                    $('#imloading').data("on",false);
 
-                var $newElems = $(html).css({ opacity: 0}).appendTo($('#masonry'));
-                    $newElems.animate({ opacity: 1},800);
-              }});
+                    var html = template('template_item',data);
+                    var $newDom = $($.parseHTML(html)).appendTo($masonry);
+                    // $newDom.imagesLoaded(function() {
+                        $masonry.masonry( 'appended', $newDom,true);
+                    // });
+                    // var $newElems = $($.parseHTML(html)).css({ opacity: 0}).appendTo($('#masonry'));
+                    // var $newElems = $(html).css({ opacity: 0}).appendTo($('#masonry'));
+                        // $newElems.animate({ opacity: 1},800);
+                        
+                    //加载解锁
+                    $('#imloading').data("on",true);
+
+                }});
             });
         </script>
 

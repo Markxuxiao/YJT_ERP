@@ -204,8 +204,10 @@ function IframeTab(tabs, id) {
     this.label = (this.header ? this.header.find('a:first').attr('title') : null);
     this.url = (this.panel ? this.panel.find(' > iframe:first').attr('src') : null);
     this.callback = this.tabs.hashtable[id].callback;
-    this.closeRefresh = this.tabs.hashtable[id].closeRefresh;
-    this.closeActivate = this.tabs.hashtable[id].closeActivate;
+    this.closeRefresh = this.tabs.hashtable[id].closerefresh;
+    this.closeActivate = this.tabs.hashtable[id].closeactivate;
+    // this.closeRefresh = this.tabs.hashtable[id].closeRefresh;
+    // this.closeActivate = this.tabs.hashtable[id].closeActivate;
     this.orgLock = this.tabs.hashtable[id].orgLock;
 };
 

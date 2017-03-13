@@ -482,29 +482,165 @@
 
         </div> <!-- content -->
 
-
+        <!-- searchPage.js 滚动加载必备 loading按钮自己通过样式调整 -->
+        <div id="imloading" style="width:150px;height:30px;line-height:30px;font-size:16px;text-align:center;border-radius:3px;opacity:0.7;background:#000;margin:10px auto 30px;color:#fff;display:none">
+           <i class="fa fa-spinner fa-spin"></i>
+           <span>  Loading.....</span>
+        </div>
+        <!-- 不用前端渲染可删除 -->
+        <script id="template_item" type="text/html">
+            {{each list as value i}}
+                <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="portlet thumbnail">
+                        <div class="portlet-heading portlet-default">
+                            <h3 class="portlet-title text-dark">
+                                当月销售分析(汇总)
+                            </h3>
+                            <div class="portlet-widgets">
+                                <a href="#" data-toggle=""><i class="ion-ios7-star"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="panel-collapse collapse in">
+                            <div class="portlet-body">
+                                <div align="center">
+                                    <img class="img-responsive" src="./assets/images/temp/2016-11-29adminGKYS001_033.GIF">
+                                </div>
+                                <ul class="list-inline m-t-15">
+                                    <li>
+                                        <h6 class="m-t-20">ADMIN</h6>
+                                        <h6 class="m-b-0">2017-02-16</h6>
+                                    </li>
+                                    <li>
+                                        <h6 class="m-t-20">广州公司</h6>
+                                        <h6 class="m-b-0"><a href="">看趋势</a></h6>
+                                    </li>
+                                    <li>
+                                        <h6 class="m-t-20">广州系统管理</h6>
+                                        <h6 class="m-b-0"><a href="#">详细</a></h6>
+                                    </li>
+                                </ul>
+                                <div class="table-responsive">
+                                    <table class="table m-0">
+                                        <thead>
+                                            <tr>
+                                                <th>信息来源</th>
+                                                <th>跟踪率</th>
+                                                <th>进店率</th>
+                                                <th>成交率</th>
+                                                <th>进店成交率</th>
+                                                <th>失败率</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+        <!-- end 不用前端渲染可删除 -->
 
         <!-- common js  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-        <!-- jQueryPlugin js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <!-- jQueryPlugin  -->
         <!-- <script src="assets/js/masonry-docs.min.js"></script> -->
         <script src="assets/js/imagesLoaded.js"></script>
         <script src="assets/js/masonry.pkgd.min.js"></script>
-        <!-- page js -->
+        <!-- 不用前端渲染可删除 -->
+        <script src="assets/js/template.js"></script>
+        <!-- end 不用前端渲染可删除 -->
+        <!-- page js  -->
+        <script src="assets/pages/searchPage.js"></script>
         <script type="text/javascript">
-        // (function( $ ) {
-            $('#masonry').ready(function(){
-                var $container = $('#masonry');
-                $container.imagesLoaded( function () {
-                    $container.masonry({
-                        columnWidth: '.item',
-                        itemSelector: '.item'
-                    });
-                });
-            });
+        // 不用前端渲染可删除
+            var data = {
+                list: [
+                    {'name':'ewrerwerwerwerwrwrwerwer','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                   ,{'name':'M3219/地砖/316*316(优等)','chang_wei':'广州主仓-无仓位','se_hao':1,'price':42.90,'number':100000.00}
+                ]
+            };
+            $(function(){
+                // 初始化瀑布流
+                var $masonry = $('#masonry');
+                //浏览器支持检测
+               if (Modernizr.smil) {
+                    var masonry_opt = {itemSelector: '.item',columnWidth: '.item'}; //现代浏览器
+               } else {
+                   var masonry_opt = {itemSelector: '.item',columnWidth: '.item',gutter: 15};//IE10以下
+               }
 
-        // })(jQuery);
+                $masonry.imagesLoaded(function() {
+                    $masonry.masonry(masonry_opt);
+                });
+
+                // 滚动加载瀑布流
+                // 接口示例
+                // var defaluts = {
+                //     container: $('#masonry'),
+                //     item : '.item',//滚动加载容器item
+                //     loading : $('#imloading'),//加载提示dom
+                //     max_item : 999, //最大条数
+                //     scroll_distance :50, //距离下边多少距离加载
+                //     callback: null
+                //   };
+                $masonry.masonryOnScroll({callback:function(){
+                    //加载上锁
+                    $('#imloading').data("on",false);
+
+                    var html = template('template_item',data);
+                    var $newDom = $($.parseHTML(html)).appendTo($masonry);
+                     $newDom.imagesLoaded(function() {
+                        $masonry.masonry( 'appended', $newDom,true);
+                     });
+                    // var $newElems = $($.parseHTML(html)).css({ opacity: 0}).appendTo($('#masonry'));
+                    // var $newElems = $(html).css({ opacity: 0}).appendTo($('#masonry'));
+                        // $newElems.animate({ opacity: 1},800);
+                        
+                    //加载解锁
+                    $('#imloading').data("on",true);
+
+                }});
+
+            });
         </script>
     </body>
 </html>
