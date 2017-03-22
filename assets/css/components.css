@@ -817,8 +817,8 @@ File: Components
 .portlet .portlet-heading .portlet-title {
   color: #ffffff;
   float: left;
-  font-size: 15px;
-  /* font-weight: 600; */
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 0;
   margin-top: 0;
   text-transform: uppercase;
