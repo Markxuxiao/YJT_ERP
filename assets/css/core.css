@@ -77,10 +77,8 @@ a:focus {
 }
 /* Footer */
 .footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   bottom: 0px;
   color: #ccc;
-  /* text-align: left !important; */
   padding: 0px 2px;
   position: absolute;
   right: 0px;
@@ -89,9 +87,6 @@ a:focus {
   overflow: hidden;
 }
 #wrapper {
-/*  height: 100%;
-  overflow: hidden;
-  width: 100%;*/
   overflow: hidden;
       position: absolute;
       top: 0;

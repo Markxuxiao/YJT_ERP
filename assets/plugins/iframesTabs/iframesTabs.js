@@ -34,7 +34,7 @@ function IframeTabs(self, options) {
         //Tab用于控制的头模板
         tabHeaderTemplate: '<li id="cleverTabHeaderItem-#{id}" class="#{liclass}"><a href="#" title="#{title}">#{label}</a></li>',
         //Tab用于显示的Panel模板
-        tabPanelTemplate: '<div id="cleverTabPanelItem-#{id}" style="height: 100%;"><iframe frameBorder="0" style="width: 100%; display: inline; height: 100%;" src="#{src}"></iframe></div>',
+        tabPanelTemplate: '<div id="cleverTabPanelItem-#{id}" style="height: 100%;"><div class="l-tab-loading"><div class="dots-loader">Loading...</div></div><iframe frameBorder="0" style="width: 100%; display: inline; height: 100%;" src="#{src}"></iframe></div>',
         //Tab唯一id生成器
         uidGenerator: function () { return new Date().getTime(); }
 
@@ -124,7 +124,8 @@ IframeTabs.prototype.add = function (options) {
 
     var panel = $(self.options.tabPanelTemplate
         .replace(/#\{id\}/g, options.id)
-        .replace(/#\{src\}/g, options.url.toLowerCase()));
+        .replace(/#\{src\}/g, "")
+        ).data('src',options.url.toLowerCase());
 
     self.element.append(tabHeader);
 
@@ -140,7 +141,77 @@ IframeTabs.prototype.add = function (options) {
     tab.activate();
     return tab;
 };
+IframeTabs.prototype.temp_add = function (options) {
+    var self = this;
+    var uid = self.options.uidGenerator(self);
 
+    var options = $.extend({
+        id: uid,
+        url: '#',
+        label: 'New Tab',
+        closeRefresh: null,
+        closeActivate: null,
+        callback: function () { }
+    }, options || {});
+
+
+    var exsitsTab = self.getTabByUrl(options.url);
+    if (exsitsTab) {
+        if (!exsitsTab.activate()) {
+            return false;
+        }
+    }
+
+
+    var tabHeader = $(self.options.tabHeaderTemplate
+    .replace(/#\{id\}/g, options.id)
+    .replace(/#\{liclass\}/g, 'ui-state-default ui-corner-top')
+    .replace(/#\{title\}/g, options.label)
+    .replace(/#\{label\}/g, function () {
+
+        if (options.label.length > 7) {
+            return options.label.substring(0, 7) + '...';
+        }
+        return options.label;
+    } ()));
+
+
+    tabHeader.bind("click", function () {
+        if (!$(this).hasClass('ui-state-disabled')) {
+            tab.activate();
+        }
+    });
+
+    tabHeader.bind('mouseover', function () {
+        if (!$(this).hasClass('ui-state-disabled')) {
+            $(this).addClass('ui-state-hover');
+        }
+    });
+
+    tabHeader.bind('mouseout', function () {
+        if (!$(this).hasClass('ui-state-disabled')) {
+            $(this).removeClass('ui-state-hover');
+        }
+    });
+
+    var panel = $(self.options.tabPanelTemplate
+        .replace(/#\{id\}/g, options.id)
+        .replace(/#\{src\}/g, "")
+        ).data('src',options.url.toLowerCase()).addClass('ui-tabs-hide');;
+
+    self.element.append(tabHeader);
+
+    // if (self.panelContainer.attr('id').indexOf('cleverTabsPanelContainer') === 0) {
+    //     var height = self.wrapper.height() - self.element.height() - 30;
+    //     self.panelContainer.css('height', Math.floor(height / self.wrapper.height() * 100) + '%');
+    // }
+
+    self.panelContainer.append(panel);
+    self.hashtable[options.id] = { 'callback': options.callback, 'closerefresh': options.closeRefresh, 'closeactivate': options.closeActivate, 'orgLock': options.lock };
+    var tab = new IframeTab(self, options.id);
+    tab.setLock(options.locked);
+    return tab;
+};
 IframeTabs.prototype.setupContextMenu = function () {
 
 }
@@ -170,7 +241,7 @@ IframeTabs.prototype.getTabByUrl = function (url) {
     var tab;
     for (i = 0; i < frames.size(); i++) {
         var frame = $(frames[i]);
-        var src = frame.attr('src');
+        var src = frame.parent().data('src');
         if (src.indexOf('clever_tabs_time_stamp=') > 0) {
             src = src.substring(0, src.indexOf('clever_tabs_time_stamp=') - 1);
         }
@@ -202,7 +273,8 @@ function IframeTab(tabs, id) {
     this.panel = tabs.panelContainer.find('div#' + IframeTab.getFullPanelId(id));
     this.panelId = this.panel.attr('id');
     this.label = (this.header ? this.header.find('a:first').attr('title') : null);
-    this.url = (this.panel ? this.panel.find(' > iframe:first').attr('src') : null);
+    // this.url = (this.panel ? this.panel.find(' > iframe:first').attr('src') : null);
+    this.url = (this.panel ? this.panel.data('src') : null);
     this.callback = this.tabs.hashtable[id].callback;
     this.closeRefresh = this.tabs.hashtable[id].closerefresh;
     this.closeActivate = this.tabs.hashtable[id].closeactivate;
@@ -246,6 +318,14 @@ IframeTab.prototype.activate = function () {
 
     if (self.tabs.lockOnlyOne && self.tabs.element.find('>li').size() == 1) {
         self.setLock(true, false);
+    }
+//新增 判断是否第一次激活
+    if(!self.panel.data('first')){
+        self.panel.find('.l-tab-loading').show();
+        self.panel.find('iframe').attr('src',self.url).unbind('load.tab').bind('load.tab',function(){
+            self.panel.find('.l-tab-loading').hide();
+        });
+        self.panel.data('first','true');
     }
 }
 
