@@ -59,6 +59,10 @@ $(function () {
         tabs.resizePanelContainer();
     })()
 
+
+    // 隐藏加载动画
+    $("#loading").fadeOut("slow");
+
 });
 
 /**

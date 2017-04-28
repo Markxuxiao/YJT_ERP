@@ -52,11 +52,11 @@
 
 .ui-tabs {position: relative;zoom: 1;} 
 .ui-tabs .ui-tabs-nav {border-bottom: 0;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); padding: 0;}
-.ui-tabs .ui-tabs-nav li {border-radius: 5px 5px 0 0;list-style: none;background-color: #DCDCDC;float: left;position: relative;top: 1px;margin: 0 .2em 1px 0;border-bottom: 0 !important;padding: 0;white-space: nowrap;}
+.ui-tabs .ui-tabs-nav li {border-radius: 5px 5px 0 0;list-style: none;background-color: #DCDCDC;float: left;position: relative;top: 1px;margin: 0 .2em 1px 0;border-bottom: 0 !important;padding:2px 0;white-space: nowrap;}
 .ui-tabs .ui-tabs-nav li a {color: #505461 !important;cursor: pointer;padding: 2px 20px;font-weight: 600;}
 .ui-tabs .ui-tabs-nav li span{position: absolute; right: 0;top:0;}
 .ui-tabs .ui-tabs-nav li.ui-state-active {background-color: #fff;}
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 2px; }
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } 
 .ui-tabs .ui-tabs-panel { display: block; border-width: 0; background: none; padding: 0;}

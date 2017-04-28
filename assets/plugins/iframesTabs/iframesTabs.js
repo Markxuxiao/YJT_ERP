@@ -323,7 +323,7 @@ IframeTab.prototype.activate = function () {
     if(!self.panel.data('first')){
         self.panel.find('.l-tab-loading').show();
         self.panel.find('iframe').attr('src',self.url).unbind('load.tab').bind('load.tab',function(){
-            self.panel.find('.l-tab-loading').hide();
+            self.panel.find('.l-tab-loading').fadeOut("slow");
         });
         self.panel.data('first','true');
     }
