@@ -362,6 +362,7 @@
         <!-- page js -->
         <script src="assets/js/appLayout.js"></script>
         <script type="text/javascript">
+
             //窗口变化回调函数名存储空间
             var resizefunc = [];
 
@@ -375,13 +376,36 @@
                           ];
 
             // 换肤功能
-
             $(function () {
+                var theme = getCookie("ERPtheme");
+                if(theme){$('body').removeClass().addClass('fixed-left '+theme);};
                 $('#site-bg').on('click','li',function(){
                     var that =this;
                     var bg = that.id;
+                    setCookie("ERPtheme",bg,"d365");
                     $('body').removeClass().addClass('fixed-left '+bg);
                 })
+                function getCookie(name){
+                    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+                    if(arr=document.cookie.match(reg))
+                        return unescape(arr[2]);
+                        else
+                        return null;
+                }
+                function getsec(str){
+                    var str1=str.substring(1,str.length)*1;
+                    var str2=str.substring(0,1);
+                        if (str2=="s"){return str1*1000;}
+                        else if (str2=="h"){return str1*60*60*1000;}
+                        else if (str2=="d"){return str1*24*60*60*1000;}
+                }
+                function setCookie(name,value,time){
+                    var strsec = getsec(time);
+                    var exp = new Date();
+                    exp.setTime(exp.getTime() + strsec*1);
+                    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+                }
+                
             })
         </script>
     </body>

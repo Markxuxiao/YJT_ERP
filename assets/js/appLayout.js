@@ -23,30 +23,7 @@ $(function () {
             for (var i = 0; i < CONFIG.TABS.length; i++) {
                     tabs.temp_add(CONFIG.TABS[i]).setLock(true);
             }
-
             tabs.getTabByUrl(CONFIG.TABS[0].url).activate();
-            // $('.ui-tabs-nav>li').eq(1).click(function(){
-            //     var that = $(this);
-            //     var data  = that.data('first')
-            //     if (!data){
-            //         $('.ui-tabs.ui-tabs-panel>div').eq(1).find('.l-tab-loading').show();
-            //         $('.ui-tabs.ui-tabs-panel>div').eq(1).find('iframe').attr('src','myMassage.html').bind('load.tab',function(){
-            //             $('.ui-tabs.ui-tabs-panel>div').eq(1).find('.l-tab-loading').hide();
-            //         });
-            //         that.data('first','true');
-            //     }
-            //     console.log(data)
-            // });
-            // $('.ui-tabs-nav>li').eq(2).click(function(){
-            //     var that = $(this);
-            //     var data  = that.data('first')
-            //     if (!data){
-            //         $('.ui-tabs.ui-tabs-panel>div').eq(2).find('iframe').attr('src','dashboard.html');
-            //         that.data('first','true');
-            //     }
-            //     console.log(data)
-            // });
-            
         }else{
             var ele = $('#sidebar-menu').find('li.has_sub').first()
             ele.trigger('click')
