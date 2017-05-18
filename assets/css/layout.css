@@ -101,9 +101,7 @@
     -o-animation: moveFromTop 300ms ease-in-out;
     animation: moveFromTop 300ms ease-in-out;
 }
-.hoverdown:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
+
 .hoverdown:hover button{
     visibility: visible;
 }
@@ -228,6 +226,7 @@
 .item-link {
     padding: 8px 15px;
     display: block;
+    color: #333;
 }
 .tabs {
     background-color: transparent;
