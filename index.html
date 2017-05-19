@@ -48,8 +48,7 @@
                     <div class="text-center">
                         <a href="index.html" class="logo">
                         	<span><img src="assets/images/logo-white.png"/></span>
-                        </a>
-                        
+                        </a> 
                     </div>
                 </div>
 
@@ -190,7 +189,7 @@
                                     
                                 </li>
                                 <li class="hoverdown">
-                                    <a href="#" class="profile" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                                    <a href="#" class="profile" aria-expanded="true"><img src="assets/images/timg.jpg" alt="user-img"> </a>
                                     <ul class="hoverdown-menu" style="min-width: 200px;">
                                         <li>
                                         	<div class="p-l-r-10 m-t-10 text-left">
@@ -343,8 +342,8 @@
 
         </div>
         <!-- END wrapper -->
-
-
+        <!-- 加载动画 -->
+        <div id="loading" style="position: absolute;top:0;left:0;right:0;bottom:0; background-color:#fff;z-index: 999999;"></div>
 
 
 
@@ -363,6 +362,7 @@
         <!-- page js -->
         <script src="assets/js/appLayout.js"></script>
         <script type="text/javascript">
+
             //窗口变化回调函数名存储空间
             var resizefunc = [];
 
@@ -373,17 +373,39 @@
                         {'url':'myDesktop.html','label':'我的桌面'}
                         ,{'url':'myMassage.html','label':'我的消息'}
                         ,{'url':'dashboard.html','label':'智能看板'}
-                        // ,{'url':'http://amazeui.github.io/masonry/docs/panel.html','label':'test'}
                           ];
 
             // 换肤功能
-
             $(function () {
+                var theme = getCookie("ERPtheme");
+                if(theme){$('body').removeClass().addClass('fixed-left '+theme);};
                 $('#site-bg').on('click','li',function(){
                     var that =this;
                     var bg = that.id;
+                    setCookie("ERPtheme",bg,"d365");
                     $('body').removeClass().addClass('fixed-left '+bg);
                 })
+                function getCookie(name){
+                    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+                    if(arr=document.cookie.match(reg))
+                        return unescape(arr[2]);
+                        else
+                        return null;
+                }
+                function getsec(str){
+                    var str1=str.substring(1,str.length)*1;
+                    var str2=str.substring(0,1);
+                        if (str2=="s"){return str1*1000;}
+                        else if (str2=="h"){return str1*60*60*1000;}
+                        else if (str2=="d"){return str1*24*60*60*1000;}
+                }
+                function setCookie(name,value,time){
+                    var strsec = getsec(time);
+                    var exp = new Date();
+                    exp.setTime(exp.getTime() + strsec*1);
+                    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+                }
+                
             })
         </script>
     </body>
