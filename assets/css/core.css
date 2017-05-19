@@ -1131,6 +1131,7 @@ File: Topbar,Left-sidebar,Right-sidebar
   border: 2px solid #edf0f0;
   height: 36px;
   width: 36px;
+  border-radius: 5px;
 }
 .dropdown-menu-lg {
   width: 300px;
