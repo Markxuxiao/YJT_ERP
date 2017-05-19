@@ -48,8 +48,7 @@
                     <div class="text-center">
                         <a href="index.html" class="logo">
                         	<span><img src="assets/images/logo-white.png"/></span>
-                        </a>
-                        
+                        </a> 
                     </div>
                 </div>
 
@@ -99,12 +98,86 @@
                                 <!-- <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li> -->
-                                <li class="hidden-xs">
-                                    <a href="#" class="right-bar-toggle"><i class="icon-list"></i></a>
+                                <li class="right-bar-toggle">
+                                    <a href="#" class=""><i class="icon-list"></i></a>
+                                    <!-- Right Sidebar -->
+                                    <div class="side-bar right-bar nicescroll">
+                                        <div class="contact-list nicescroll m-t-10">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-star m-r-5"></i> 我的收藏
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:iframecallback('add_tab',{url:'myFocus.html',label:'我的关注'});" class="item-link">
+                                                        <i class="fa fa-calendar-plus-o m-r-5"></i> 我的关注
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                   <a href="javascript:iframecallback('add_tab',{url:'myOffences.html',label:'我的违章'});" class="item-link">
+                                                       <i class="fa fa-exclamation-circle m-r-5"></i> 我的违章
+                                                   </a>
+                                                   <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-area-chart m-r-5"></i> 我的报表
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-check-square-o m-r-5"></i> 已审工作
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+
+                                                <li role="separator" class="divider"></li>
+
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-bookmark-o m-r-5"></i> 智能秘书
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-search-plus m-r-5"></i> 智能体检
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-table m-r-5"></i> 决策看板
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-paw m-r-5"></i> 行程跟踪
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                
+                                                <li role="separator" class="divider"></li>
+
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-comment-o m-r-5"></i> 万维微信
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- /Right-bar -->
                                 </li>
-                                <li class="hidden-xs" id="site-bg">
+                                <li class="hoverdown" id="site-bg">
                                     <a href="#" class=""><i class="icon-settings" ></i></a>
-                                    <ul class="dropdown-menu">
+                                    <ul class="hoverdown-menu">
                                         <li id="bg-0"><a href="#"><i class="fa fa-circle" style="color: #365277;"></i> 天空蓝</a></li>
                                         <li id="bg-1"><a href="#"><i class="fa fa-circle" style="color: #277953;"></i> 小草绿</a></li>
                                         <li id="bg-2"><a href="#"><i class="fa fa-circle" style="color: #ccc;"></i> 优雅清新</a></li>
@@ -116,8 +189,8 @@
                                     
                                 </li>
                                 <li class="hoverdown">
-                                    <a href="#" class="profile" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
-                                    <ul class="hoverdown-menu dropdown-menu">
+                                    <a href="#" class="profile" aria-expanded="true"><img src="assets/images/timg.jpg" alt="user-img"> </a>
+                                    <ul class="hoverdown-menu" style="min-width: 200px;">
                                         <li>
                                         	<div class="p-l-r-10 m-t-10 text-left">
 		                                        <p class="text-muted font-13"><strong>用户 :</strong><span class="m-l-15">躺床铺</span></p>
@@ -265,85 +338,12 @@
             <!-- ============================================================== -->
 
 
-            <!-- Right Sidebar -->
-            <div class="side-bar right-bar nicescroll">
-                <div class="contact-list nicescroll m-t-10">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-star m-r-5"></i> 我的收藏
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="javascript:iframecallback('add_tab',{url:'myFocus.html',label:'我的关注'});" class="item-link">
-                                <i class="fa fa-calendar-plus-o m-r-5"></i> 我的关注
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                           <a href="javascript:iframecallback('add_tab',{url:'myOffences.html',label:'我的违章'});" class="item-link">
-                               <i class="fa fa-exclamation-circle m-r-5"></i> 我的违章
-                           </a>
-                           <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-area-chart m-r-5"></i> 我的报表
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-check-square-o m-r-5"></i> 已审工作
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-
-                        <li role="separator" class="divider"></li>
-
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-bookmark-o m-r-5"></i> 智能秘书
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-search-plus m-r-5"></i> 智能体检
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-table m-r-5"></i> 决策看板
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                                <i class="fa fa-paw m-r-5"></i> 行程跟踪
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        
-                        <li role="separator" class="divider"></li>
-
-                        <li class="list-group-item">
-                            <a href="#" class="item-link">
-                            	<i class="fa fa-comment-o m-r-5"></i> 万维微信
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- /Right-bar -->
+            
 
         </div>
         <!-- END wrapper -->
-
-
+        <!-- 加载动画 -->
+        <div id="loading" style="position: absolute;top:0;left:0;right:0;bottom:0; background-color:#fff;z-index: 999999;"></div>
 
 
 
@@ -362,6 +362,7 @@
         <!-- page js -->
         <script src="assets/js/appLayout.js"></script>
         <script type="text/javascript">
+
             //窗口变化回调函数名存储空间
             var resizefunc = [];
 
@@ -372,27 +373,39 @@
                         {'url':'myDesktop.html','label':'我的桌面'}
                         ,{'url':'myMassage.html','label':'我的消息'}
                         ,{'url':'dashboard.html','label':'智能看板'}
-                        // ,{'url':'http://amazeui.github.io/masonry/docs/panel.html','label':'test'}
                           ];
 
             // 换肤功能
             $(function () {
-                var unlock=true;
-                $('#site-bg').on('click',function(){
-                    var that = $(this)
-                    if(unlock){
-                        that.addClass('open')
-                        unlock=false
-                    }else{
-                        that.removeClass('open')
-                        unlock=true
-                    }
-                })
+                var theme = getCookie("ERPtheme");
+                if(theme){$('body').removeClass().addClass('fixed-left '+theme);};
                 $('#site-bg').on('click','li',function(){
                     var that =this;
                     var bg = that.id;
+                    setCookie("ERPtheme",bg,"d365");
                     $('body').removeClass().addClass('fixed-left '+bg);
                 })
+                function getCookie(name){
+                    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+                    if(arr=document.cookie.match(reg))
+                        return unescape(arr[2]);
+                        else
+                        return null;
+                }
+                function getsec(str){
+                    var str1=str.substring(1,str.length)*1;
+                    var str2=str.substring(0,1);
+                        if (str2=="s"){return str1*1000;}
+                        else if (str2=="h"){return str1*60*60*1000;}
+                        else if (str2=="d"){return str1*24*60*60*1000;}
+                }
+                function setCookie(name,value,time){
+                    var strsec = getsec(time);
+                    var exp = new Date();
+                    exp.setTime(exp.getTime() + strsec*1);
+                    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+                }
+                
             })
         </script>
     </body>

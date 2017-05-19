@@ -1,9 +1,3 @@
-/**
-* Theme: Ubold Admin Template
-* Author: Coderthemes
-* Module/App: Main Js
-*/
-
 
 !function($) {
     "use strict";
@@ -144,8 +138,6 @@ function($) {
     
     var App = function() {
         this.VERSION = "1.1.0", 
-        this.AUTHOR = "Coderthemes", 
-        this.SUPPORT = "coderthemes@gmail.com", 
         this.pageScrollElement = "html, body", 
         this.$body = $("body")
     };
@@ -164,12 +156,15 @@ function($) {
       $(window).resize(debounce(resizeitems,100));
       $("body").trigger("resize");
 
-      // right side-bar toggle
-      $('.right-bar-toggle').on('click', function(e){
-          e.preventDefault();
-          $('#wrapper').toggleClass('right-bar-enabled');
-      }); 
-
+      //right side-bar toggle
+      $('.right-bar-toggle').hover(
+        function () {
+          $('#wrapper').addClass('right-bar-enabled');
+        },
+        function () {
+          $('#wrapper').removeClass('right-bar-enabled');
+        }
+      );
       
     },
     //initilizing 
