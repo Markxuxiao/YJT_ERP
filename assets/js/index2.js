@@ -27,6 +27,23 @@ $(function(){
 
 });
 
+$(function(){
+  $('#bg-primary').find(".btn.list").each(function(){
+    $(this).click(function(){
+      var that = this;
+      var $i = $(that).find("i");
+      var $content = $(that).siblings('.link-content-link');
+      if($i.hasClass("fa-th")){
+        $i.removeClass('fa-th').addClass('fa-list');
+        $content.addClass('content-list')
+      }else{
+        $i.removeClass('fa-list').addClass('fa-th');
+        $content.removeClass('content-list')
+      }
+    })
+  })
+})
+
 
 
 // (function(){

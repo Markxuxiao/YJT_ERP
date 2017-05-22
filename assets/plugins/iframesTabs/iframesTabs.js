@@ -34,7 +34,7 @@ function IframeTabs(self, options) {
         //Tab用于控制的头模板
         tabHeaderTemplate: '<li id="cleverTabHeaderItem-#{id}" class="#{liclass}"><a href="#" title="#{title}">#{label}</a></li>',
         //Tab用于显示的Panel模板
-        tabPanelTemplate: '<div id="cleverTabPanelItem-#{id}" style="height: 100%;"><div class="l-tab-loading"><div class="dots-loader">Loading...</div></div><iframe frameBorder="0" style="width: 100%; display: inline; height: 100%;" src="#{src}"></iframe></div>',
+        tabPanelTemplate: '<div id="cleverTabPanelItem-#{id}" style="height: 100%;"><div class="l-tab-loading"></div><iframe frameBorder="0" style="width: 100%; display: inline; height: 100%;" src="#{src}"></iframe></div>',
         //Tab唯一id生成器
         uidGenerator: function () { return new Date().getTime(); }
 
@@ -197,7 +197,7 @@ IframeTabs.prototype.temp_add = function (options) {
     var panel = $(self.options.tabPanelTemplate
         .replace(/#\{id\}/g, options.id)
         .replace(/#\{src\}/g, "")
-        ).data('src',options.url.toLowerCase()).addClass('ui-tabs-hide');;
+        ).data('src',options.url.toLowerCase()).addClass('ui-tabs-hide');
 
     self.element.append(tabHeader);
 
@@ -213,7 +213,13 @@ IframeTabs.prototype.temp_add = function (options) {
     return tab;
 };
 IframeTabs.prototype.setupContextMenu = function () {
-
+    var self = this;
+    self.element.contextmenu(function(event) {
+            event.preventDefault()
+            if(confirm("是否刷新当前激活页面？")){
+                self.getCurrentTab().refresh();
+            }
+        });
 }
 
 IframeTabs.prototype.getCurrentUniqueId = function () {
@@ -322,9 +328,9 @@ IframeTab.prototype.activate = function () {
 //新增 判断是否第一次激活
     if(!self.panel.data('first')){
         self.panel.find('.l-tab-loading').show();
-        self.panel.find('iframe').attr('src',self.url).unbind('load.tab').bind('load.tab',function(){
+        self.panel.find(' > iframe:first').unbind('load.tab').bind('load.tab',function(){
             self.panel.find('.l-tab-loading').fadeOut("slow");
-        });
+        }).attr('src',self.url);
         self.panel.data('first','true');
     }
 }
@@ -391,7 +397,12 @@ IframeTab.prototype.refresh = function () {
         self.url = self.url.substring(0, self.url.indexOf('clever_tabs_time_stamp=') - 1);
     }
     var newUrl = self.url.concat(self.url.indexOf('?') < 0 ? '?' : '&').concat('clever_tabs_time_stamp=').concat(new Date().getTime());
-    self.panel.find(' > iframe:first').attr('src', newUrl);
+    // self.panel.find(' > iframe:first').attr('src', newUrl);
+    self.panel.find('.l-tab-loading').show();
+    self.panel.find(' > iframe:first').unbind('load.tab').bind('load.tab',function(){
+        self.panel.find('.l-tab-loading').fadeOut("slow");
+    }).attr('src',newUrl);
+    self.panel.data('first','true');
 }
 
 IframeTab.prototype.setDisable = function (disable) {
