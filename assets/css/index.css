@@ -428,7 +428,11 @@ body{
 }
 
 
-.btn-ee8742 {
+.btn.btn-ee8742 {
+    background-color: #eaa97d;
+    color: #fff;
+}
+.btn.btn-ee8742:hover{
     background-color: #ee8742;
     color: #fff;
 }

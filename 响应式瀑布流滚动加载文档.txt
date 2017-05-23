@@ -1,0 +1,42 @@
+//html模板 所有宽度必须控制
+<div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+
+
+//监听滚动
+$('body').masonryOnScroll({
+	callback: function() {
+		//加载上锁
+		$('#imloading').data("on", false);
+		pageindex = pageindex + 1;			  
+		Getmsg(pageindex);
+	}
+});
+
+//初始化
+$masonry.imagesLoaded(function() {
+	$masonry.masonry({
+          itemSelector: '.item',
+          columnWidth: '.item'
+      });
+});
+
+
+
+//重新排
+$masonry.masonry('destroy');
+$(html).appendTo($masonry);
+$masonry.imagesLoaded(function() {
+	$masonry.masonry({
+          itemSelector: '.item',
+          columnWidth: '.item'
+      });
+});
+
+
+
+//动态添加
+var datahtml = $(html);
+var $newDom = datahtml.appendTo($masonry);
+$newDom.imagesLoaded(function() {
+	$masonry.masonry( 'appended', $newDom,true);
+});

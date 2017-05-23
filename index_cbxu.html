@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    	<meta name="renderer" content="webkit">
+    	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="万维软件新界面">
+        <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+        <title>Anywell - 万维软件</title>
+
+        <!-- commen css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <!-- plugin css -->
+        <link href="assets/plugins/iframesTabs/style.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+        <!-- page css -->
+        <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="assets/js/modernizr.min.js"></script>
+
+
+    </head>
+
+
+    <body class="fixed-left bg-1">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="index.html" class="logo">
+                        	<span><img src="assets/images/logo-white.png"/></span>
+                        </a> 
+                    </div>
+                </div>
+
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar" role="navigation">
+                    <div class="container">
+                        <div class=" ">
+                            <div class="pull-left" style="width: 275px;">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <div class="input-group m-t-10">
+                                            <div id="header-seach" class="input-group-btn">
+                                                <button type="button" class="btn waves-effect waves-light dropdown-toggle" data-toggle="dropdown" style="overflow: hidden; position: relative;"><span>功能搜索</span><span class="caret" style="margin-left:5px;"></span></button>
+                                                <ul class="dropdown-menu" >
+                                                    <li><a href="javascript:void(0)">功能搜索</a></li>
+                                                    <li><a href="javascript:void(0)">报表搜索</a></li>
+                                                    <li><a href="javascript:void(0)">微信号</a></li>
+                                                    <li><a href="javascript:void(0)">产品库存</a></li>
+                                                    <li><a href="javascript:void(0)">通讯录</a></li>
+                                                    <li><a href="javascript:void(0)">客户信息</a></li>
+                                                    <li><a href="javascript:void(0)">订单状态</a></li>
+                                                </ul>
+                                            </div>
+                                            <input id="header-seach-input" type="text" id="example-input3-group3" name="example-input3-group3" class="form-control" placeholder="请输入搜索内容">
+                                            <div class="input-group-btn">
+                                                <button id="header-seach-btn" type="button" class="btn waves-effect waves-light"  style="overflow: hidden; position: relative;"><i class="fa fa-search"></i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div> <!-- form-group -->
+                                  
+                                </form>
+                            </div>
+
+                            <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
+			                     <input type="text" placeholder="搜索..." class="form-control">
+			                     <a href=""><i class="fa fa-search"></i></a>
+			                </form> -->
+
+							<div class="m-l-15 pull-left navbar-img">
+								<!-- <img src="assets/images/culture-bar.png"/> -->
+                                <h2 style="color:#fff;">       世界的  中国的  建材的</h2>
+							</div>
+							
+                            <ul class="nav navbar-nav navbar-right pull-right">
+                                <!-- <li class="hidden-xs">
+                                    <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
+                                </li> -->
+                                <li class="right-bar-toggle">
+                                    <a href="#" class=""><i class="icon-list"></i></a>
+                                    <!-- Right Sidebar -->
+                                    <div class="side-bar right-bar nicescroll">
+                                        <div class="contact-list nicescroll m-t-10">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-star m-r-5"></i> 我的收藏
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:iframecallback('add_tab',{url:'myFocus.html',label:'我的关注'});" class="item-link">
+                                                        <i class="fa fa-calendar-plus-o m-r-5"></i> 我的关注
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                   <a href="javascript:iframecallback('add_tab',{url:'myOffences.html',label:'我的违章'});" class="item-link">
+                                                       <i class="fa fa-exclamation-circle m-r-5"></i> 我的违章
+                                                   </a>
+                                                   <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-area-chart m-r-5"></i> 我的报表
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-check-square-o m-r-5"></i> 已审工作
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+
+                                                <li role="separator" class="divider"></li>
+
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-bookmark-o m-r-5"></i> 智能秘书
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-search-plus m-r-5"></i> 智能体检
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-table m-r-5"></i> 决策看板
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-paw m-r-5"></i> 行程跟踪
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                                
+                                                <li role="separator" class="divider"></li>
+
+                                                <li class="list-group-item">
+                                                    <a href="#" class="item-link">
+                                                        <i class="fa fa-comment-o m-r-5"></i> 万维微信
+                                                    </a>
+                                                    <span class="clearfix"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- /Right-bar -->
+                                </li>
+                                <li class="hoverdown" id="site-bg">
+                                    <a href="#" class=""><i class="icon-settings" ></i></a>
+                                    <ul class="hoverdown-menu">
+                                        <li id="bg-0"><a href="#"><i class="fa fa-circle" style="color: #365277;"></i> 天空蓝</a></li>
+                                        <li id="bg-1"><a href="#"><i class="fa fa-circle" style="color: #277953;"></i> 小草绿</a></li>
+                                        <li id="bg-2"><a href="#"><i class="fa fa-circle" style="color: #ccc;"></i> 优雅清新</a></li>
+                                        <li id="bg-3"><a href="#"><i class="fa fa-circle" style="color: #142030;"></i> 沉稳大气</a></li>
+                                        <li id="bg-4"><a href="#"><i class="fa fa-circle" style="color: #f12f40;"></i> 五彩缤纷</a></li>
+                                        <li id="bg-5"><a href="#"><i class="fa fa-circle" style="color: #b3c483;"></i> 生机盎然</a></li>
+                                        <li id="bg-6"><a href="#"><i class="fa fa-circle" style="color: #277953;"></i> 炫彩夺目</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                <li class="hoverdown">
+                                    <a href="#" class="profile" aria-expanded="true"><img src="assets/images/timg.jpg" alt="user-img"> </a>
+                                    <ul class="hoverdown-menu" style="min-width: 200px;">
+                                        <li>
+                                        	<div class="p-l-r-10 m-t-10 text-left">
+		                                        <p class="text-muted font-13"><strong>用户 :</strong><span class="m-l-15">躺床铺</span></p>
+		                                        <p class="text-muted font-13"><strong>短信 :</strong><span class="m-l-15">1889.90</span></p>
+		                                        <p class="text-muted font-13"><strong>账套 :</strong><span class="m-l-15">总公司->扬海OA</span></p>
+                                        		<p class="text-muted font-13"><strong>权限 :</strong></p>
+	                                        	<select id="select-jurisdiction" class="selectpicker show-tick" data-style="btn-white">
+													<option value="1">扬海OA</option>
+													<option value="2">高级免费义务游戏测试工程师</option>
+													<option value="3">高级删库跑路数据库管理员</option>
+												</select>
+                                        	</div>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="ti-settings m-r-5"></i> 设置</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#" class=""><i class="ti-power-off m-r-5"></i> 退出</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+
+            <!-- ========== Left Sidebar Start ========== -->
+
+            <div class="left side-menu">
+                <div class="leaderboard">
+					<ol class="m-b-15">
+						<h1>应用栏目一</h1>
+						<!--一级列表-->
+						<li>
+							<a href="javascript:iframecallback('add_tab',{url:'myDesktop.html',label:'通讯录'});">
+								<!-- <i class="ti-dashboard"></i> -->
+								<mark>我的桌面</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<!-- <i class="ti-menu-alt"></i> -->
+								<mark>功能第一项的</mark>
+							</a>
+						</li>
+						<!--以及列表 END-->
+					</ol>  
+					<ol>
+						<h1>应用栏目二</h1>
+					
+						<!--一级列表-->
+						<li>
+							<a href="javascript:iframecallback('add_tab',{url:'addressBook.html',label:'通讯录'});">
+								<mark>通讯录</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:iframecallback('add_tab',{url:'searchCustomer.html',label:'客户搜索'});">
+								<mark>客户搜索</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:iframecallback('add_tab',{url:'searchStocks.html',label:'库存查询'});">
+								<mark>库存查询</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:iframecallback('add_tab',{url:'dashboard.html',label:'智能看板'});">
+								<mark>智能看板</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:iframecallback('add_tab',{url:'page-5.html',label:'功能第5项'});">
+								<mark>功能第5项</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<mark>功能第5项</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<mark>功能第5项</mark>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<mark>功能第5项</mark>
+							</a>
+						</li>
+					
+						<!--以及列表 END-->
+					</ol>  
+				</div>
+				
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Left Sidebar End -->
+
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content m-r-0 p-r-0">
+                    <div class="container m-r-0 p-r-0">
+
+                        <!-- Page-Title -->
+                        <div class="row m-r-0 p-r-0">
+
+                            <div class="col-sm-12 m-r-0 p-r-0">
+                                <div id="tabs" style="margin: 0px;">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- container -->
+                </div><!-- content -->
+
+                <footer class="footer">
+                    <iframe src="footer.html" frameborder="0" style="height: 20px;overflow: hidden;width: 100%;"></iframe>
+                    
+                </footer>
+
+            </div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+
+            
+
+        </div>
+        <!-- END wrapper -->
+        <!-- 加载动画 -->
+        <div id="loading" style="position: absolute;top:0;left:0;right:0;bottom:0; background-color:#fff;z-index: 999999;"></div>
+
+
+
+        <!-- common js  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+        <!-- jQueryPlugin js -->
+        
+        <script src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="assets/plugins/iframesTabs/iframesTabs.js"></script>
+        <!-- page js -->
+        <script src="assets/js/appLayout.js"></script>
+        <script type="text/javascript">
+
+            //窗口变化回调函数名存储空间
+            var resizefunc = [];
+
+            // 全局配置专用
+            var CONFIG = CONFIG||{};
+            //配置输出默认tab页面并锁定，并激活第一个
+            CONFIG.TABS = [
+                        {'url':'myDesktop.html','label':'我的桌面'}
+                        ,{'url':'myMassage.html','label':'我的消息'}
+                        ,{'url':'dashboard.html','label':'智能看板'}
+                          ];
+
+            // 换肤功能
+            $(function () {
+                var theme = getCookie("ERPtheme");
+                if(theme){$('body').removeClass().addClass('fixed-left '+theme);};
+                $('#site-bg').on('click','li',function(){
+                    var that =this;
+                    var bg = that.id;
+                    setCookie("ERPtheme",bg,"d365");
+                    $('body').removeClass().addClass('fixed-left '+bg);
+                })
+                function getCookie(name){
+                    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+                    if(arr=document.cookie.match(reg))
+                        return unescape(arr[2]);
+                        else
+                        return null;
+                }
+                function getsec(str){
+                    var str1=str.substring(1,str.length)*1;
+                    var str2=str.substring(0,1);
+                        if (str2=="s"){return str1*1000;}
+                        else if (str2=="h"){return str1*60*60*1000;}
+                        else if (str2=="d"){return str1*24*60*60*1000;}
+                }
+                function setCookie(name,value,time){
+                    var strsec = getsec(time);
+                    var exp = new Date();
+                    exp.setTime(exp.getTime() + strsec*1);
+                    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+                }
+                
+            })
+        </script>
+    </body>
+</html>
