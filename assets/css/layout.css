@@ -152,8 +152,26 @@
 #sidebar-menu li{
     color: #fff;
 }
-#sidebar-menu li.has_sub{
-
+#sidebar-menu li.has_sub:before{
+    background: #3a7358;
+    bottom: auto;
+    content: "";
+    height: 8px;
+    left: 23px;
+    margin-top: 7px;
+    position: absolute;
+    right: auto;
+    width: 8px;
+    z-index: 1;
+    border-radius: 50%;
+}
+#sidebar-menu li.has_sub:after{
+    border-left: 1px solid #3a7358;
+    bottom: 0;
+    content: "";
+    left: 27px;
+    position: absolute;
+    top: 0;
 }
 #sidebar-menu > ul > li > a {
     color: #fff;
@@ -166,7 +184,8 @@
 }
 
 #sidebar-menu .menu-title {
-    font-weight: 600;
+    border-left: 5px solid #00903c;
+    background-color: rgba(0, 0, 0, 0.12);
 }
 
 #sidebar-menu .subdrop {
@@ -516,13 +535,14 @@ Leaderboard
     background-color: rgba(0,0,0,.5);
 }
 
-#wrapper.enlarged .left.side-menu #sidebar-menu ul ul li:hover > ul {
+#sidebar-menu ul ul li:hover > ul {
     margin-left: 0 !important;
     left: 106px;
 }
-#wrapper.enlarged .left.side-menu #sidebar-menu ul > li {
+#sidebar-menu ul > li {
     position: relative;
     white-space: normal;
+    padding: 5px 0 5px 36px;
 }
 
 

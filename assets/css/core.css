@@ -1282,13 +1282,6 @@ body.fixed-left .side-menu.left {
   border-left: 3px solid #5fbeaa;
   color: #5fbeaa !important;
 }
-#sidebar-menu > ul > li > a {
-  color: #36404a;
-  display: block;
-  padding: 2px 20px;
-  margin: 5px 0px;
-  /*  border-left: 3px solid #ffffff;*/
-}
 #sidebar-menu > ul > li > a:hover {
   color: #5fbeaa;
   text-decoration: none;
