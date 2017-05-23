@@ -93,6 +93,7 @@ body{
 #sidebar-menu ul ul a {
     font-weight: 700;
 }
+
 #sidebar-menu .item-disabled {
     background: none !important;
     border-left: none;
@@ -239,7 +240,6 @@ body{
 }
 
 .link-content h5 {
-	width: 100px;
 	margin-left: 10px;
     padding-left: 5px;
     border-left: 3px solid #00913a;
@@ -248,10 +248,12 @@ body{
     line-height: 1.5;
 }
 .link-content .btn.btn-white {
+    background-color: #f7f7f7;
 	border: none !important;
+    margin-left: 10px;
 }
 .link-content .btn.btn-white i {
-	font-size: 20px;
+	font-size: 14px;
 }
 .link-content-title {
 	display: inline-block;
@@ -276,10 +278,39 @@ body{
 }
 .link-content .link-content-link a h6{
     margin: 3px 0;
-    text-align: center;
 }
-
-
+.link-content-link.content-list a{
+    
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 0 20px;
+    background-color: #f3f3f3;
+    color: #333;
+    border-radius: 5px;
+}
+.link-content-link.content-list a:hover{
+    background-color: #e8e8e8;
+}
+.link-content-link.content-list a h6{
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    overflow: hidden;
+}
+.link-content-link.content-list a img{
+    display: none;
+}
+.link-content-link .link-content-link-fenlei{
+    font-weight: normal;
+    border-left: none;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    padding: 5px 2px;
+}
 #wrapper.enlarged .left.side-menu #sidebar-menu ul ul li:hover > ul {
     margin-left: 0 !important;
     left: 106px;

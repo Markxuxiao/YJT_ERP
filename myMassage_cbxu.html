@@ -27,7 +27,6 @@
 
         <script src="assets/js/modernizr.min.js"></script>
 
-
     </head>
 
 
@@ -46,53 +45,53 @@
                             #scroller .tab-pane.on>.btn-toolbar{display: block;}
                         </style>
                         <ul class="nav nav-tabs tabs tabs-top">
-                            <li class="tab"> 
+                            <li class="tab active"> 
                                 <a href="#settings-21" data-toggle="tab" aria-expanded="false"> 
-                                    <span class="visible-xs"><i class="fa fa-cog"></i></span> 
-                                    <span class="hidden-xs">待批</span> 
+                                    <span><i class="fa fa-cog"></i></span> 
+                                    <span>待批</span> 
                                 </a> 
                             </li> 
-                            <li class="active tab">
+                            <li class="tab">
                                 <a href="#home-2" data-toggle="tab" aria-expanded="false"> 
-                                    <span class="visible-xs"><i class="fa fa-home"></i></span> 
-                                    <span class="hidden-xs">公告</span><span class="psa-t-5 badge badge-danger">2</span>
+                                    <span><i class="fa fa-home"></i></span> 
+                                    <span>公告</span><span class="psa-t-5 badge badge-danger">2</span>
                                 </a> 
                             </li> 
                             <li class="tab"> 
                                 <a href="#profile-2" data-toggle="tab" aria-expanded="false"> 
-                                    <span class="visible-xs"><i class="fa fa-user"></i></span> 
-                                    <span class="hidden-xs">会议</span> 
+                                    <span><i class="fa fa-user"></i></span> 
+                                    <span>会议</span> 
                                 </a> 
                             </li> 
                             <li class="tab"> 
                                 <a href="#messages-2" data-toggle="tab" aria-expanded="true"> 
-                                    <span class="visible-xs"><i class="fa fa-envelope-o"></i></span> 
-                                    <span class="hidden-xs">批复</span> 
+                                    <span><i class="fa fa-envelope-o"></i></span> 
+                                    <span>批复</span> 
                                 </a> 
                             </li> 
                             <li class="tab"> 
                                 <a href="#settings-2" data-toggle="tab" aria-expanded="false"> 
-                                    <span class="visible-xs"><i class="fa fa-cog"></i></span> 
-                                    <span class="hidden-xs">文件</span>
+                                    <span><i class="fa fa-cog"></i></span> 
+                                    <span>文件</span>
                                 </a> 
                             </li> 
                             <li class="tab"> 
                                 <a href="#profile-21" data-toggle="tab" aria-expanded="false"> 
-                                    <span class="visible-xs"><i class="fa fa-user"></i></span> 
-                                    <span class="hidden-xs">留言</span> 
+                                    <span><i class="fa fa-user"></i></span> 
+                                    <span>留言</span> 
                                 </a> 
                             </li> 
                             <li class="tab"> 
                                 <a href="#messages-21" data-toggle="tab" aria-expanded="true"> 
-                                    <span class="visible-xs"><i class="fa fa-envelope-o"></i></span> 
-                                    <span class="hidden-xs">任务</span> 
+                                    <span><i class="fa fa-envelope-o"></i></span> 
+                                    <span>任务</span> 
                                 </a> 
                             </li> 
                             
                         </ul> 
                         <div id="tab-content" class="tab-content"> 
                             <div id="scroller" class="scroller" data-height="290px" data-always-visible="1" data-rail-visible="0">
-                                <div class="tab-pane" id="settings-21">
+                                <div class="tab-pane active" id="settings-21">
                                     <style>
                                         .gridly .active,.gridly .number{position:absolute;height:20px;background: hsla(0, 2%, 17%, 0.7);text-align:center;line-height:20px;}
                                         .gridly .number{bottom:0;width:100%;color: #fff;}
@@ -236,7 +235,7 @@
                                     </div>
                                     
                                 </div>
-                                <div class="tab-pane active" id="home-2">
+                                <div class="tab-pane" id="home-2">
                                     <div class="btn-toolbar m-t-20" role="toolbar">
                                         <div class="btn-group">
                                             <button href="javascript:;" type="button" class="btn btn-ee8742 waves-effect waves-light "><i class="fa fa-plus"></i> 新建</button>
@@ -245,141 +244,163 @@
                                             <button type="button" class="btn btn-ee8742 waves-effect waves-light "><i class="fa fa-list"></i> 查看列表</button>
                                         </div>
                                     </div>
-                                    <div class="m-b-20 m-r-10 msg-section">
-                                        <a href="">
-                                            <div class="msg-original">
-                                            
-                                                <p>原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。</p>
-                                                <div class="msg-detail">
-                                                    <span>制訂人：安倍五十六</span>
-                                                    <span>制訂日期：2016-02-30</span>
-                                                    <span>计划完成日期：2016-02-30</span>
-                                                </div>
-                                            
-                                                
-                                                
-                                            </div>
-                                        </a>
-                                        <div class="row">
-                                            <span class="pull-right m-r-10">
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
-                                                </div>
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
-                                                </div>
-                                            </span>
-                                        </div>
+                                    
+                                    <!--内容块-->
+                                    <div class="card-box m-b-20 p-0">
+                                    	
+	                                    <div class="panel panel-color panel-primary m-b-0">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													躺·床破
+													<span class="pull-right">2017-05-22</span>
+												</h3>
+											</div>
+											<div class="panel-body">
+												
+												<p class="m-b-10">
+													原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。
+												</p>
+											
+                                        		<a href="javascript:void(0);">
+													<i class="glyphicon glyphicon-download-alt"></i> 这是个文件.doc
+		                                        </a>
+											</div>
+											<div class="panel-footer">
+												<div class="row">
+		                                            <span class="pull-left m-l-10">
+		                                            	<small class="text-muted m-r-15">已读:25</small>
+		                                            	<small class="text-muted m-r-15">评论:13</small>
+		                                            </span>
+		                                            <span class="pull-right m-r-10">
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
+		                                                </div>
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
+		                                                </div>
+		                                            </span>
+		                                        </div>
+											</div>
+										</div>
+                                    	
                                     </div>
                                     
-                                    <div class="m-b-20 m-r-10 msg-section">
-                                        <a href="">
-                                            <div class="msg-original">
-                                            
-                                                <p>原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。</p>
-                                                <div class="msg-detail">
-                                                    <span>制訂人：安倍五十六</span>
-                                                    <span>制訂日期：2016-02-30</span>
-                                                    <span>计划完成日期：2016-02-30</span>
-                                                </div>
-                                            
-                                                
-                                                
-                                            </div>
-                                        </a>
-                                        <div class="row">
-                                            <span class="pull-right m-r-10">
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
-                                                </div>
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="m-b-20 m-r-10 msg-section">
-                                        <a href="">
-                                            <div class="msg-original">
-                                            
-                                                <p>原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。</p>
-                                                <div class="msg-detail">
-                                                    <span>制訂人：安倍五十六</span>
-                                                    <span>制訂日期：2016-02-30</span>
-                                                    <span>计划完成日期：2016-02-30</span>
-                                                </div>
-                                            
-                                                
-                                                
-                                            </div>
-                                        </a>
-                                        <div class="row">
-                                            <span class="pull-right m-r-10">
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
-                                                </div>
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="m-b-20 m-r-10 msg-section">
-                                        <a href="">
-                                            <div class="msg-original">
-                                            
-                                                <p>原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。</p>
-                                                <div class="msg-detail">
-                                                    <span>制訂人：安倍五十六</span>
-                                                    <span>制訂日期：2016-02-30</span>
-                                                    <span>计划完成日期：2016-02-30</span>
-                                                </div>
-                                            
-                                                
-                                                
-                                            </div>
-                                        </a>
-                                        <div class="row">
-                                            <span class="pull-right m-r-10">
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
-                                                </div>
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="m-b-20 m-r-10 msg-section">
-                                        <a href="">
-                                            <div class="msg-original">
-                                            
-                                                <p>原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。</p>
-                                                <div class="msg-detail">
-                                                    <span>制訂人：安倍五十六</span>
-                                                    <span>制訂日期：2016-02-30</span>
-                                                    <span>计划完成日期：2016-02-30</span>
-                                                </div>
-                                            
-                                                
-                                                
-                                            </div>
-                                        </a>
-                                        <div class="row">
-                                            <span class="pull-right m-r-10">
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
-                                                </div>
-                                                <div class="btn-group">
-                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
-                                                </div>
-                                            </span>
-                                        </div>
+                                    <div class="card-box m-b-20 p-0">
+                                    	
+	                                    <div class="panel panel-color panel-primary m-b-0">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													躺·床破
+													<span class="pull-right">2017-05-22</span>
+												</h3>
+											</div>
+											<div class="panel-body">
+												
+												<p class="m-b-10">
+													原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。
+												</p>
+											
+                                        		<a href="javascript:void(0);">
+													<i class="glyphicon glyphicon-download-alt"></i> 这是个文件.doc
+		                                        </a>
+											</div>
+											<div class="panel-footer">
+												<div class="row">
+		                                            <span class="pull-left m-l-10">
+		                                            	<small class="text-muted m-r-15">已读:25</small>
+		                                            	<small class="text-muted m-r-15">评论:13</small>
+		                                            </span>
+		                                            <span class="pull-right m-r-10">
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
+		                                                </div>
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
+		                                                </div>
+		                                            </span>
+		                                        </div>
+											</div>
+										</div>
+                                    	
                                     </div>
                                     
+                                    <div class="card-box m-b-20 p-0">
+                                    	
+	                                    <div class="panel panel-color panel-primary m-b-0">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													躺·床破
+													<span class="pull-right">2017-05-22</span>
+												</h3>
+											</div>
+											<div class="panel-body">
+												
+												<p class="m-b-10">
+													原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。
+												</p>
+											
+                                        		<a href="javascript:void(0);">
+													<i class="glyphicon glyphicon-download-alt"></i> 这是个文件.doc
+		                                        </a>
+											</div>
+											<div class="panel-footer">
+												<div class="row">
+		                                            <span class="pull-left m-l-10">
+		                                            	<small class="text-muted m-r-15">已读:25</small>
+		                                            	<small class="text-muted m-r-15">评论:13</small>
+		                                            </span>
+		                                            <span class="pull-right m-r-10">
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
+		                                                </div>
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
+		                                                </div>
+		                                            </span>
+		                                        </div>
+											</div>
+										</div>
+                                    	
+                                    </div>
+                                    
+                                    <div class="card-box m-b-20 p-0">
+                                    	
+	                                    <div class="panel panel-color panel-primary m-b-0">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													躺·床破
+													<span class="pull-right">2017-05-22</span>
+												</h3>
+											</div>
+											<div class="panel-body">
+												
+												<p class="m-b-10">
+													原文：這是原文。這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文這是原文。
+												</p>
+											
+                                        		<a href="javascript:void(0);">
+													<i class="glyphicon glyphicon-download-alt"></i> 这是个文件.doc
+		                                        </a>
+											</div>
+											<div class="panel-footer">
+												<div class="row">
+		                                            <span class="pull-left m-l-10">
+		                                            	<small class="text-muted m-r-15">已读:25</small>
+		                                            	<small class="text-muted m-r-15">评论:13</small>
+		                                            </span>
+		                                            <span class="pull-right m-r-10">
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa fa-commenting-o"></i> 回复</a>
+		                                                </div>
+		                                                <div class="btn-group">
+		                                                    <a href="#" type="button" class="btn btn-default btn-xs waves-effect waves-light "><i class="fa  fa-check-square-o"></i> 确认</a>
+		                                                </div>
+		                                            </span>
+		                                        </div>
+											</div>
+										</div>
+                                    	
+                                    </div>
                                     
                                 </div> 
                                 <div class="tab-pane" id="profile-2">
@@ -464,6 +485,7 @@
                                             <button type="button" class="btn btn-ee8742 waves-effect waves-light "><i class="fa fa-list"></i> 查看列表</button>
                                         </div>
                                     </div>
+                                   
                                     <div class="m-b-20 m-r-10 msg-section">
                                         <a href="">
                                             <div class="msg-original">
