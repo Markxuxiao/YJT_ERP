@@ -281,17 +281,14 @@ body{
 }
 .link-content .link-content-link a p{
     display: none;
-    display: block;
-    height: 30px;
-    height: 42px;
-    overflow: hidden;
-    color: #9e9e9e;
 }
 
 .link-content-link.content-list a{
     width: 200px;
     text-align: left;
     padding: 0 10px;
+    margin: 0 10px;
+    height: inherit;
     color: #333;
     overflow: hidden;
 }
@@ -310,6 +307,10 @@ body{
 }
 .link-content-link.content-list a p{
     display: block;
+    margin-bottom: 3px;
+    height: 44px;
+    overflow: hidden;
+    color: #9e9e9e;
 }
 
 

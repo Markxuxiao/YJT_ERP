@@ -667,7 +667,7 @@ File: Components
   letter-spacing: 0.03em;
 }
 .panel-footer {
-  background: #f4f8fb;
+  background: #fff;
   border-top: 0px;
 }
 .panel-color .panel-title {
@@ -700,11 +700,7 @@ File: Components
 .panel-inverse > .panel-heading {
   background-color: #4c5667;
 }
-.panel-border .panel-heading {
-  background-color: #ffffff;
-  border-top: 3px solid #DADFE2 !important;
-  padding: 10px 20px 0px;
-}
+
 .panel-border .panel-body {
   padding: 15px 20px 20px 20px;
 }
