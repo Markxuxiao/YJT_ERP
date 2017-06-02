@@ -407,6 +407,17 @@
                 }
                 
             })
+
+            $(function(){
+                var html = '<li id="refreshTab" class="ui-state-active ui-corner-top" style="float:right;padding:3px 10px;"><a class="ui-icon ui-icon-refresh" style="padding:0;" href="javascript:void(0);" title="刷新当前页">刷新</a></li>';
+                $('#tabs').find('.ui-tabs-nav').append(html);
+                $('#tabs').on('click','#refreshTab',function(event){
+                    event.preventDefault()
+                    tabs.getCurrentTab().refresh();
+                })
+            })
+
+            
         </script>
     </body>
 </html>

@@ -3,7 +3,7 @@
 $.fn.iframesTabs = function (options) {
     var self = this;
     var options = $.extend({
-        setupContextMenu: true
+        setupContextMenu: false
     }, options || {});
     var tabs = new IframeTabs(self, options);
     if (options.setupContextMenu) {
