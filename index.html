@@ -409,8 +409,8 @@
             })
 
             $(function(){
-                var html = '<li id="refreshTab" class="ui-state-active ui-corner-top" style="float:right;padding:3px 10px;"><a class="ui-icon ui-icon-refresh" style="padding:0;" href="javascript:void(0);" title="刷新当前页">刷新</a></li>';
-                $('#tabs').find('.ui-tabs-nav').append(html);
+                var html = '<div id="refreshTab" class="ui-state-active ui-corner-top" style="position:absolute;top:0;right:0;padding: 4px 10px;border-radius: 5px 5px 0 0;"><a class="ui-icon ui-icon-refresh" style="padding:0;" href="javascript:void(0);" title="刷新当前页">刷新</a></div>';
+                $('#tabs').append(html);
                 $('#tabs').on('click','#refreshTab',function(event){
                     event.preventDefault()
                     tabs.getCurrentTab().refresh();
