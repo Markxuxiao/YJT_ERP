@@ -16,7 +16,6 @@ File: Components
 }
 .btn-primary,
 .btn-success,
-.btn-default,
 .btn-info,
 .btn-warning,
 .btn-danger,
@@ -24,19 +23,6 @@ File: Components
 .btn-purple,
 .btn-pink {
   color: #ffffff !important;
-}
-.btn-default,
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active,
-.btn-default.active,
-.btn-default.focus,
-.btn-default:active,
-.btn-default:focus,
-.btn-default:hover,
-.open > .dropdown-toggle.btn-default {
-  background-color: #5fbeaa !important;
-  border: 1px solid #5fbeaa !important;
 }
 .btn-white,
 .btn-white:hover,
