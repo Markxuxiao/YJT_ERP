@@ -4,7 +4,7 @@
         <meta charset="utf-8">
     	<meta name="renderer" content="webkit">
     	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <meta name="description" content="万维软件新界面">
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
         <title>Anywell - 万维软件</title>
@@ -407,6 +407,17 @@
                 }
                 
             })
+
+            $(function(){
+                var html = '<div id="refreshTab" class="ui-state-active ui-corner-top" style="position:absolute;top:0;right:0;padding: 4px 10px;border-radius: 5px 5px 0 0;"><a class="ui-icon ui-icon-refresh" style="padding:0;" href="javascript:void(0);" title="刷新当前页">刷新</a></div>';
+                $('#tabs').append(html);
+                $('#tabs').on('click','#refreshTab',function(event){
+                    event.preventDefault()
+                    tabs.getCurrentTab().refresh();
+                })
+            })
+
+            
         </script>
     </body>
 </html>

@@ -16,7 +16,6 @@ File: Components
 }
 .btn-primary,
 .btn-success,
-.btn-default,
 .btn-info,
 .btn-warning,
 .btn-danger,
@@ -24,19 +23,6 @@ File: Components
 .btn-purple,
 .btn-pink {
   color: #ffffff !important;
-}
-.btn-default,
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active,
-.btn-default.active,
-.btn-default.focus,
-.btn-default:active,
-.btn-default:focus,
-.btn-default:hover,
-.open > .dropdown-toggle.btn-default {
-  background-color: #5fbeaa !important;
-  border: 1px solid #5fbeaa !important;
 }
 .btn-white,
 .btn-white:hover,
@@ -48,7 +34,7 @@ File: Components
 .btn-white:focus,
 .btn-white:hover,
 .open > .dropdown-toggle.btn-white {
-  border: 1px solid #eaeaea !important;
+  border: 1px solid #ccc !important;
   background-color: #ffffff;
   color: #4c5667;
 }
@@ -667,7 +653,7 @@ File: Components
   letter-spacing: 0.03em;
 }
 .panel-footer {
-  background: #f4f8fb;
+  background: #fff;
   border-top: 0px;
 }
 .panel-color .panel-title {
@@ -700,11 +686,7 @@ File: Components
 .panel-inverse > .panel-heading {
   background-color: #4c5667;
 }
-.panel-border .panel-heading {
-  background-color: #ffffff;
-  border-top: 3px solid #DADFE2 !important;
-  padding: 10px 20px 0px;
-}
+
 .panel-border .panel-body {
   padding: 15px 20px 20px 20px;
 }

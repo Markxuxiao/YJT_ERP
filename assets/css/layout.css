@@ -175,7 +175,7 @@
 }
 #sidebar-menu > ul > li > a {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     font-family: "Microsoft YaHei";
 }
 #sidebar-menu > ul > li > a:hover {
@@ -542,7 +542,7 @@ Leaderboard
 #sidebar-menu ul > li {
     position: relative;
     white-space: normal;
-    padding: 5px 0 5px 36px;
+    padding: 2px 0 2px 36px;
 }
 
 

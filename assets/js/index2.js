@@ -3,7 +3,7 @@ $(function(){
   function toggle (btn) {
     this.unlock = true;
     this.btn = btn;
-    this.content = this.btn.siblings(".link-content-link");
+    this.content = this.btn.parent().find('.link-content-link');
     this.btn.click(function(){
       this.onclick();
     }.bind(this));
@@ -26,13 +26,13 @@ $(function(){
   });
 
 });
-
+// 纯文本视图切换
 $(function(){
   $('#bg-primary').find(".btn.list").each(function(){
     $(this).click(function(){
       var that = this;
       var $i = $(that).find("i");
-      var $content = $(that).siblings('.link-content-link');
+      var $content = $(that).parent().find('.link-content-link');
       if($i.hasClass("fa-th")){
         $i.removeClass('fa-th').addClass('fa-list');
         $content.addClass('content-list')

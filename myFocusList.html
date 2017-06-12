@@ -2,9 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <meta name="description" content="万维软件新界面">
 
         <title>Anywell - 万维软件</title>
@@ -48,10 +47,21 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-sm-9">
-                                    <h4 style="font-weight: bold;">
-                                        部门周计划
-                                    </h4>
+                                    <form class="form-inline" role="form">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-primary m-l-0" style="display: inline-block;margin-top: 0;margin-bottom: 0;">
+                                                <input id="checkboxall" type="checkbox">
+                                                <label for="checkboxall">
+                                                    &nbsp;全选
+                                                </label>
+                                            </div>
+                                            <a id="checked_remove" href="javascrpt:;" class="m-l-10" style="vertical-align: bottom;">删除</a>
+                                        </div>
+
+                                        
+                                    </form>
                                 </div>
+
                                 <div class="col-sm-3">
                                     <form role="form">
                                         <div class="">
@@ -59,10 +69,12 @@
                                                 <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control" placeholder="搜索">
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn waves-effect btn-white"><i class="fa fa-search"></i></button>
+                                                    <button type="button" class="btn waves-effect btn-white"><i class="fa fa-refresh"></i></button>
                                                 </span>
                                             </div>
                                         </div>
                                     </form>
+
                                 </div> 
                             </div>
 
@@ -70,287 +82,255 @@
                     </div>
                 </div> <!-- end row -->
                 
-
-
-
-
                 <div id="masonry" class="row table-list">
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
 
-                            <ul class="list-unstyled clearfix">
-                                <li class="clearfix">
-                                    <span style="font-size:18px; font-weight: bold; float: left;">周星星 </span>
-                                    <span class="text-dark pull-right">直属领导审核</span>
-                                </li>
-                                <li><span>递交：部门周计划-直属领导审核</span></li>
-                                <li>
-                                    <span class="text-dark">2015-11-01</span>
-                                </li>
-                            </ul>
-
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
                     <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
                                 </div>
-                                
                             </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
                             <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox4" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox4">
+                                            &nbsp;
+                                        </label>
+                                    </div>
                                 </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
                                 <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card-box">
-                            <ul class="list-unstyled transaction-list m-b-0 on">
-                                <li>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <span class="tran-text">部门周计划-直属领导审核</a></span>
-                                        </li>
-                                        <li><span class="tran-text">周星星 2015-11-01 12:00:46</span></li>
-                                        <li><span class="tran-text">20174323425545635324mtan</span></li>
-                                        <li><span class="tran-text">单据  部门周计划</span></li>
-                                        <li><span class="tran-text">内容  递交：部门周计划-直属领导审核</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="card-box-foot clearfix m-t-5">
-                                <div class="pull-right">
-                                    <button class="btn btn-default waves-effect waves-light btn-xs">批单</button>
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
                                 </div>
                                 
                             </div>
                         </div>
                     </div>
 
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
+                                </div>
+                            </div>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox5" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox5">
+                                            &nbsp;
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
+                                </div>
+                            </div>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox4" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox4">
+                                            &nbsp;
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
+                                </div>
+                            </div>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox4" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox4">
+                                            &nbsp;
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
+                                </div>
+                            </div>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox4" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox4">
+                                            &nbsp;
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
+                                </div>
+                            </div>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox4" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox4">
+                                            &nbsp;
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
+                                </div>
+                            </div>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox4" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox4">
+                                            &nbsp;
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="card-box">
+                            <div class="card-box-head">
+                                <img src="./assets/images/index/1 (6).png" alt="" width="40" height="40" style="position: absolute;">
+                                <div class="member-info" style="margin-left: 50px;">
+                                    <h4 class="m-t-0 m-b-5 header-title"><b>部门周计划</b><span class="text-success pull-right">直属领导审批</span></h4>
+                                    <p class="text-muted">2015-11-01 12:45</p>
+                                </div>
+                            </div>
+                            <div class="card-box-content">
+                                <h5 style="font-weight: bold;">王某某</h5>
+                                <p>递交：部门周计划-直属领导审核</p>
+                            </div>
+                            <div class="card-box-foot clearfix m-t-5">
+                                <div class="pull-left">
+                                    <div class="checkbox checkbox-primary m-l-0">
+                                        <input id="checkbox4" type="checkbox" class="checkbox_item">
+                                        <label for="checkbox4">
+                                            &nbsp;
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascrpt:;" class="btn btn-default remove" style="width: 80px;">删 除</a>
+                                    <a href="javascrpt:;" class="btn btn-default" style="width: 80px;">审 批</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                    
                 </div><!-- end row -->
 
@@ -367,5 +347,40 @@
         <script src="assets/js/masonry-docs.min.js"></script>
         <!-- page js -->
         <script src="assets/pages/searchPage.js"></script>
+
+
+        <script>
+            $(function () {
+                //工具栏
+                    //全选
+                    $("#checkboxall").click(function(){   
+                        if(this.checked){   
+                              $("#masonry :checkbox").prop("checked", true);
+                        }else{   
+                              $("#masonry :checkbox").prop("checked", false);
+                        }   
+                    });
+                    //全选删除
+                    $("#checked_remove").click(function(){
+                          var data=[];
+                          $("#masonry :checkbox").each(function(){
+                              var that=this;
+                              if($(that).prop("checked")){
+                                  data.push(that.id)
+                              }
+                          });
+                          alert(data)
+                          if (data.length==0) {
+                                  alert("您还未选中任意一项！")
+                          }
+                    })
+                  //单个删除
+                  $('#masonry').on('click','.remove',function(e){
+                        e.preventDefault();
+                        var that=$(this).parent().parent().find('.checkbox_item');
+                        console.log(that.attr('id'))
+                  })
+            })
+        </script>
     </body>
 </html>
