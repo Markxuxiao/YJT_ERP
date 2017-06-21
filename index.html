@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -73,6 +73,17 @@
                                                 </ul>
                                             </div>
                                             <input id="header-seach-input" type="text" id="example-input3-group3" name="example-input3-group3" class="form-control" placeholder="请输入搜索内容">
+                                            <!-- 历史搜索 -->
+                                            <div id="history-search" style="position: absolute;top: 34px;display: none;">
+                                                <ul class="dropdown-menu" style="display: block;">
+                                                    <li><a href="javascript:void(0)">历史搜索词1</a></li>
+                                                    <li><a href="javascript:void(0)">微信号</a></li>
+                                                    <li><a href="javascript:void(0)">历史搜索词2</a></li>
+                                                    <li><a href="javascript:void(0)">通讯录</a></li>
+                                                    <li><a href="javascript:void(0)">客户信息</a></li>
+                                                    <li><a href="javascript:void(0)">订单状态</a></li>
+                                                </ul>
+                                            </div>
                                             <div class="input-group-btn">
                                                 <button id="header-seach-btn" type="button" class="btn waves-effect waves-light"  style="overflow: hidden; position: relative;"><i class="fa fa-search"></i>
                                                 </button>
@@ -407,7 +418,7 @@
                 }
                 
             })
-
+            // 刷新功能
             $(function(){
                 var html = '<div id="refreshTab" class="ui-state-active ui-corner-top" style="position:absolute;top:0;right:0;padding: 4px 10px;border-radius: 5px 5px 0 0;"><a class="ui-icon ui-icon-refresh" style="padding:0;" href="javascript:void(0);" title="刷新当前页">刷新</a></div>';
                 $('#tabs').append(html);
@@ -416,7 +427,22 @@
                     tabs.getCurrentTab().refresh();
                 })
             })
+            // 历史搜索记录
+            $(function(){
+                var $historySearch = $('#history-search'),
+                    $searchInput = $('#header-seach-input'),
+                    $items = $historySearch.find("a");
 
+                $searchInput.focusin(function(){
+                    $historySearch.show()
+                }).blur(function(){
+                    setTimeout(function(){$historySearch.hide()},200)
+                })
+                $historySearch.on('click','a',function(e){
+                    var that = $(e.target);
+                    $searchInput.val(that.text());
+                })
+            })
             
         </script>
     </body>
