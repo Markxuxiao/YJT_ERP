@@ -69,7 +69,7 @@
                                                 <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control" placeholder="搜索">
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn waves-effect btn-white"><i class="fa fa-search"></i></button>
-                                                    <button type="button" class="btn waves-effect btn-white"><i class="fa fa-refresh"></i></button>
+                                                    <button type="button" class="btn waves-effect btn-white"><i class="fa fa-refresh "></i></button>
                                                 </span>
                                             </div>
                                         </div>
@@ -338,7 +338,10 @@
 
         </div> <!-- content -->
 
-
+        <div id="imloading" style="width: 150px; height: 30px; line-height: 30px; font-size: 16px; text-align: center; border-radius: 3px; opacity: 0.7; background: rgb(0, 0, 0); margin: 10px auto 30px; color: rgb(255, 255, 255); display: none;">
+           <i class="fa fa-spinner fa-spin"></i>
+           <span>  Loading.....</span>
+        </div>
 
         <!-- commen js  -->
         <script src="assets/js/jquery.min.js"></script>
@@ -380,6 +383,17 @@
                         var that=$(this).parent().parent().find('.checkbox_item');
                         console.log(that.attr('id'))
                   })
+
+                  //刷新
+                  $('.fa-refresh').click(function(){
+                    $.showIndicator();
+                    setTimeout(function(){
+                        
+                        //加载数据
+                        $.hideIndicator();
+                    },2000)
+                  })
+                  
             })
         </script>
     </body>
