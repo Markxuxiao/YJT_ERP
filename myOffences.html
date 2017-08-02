@@ -86,7 +86,7 @@
                                                       </button>
                                                       <ul class="dropdown-menu dropdown-menu-right">
                                                         <li><a href="#">我的桌面</a></li>
-                                                        <li><a href="#">刷新</a></li>
+                                                        <li><a href="#" class="refresh">刷新</a></li>
                                                         <li><a href="#">其他</a></li>
                                                       </ul>
                                                     </div>
@@ -294,6 +294,16 @@
                     console.log(that.attr('id'))
                 })
 
+
+
+                //刷新
+                $('.refresh').click(function(){
+                    $masonry.empty();
+                    $masonry.masonry('destroy');
+                    first_init = true;
+                    addItems();
+
+                })
 
             });
         </script>
