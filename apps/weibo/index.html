@@ -1,0 +1,452 @@
+<html>
+
+<head>
+	<title>Moments</title>
+	<meta charset="UTF-8"/>
+	<meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/Moments.css" />
+</head>
+
+<body >
+	<div  id="app"  style="position: absolute;top: 0;right: 0;bottom: 0;left: 0;overflow: auto;" v-infinite-scroll='scrollGetMassage' >
+		<div class="permalink-container" >
+			
+			<!--顶部导航-->
+			<header id="permalink_header" class="headroom-header headroom-header--fixed hide-from-print headroom headroom--not-bottom headroom--pinned headroom--top" role="banner">
+				<div class="headroom-container">
+					<nav class="headroom-nav-wrapper" role="navigation">
+						<ul class="headroom-nav">
+							<li class="headroom-nav_item">
+								<a class="headroom-header_link" href="javascript:void(0);">
+									<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+									<span class="complimentary push--left">发文</span>
+								</a>
+							</li>
+							<li class="headroom-nav_item">
+								<a class="headroom-header_link" href="javascript:void(0);" @click="initGetMassage('all12313')">
+									<i class="fa fa-tint" aria-hidden="true"></i>
+									<span class="complimentary push--left">动态</span>
+								</a>
+							</li>
+							<li class="headroom-nav_item">
+								<a class="headroom-header_link" href="javascript:void(0);">
+									<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+									<span class="complimentary push--left">我的</span>
+								</a>
+							</li>
+							<li class="headroom-nav_item">
+								<a class="headroom-header_link" href="./moments_waterlist.html">
+									<i class="fa fa-flag" aria-hidden="true"></i>
+									<span class="complimentary push--left">排行</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!--信息块-->
+			<weibo-component v-for="(item, index) in weibo" :key="item.id" :weibo="item.data" :reply="item.reply" :likes="item.likes"></weibo-component>
+			<div class="preloader-indicator-modal" v-show="loading"><span class="preloader preloader-white"></span></div>
+		</div>
+	</div>
+	
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<!-- <script src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js"></script> -->
+	<script src="https://cdn.bootcss.com/vue/2.3.2/vue.js"></script>
+	<!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+
+	<script type="text/x-template" id="weibo-component-template">
+		<div class="permalink">
+			<div class="permalink-inner">
+				<div class="tweet permalink-tweet">
+					<!--源信息-->
+					<div class="content clearfix">
+						<div class="permalink-header">
+							<a class="account-group" href="javascript:void(0);">
+								<avatar-component 	:userid='weibo.userid' 
+													:avatarStyle = '{position: "absolute",
+																	width: "48px",
+																	height: "48px",
+																	left: "16px",
+																	borderRadius: "6px"}' />
+								<span class="FullNameGroup">
+							        <strong class="fullname">{{weibo.name}}</strong>
+								</span>
+								<span class="username"><b>{{weibo.time}}</b></span>
+							</a>
+						</div>
+					</div>
+					<!--文字信息-->
+					<div class="">
+						<p class="TweetTextSize TweetTextSize--jumbo">{{weibo.massage}}</p>
+					</div>
+					<!--图片信息-->
+					<div class="AdaptiveMediaOuterContainer" v-for="img in weibo.imgs" >
+						<div class="AdaptiveMedia is-square">
+							<div class="AdaptiveMedia-container">
+								<div class="AdaptiveMedia-singlePhoto">
+									<div class="AdaptiveMedia-photoContainer">
+										<img  v-bind:src="img" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--基础信息-->
+					<div class="tweet-details-fixer">
+						<div class="tweet-stats-container">
+							<ul class="stats">
+								<li class="stat-count" v-on:click="replyShow">
+									<a class="request-retweeted-popup">
+										<span class="fa fa-comments"></span>&nbsp;评论 
+										<strong>{{weibo.comment_num}}</strong> 
+									</a>
+								</li>
+								<li class="stat-count" :class="{active:UIlikeActive}" v-on:click="handle_like">
+									<a class="request-favorited-popup">
+										<span class="fa fa-thumbs-up" :class="{active: ilike}" ></span>&nbsp;喜欢 
+										<strong>{{weibo.like_num}}</strong>
+									</a>
+								</li>
+								<li class="avatar-row">
+									<a class="size24" href="javascript:void(0);" v-for="item in likes">
+										<img class="avatar size24" :src="item.avatar">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--输入操作-->
+			<div class="inline-reply-tweetbox" v-show="UIreplyShow">
+				<form class="t1-form tweet-form is-reply" method="post" target="tweet-post-iframe">
+					<div class="tweet-content">
+						<div class="RichEditor RichEditor--emojiPicker">
+							<div class="RichEditor-mozillaCursorWorkaround">&nbsp;</div>
+							<div class="RichEditor-container u-borderRadiusInherit">
+								<!--输入框-->
+								<div class="RichEditor-scrollContainer u-borderRadiusInherit">
+									<textarea name="tweet" class="tweet-box rich-editor is-showPlaceholder" v-model='reply_massage'></textarea>
+								</div>
+							</div>
+							<div class="RichEditor-mozillaCursorWorkaround">&nbsp;</div>
+						</div>
+					</div>
+					<div class="TweetBoxToolbar">
+						<div class="TweetBoxToolbar-tweetButton tweet-button">
+							<button class="btn primary-btn tweet-action tweet-btn" type="button" v-on:click='handle_reply'>
+							    <span class="button-text replying-text">
+							    	<i class="fa fa-comments" aria-hidden="true"></i> 回复
+							    </span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--评论回复-->
+			<div class="replies-to permalink-replies">
+				<div class="tweets-wrapper">
+					<div class="ThreadedDescendants">
+						<div class="stream-container">
+							<div class="stream">
+								<div class="stream-items" v-bind:class="{ active: UIshow }">
+									<reply-component v-for="(item, index) in reply" :key="item.id" :data="item"></reply-component>
+								</div>
+								
+								<!--底部缓冲-->
+								<div class="stream-footer " v-show="UIshow">
+									<div class="timeline-end has-items ">
+										<div class="stream-end">
+												<button class="stream-loading-btn" v-show="UIshow" @click="hide_me()" >
+													加载更多评论
+													<i class="fa fa-angle-down" aria-hidden="true"></i>
+												</button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--评论回复 end-->
+
+		</div>
+
+	</script>
+	<script type="text/x-template" id="reply-component-template">
+		<div class="ThreadedConversation--loneTweet">
+			<li class="stream-item">
+				<div class="tweet descendant permalink-descendant-tweet">
+					<!--评论回复内容区-->
+					<div class="content">
+						<div class="stream-item-header">
+							<avatar-component 	
+												:userid='data.userid' 
+												:avatarStyle = '{position: "absolute",
+																width: "42px",
+																height: "42px",
+																left: "16px",
+																borderRadius: "6px"}' />
+							<span class="FullNameGroup">
+								<strong class="fullname">{{data.name}}</strong>
+							</span>
+							
+							<small class="time">
+								<a href="javascript:void(0);" class="tweet-timestamp" title="下午9:53 - 2017年4月13日" >
+									<span class="">{{data.time}}</span>
+								</a>
+							</small>
+						</div>
+						<div class="">
+							<p class="TweetTextSize tweet-text">{{data.massage}}</p>
+						</div>
+					</div>
+				</div>
+
+			</li>
+		</div>
+	</script>
+
+	<script>
+		var weibo = function(userid){
+			return	[
+					{	
+						data:{
+							userid:userid,
+							name: userid,
+							avatar:"img/5Q4S5Dqm_normal.jpg",
+							time:"2017年4月13日 - 下午9:41",
+							massage:"震惊！项羽力大无穷，拿得起破轮也！",
+							imgs:["img/C9WNyccU0AU3G9L.jpg","img/C9WNyccU0AU3G9L.jpg"],
+							comment_num:4,
+							like_num:56
+						},
+						likes:[
+							{userid:"fsfsfsf",avatar:"img/5Q4S5Dqm_normal.jpg"},
+							{userid:"fsfsfsf",avatar:"img/ZpBk8nZG_normal.png"},
+							{userid:"fsfsfsf",avatar:"img/60e4df8510d5bbbbd8ea1c1674f6e261_normal.jpeg"},
+							{userid:"fsfsfsf",avatar:"img/default_profile_normal.png"},
+							{userid:"fsfsfsf",avatar:"img/army-guy-small_normal.png"},
+							{userid:"fsfsfsf",avatar:"img/qj1PFDLd_normal.jpg"},
+							{userid:"fsfsfsf",avatar:"img/YD-aKgNh_normal.jpg"}
+						],
+						reply:[
+							{userid:"大王",name: "大王",time:"2017年4月13日 - 下午9:41",massage:"震惊！项羽力大无穷，拿得起破轮也！",avatar:"img/5Q4S5Dqm_normal.jpg"},
+							{userid:"老二",name: "老二",time:"2017年4月13日 - 下午9:41",massage:"震惊！项羽力大无穷，拿得起破轮也！",avatar:"img/5Q4S5Dqm_normal.jpg"},
+							{userid:"老三",name: "老三",time:"2017年4月13日 - 下午9:41",massage:"震惊！项羽力大无穷，拿得起破轮也！",avatar:"img/5Q4S5Dqm_normal.jpg"},
+							{userid:"老四",name: "老四",time:"2017年4月13日 - 下午9:41",massage:"震惊！项羽力大无穷，拿得起破轮也！",avatar:"img/5Q4S5Dqm_normal.jpg"},
+							{userid:"老五",name: "老五",time:"2017年4月13日 - 下午9:41",massage:"震惊！项羽力大无穷，拿得起破轮也！",avatar:"img/5Q4S5Dqm_normal.jpg"}
+						]
+					},
+					{	
+						data:{
+							userid:"adfddded22",
+							name: userid,
+							avatar:"img/5Q4S5Dqm_normal.jpg",
+							time:"2117年4月13日 - 下午9:41",
+							massage:"2222222震惊！项羽力大无穷，拿得起破轮也！",
+							imgs:["img/C9WNyccU0AU3G9L.jpg"],
+							comment_num:34,
+							like_num:256
+						},
+						likes:[
+							{userid:"fsfsfsf",avatar:"img/5Q4S5Dqm_normal.jpg"},
+							{userid:"fsfsfsf",avatar:"img/ZpBk8nZG_normal.png"},
+							{userid:"fsfsfsf",avatar:"img/60e4df8510d5bbbbd8ea1c1674f6e261_normal.jpeg"},
+							{userid:"fsfsfsf",avatar:"img/default_profile_normal.png"},
+							{userid:"fsfsfsf",avatar:"img/army-guy-small_normal.png"}
+						],
+						reply:[
+							{userid:"adfddded22",name: "拿1破仑",time:"2017年4月13日 - 下午9:41",massage:"震惊！项羽力大无穷，拿得起破轮也！",avatar:"img/5Q4S5Dqm_normal.jpg"},
+							{userid:"adfddded32",name: "拿2破仑",time:"2017年4月13日 - 下午9:41",massage:"震惊！项羽力大无穷，拿得起破轮也！",avatar:"img/5Q4S5Dqm_normal.jpg"}
+						]
+					}
+				];
+		}
+
+		Vue.component('avatar-component',{
+			template:'<a class="account-group" href="javascript:void(0);" v-on:click="avatarClick"><img src="img/2zcbjFRz_bigger.jpg" alt="" :style="avatarStyle"></a>',
+			props:['avatarStyle','userid'],
+			methods:{	
+				avatarClick: function() {
+					this.userid;
+					console.log(this.userid)
+					Hub.$emit('avatarClick',this.userid)
+				}
+			}
+		})
+
+		Vue.component('weibo-component', {
+			template: '#weibo-component-template',
+			props: ['weibo','likes','reply'],
+			data:function(){
+				return	{
+							UIshow:true,
+							UIreplyShow:false,
+							UIlikeActive:false,
+							reply_massage:''
+						}
+			},
+			computed: {
+				ilike:function(){
+					if (this.likes.length < 1) return;
+
+					for (var i = this.likes.length - 1; i >= 0; i--) {
+						if(this.likes[i].userid == vm.userid){
+							return true;
+						}
+					}
+					return false;
+				},
+				show_more_reply: function () {
+					return this.reply.length > 3 ? this.UIshow = true : this.UIshow = false;
+				}
+			},
+			methods:{
+				handle_reply:function(weibo_id,reply){
+					if(this.reply_massage == "") return;
+					var that = this;
+					var data = this.reply_massage;
+					this.reply_massage = "";
+					vm.loading = true;
+
+					// var API = "data/Formchat_PC.aspx?Tmethod=Getweibochat.pinglun";
+					// $.post(API,{tnr:encodeURIComponent(reply),tsystem_id:id},function(result){
+						
+					// });
+
+					setTimeout(function(){
+						// API 获取添加成功的 回复 json
+						var reply_data = {userid:"大王444",name: "大王444",time:"2017年4月13日 - 下午9:41",massage:data,avatar:"img/5Q4S5Dqm_normal.jpg"};
+						that.reply.unshift(reply_data);
+						that.weibo.comment_num++;
+						vm.loading = false;
+					},1000)
+					
+				},
+				handle_like:function(weibo_id){
+					var that = this;
+					vm.loading = true;
+					that.UIlikeActive=!that.UIlikeActive;
+					that.UIlikeActive ? that.weibo.like_num++ : that.weibo.like_num--;
+
+					// var API = "data/Formchat_PC.aspx?Tmethod=Getweibochat.zan";
+					// $.post(API,{tnr:"",tsystem_id:weibo_id},function(result){
+					// 	vm.loading = false;
+					// }
+					setTimeout(function(){
+						// API 根据UIlikeACtive发送对应接口数据 当前登录用户是否喜欢这篇weibo
+						vm.loading = false;
+					},1000)
+					
+				},
+				replyShow:function() {
+					this.UIreplyShow = !this.UIreplyShow
+				},
+				hide_me: function(index) {
+					return this.UIshow=!this.UIshow
+				}
+			},
+			created:function(){
+				this.show_more_reply;
+			}
+		})
+
+		Vue.component('reply-component', {
+			template: '#reply-component-template',
+			props: ['data']
+		})
+
+		// 注册一个全局自定义指令 v-focus
+		Vue.directive('infiniteScroll', {
+		  // 当绑定元素插入到 DOM 中。
+			bind:function (el,binding) {
+				var el = $(el)
+				//console.log(el)
+				el.on('scroll', function(){
+						var height = parseFloat(el.height())
+						var scrollTop = parseFloat(el.scrollTop())
+						var totalHeight = height + scrollTop
+						// console.log(`${el.height()}-${el.scrollTop()}-${totalHeight}-${el[0].scrollHeight}`)
+						if (el[0].scrollHeight - totalHeight <= 3) {
+						// console.log(`${el.height()}-${el.scrollTop()}-${el[0].scrollHeight}`)
+						// console.log(binding.expression)
+						vm[binding.expression]()
+					}
+				})
+			}
+		})
+		// 全局事件代理中心
+		var Hub = new Vue();
+		var vm = new Vue({
+			el: '#app',
+			data:{
+				userid:null,//当前用户id
+				scrollUserid:null,//当前页面加载用户id
+				page:1,//当前加载页
+				loading:true,//加载动画
+				weibo:[]
+			},
+			methods: {
+				/**
+				 * @param {string} userid - 用户id 或默认全部"all"
+				 * @param {number} page   - 当前加载到第几页
+				 * @param {function} callback
+				 */
+				getMassage:function(userid,page,callback){
+					// console.log("getMassage")
+					var that = this;
+					this.loading = true;
+					setTimeout(function(){
+						var data = weibo(userid);
+						callback && callback(data);
+						that.loading = false;
+					},2000)
+				},
+				initGetMassage:function(userid){
+					var that = this;
+					this.scrollUserid = userid;
+					this.page = 1;
+					this.weibo = [];
+					this.getMassage(userid,1,function(data){
+						that.weibo = data;
+						console.log(data)
+						// $('#app').animate({scrollTop:0},'fast');
+					})
+				},
+				scrollGetMassage:function(){
+					var that = this;	
+					if(!this.loading){
+						console.log("scrollGetMassage")
+						this.getMassage(this.scrollUserid,that.page,function(data){
+							that.weibo = that.weibo.concat(data)
+							that.page++;
+						})
+					}
+				}
+
+			},
+			created : function () {
+				var that = this;
+				this.initGetMassage("all");
+				Hub.$on('avatarClick',function(id){
+					that.initGetMassage(id)
+				})
+			},
+			mounted : function () {
+				this.getMassage(this.userid,this.page,"");
+			}
+		})
+	</script>
+	<!-- // 没有路由，所以无法使用URL直达某一用户界面 -->
+
+</body>
+
+</html>

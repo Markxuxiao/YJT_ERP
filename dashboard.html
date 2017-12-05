@@ -1397,7 +1397,7 @@
                if (Modernizr.smil) {
                     var masonry_opt = {itemSelector: '.item',columnWidth: '.item'}; //现代浏览器
                } else {
-                   var masonry_opt = {itemSelector: '.item',columnWidth: '.item',gutter: 15};//IE10以下
+                   var masonry_opt = {itemSelector: '.item',columnWidth: '.item',gutter: 0};//IE10以下
                }
 
                 $masonry.imagesLoaded(function() {

@@ -202,11 +202,11 @@
                 // 初始化瀑布流
                 var $masonry = $('#masonry');
                 //浏览器支持检测
-                if (Modernizr.smil) {
-                    var masonry_opt = {itemSelector: '.item',columnWidth: '.item'}; //现代浏览器
-                } else {
-                    var masonry_opt = {itemSelector: '.item',columnWidth: '.item',gutter: 15};//IE10以下
-                }
+                // if (Modernizr.smil) {
+                //     var masonry_opt = {itemSelector: '.item',columnWidth: '.item'}; //现代浏览器
+                // } else {
+                    var masonry_opt = {itemSelector: '.item',columnWidth: '.item',gutter: 0};//IE10以下
+                //}
                 function addItems() {
                     // $.post(ajax_list.api,{page:ajax_list.page_index},function(data){
 

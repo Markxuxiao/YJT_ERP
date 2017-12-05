@@ -1,0 +1,826 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title id="Formtitle">工作日志列表</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link href="http://oa.gzwebway.com:8888/oa/minu_boot/demo.css" rel="stylesheet" type="text/css" />
+	<script src="http://oa.gzwebway.com:8888/oa/scripts/boot.js" type="text/javascript"></script>
+	<script src="http://oa.gzwebway.com:8888/oa/mini_grid.js" type="text/javascript"></script>
+	<script src="http://oa.gzwebway.com:8888/oa/mini_grid_public.js" type="text/javascript"></script>
+	<style type="text/css">
+		body{
+			margin:0;padding:0;border:0;width:100%;height:100%;overflow:hidden;
+		}    
+		.header
+		{
+			background:url(minu_boot/header.gif) repeat-x 0 -1px;
+		}
+
+		.folder
+		{
+			background:url(images/folder.gif) no-repeat 50% 50%;
+		}
+		.mini-tree-expand .folder
+		{
+			background:url(images/folder-open.gif) no-repeat 50% 50%;
+		}
+		.file
+		{
+			background:url(images/file.gif) no-repeat 50% 50%;        
+		}
+
+		.blueColor a
+		{
+			text-decoration:underline;
+			color:blue;
+		}
+		.style3 { font-size: 12px; background: url(images/button8026.gif); border: 0px}
+		.style4 { font-size: 12px; font-weight: bold; background: url(images/button8026.gif); border: 0px}
+		.styleformbutton1 { font-size: 12px; background: url(images/button8026.gif); border: 0px;width:80px ; height:26px}
+		.styleformbutton2 { font-size: 12px; font-weight: bold; background: url(images/button8026.gif); border: 0px;width:80px ; height:26px}
+		.styleformbutton3 { font-size: 12px; background: url(images/button8026.gif); border: 0px;width:80px ; height:26px}
+		.styleformbutton4 { font-size: 12px; font-weight: bold; background: url(images/button8026.gif); border: 0px;width:80px ; height:26px}
+		.stylereadonlytext {BORDER-RIGHT: #d5dee9 1px solid; BACKGROUND-COLOR: #D4D4D4;PADDING-RIGHT: 3px; BACKGROUND-POSITION: left top; BORDER-TOP: #d5dee9 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #d5dee9 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #d5dee9 1px solid; BACKGROUND-REPEAT: no-repeat}
+		.styletext {BORDER-RIGHT: #d5dee9 1px solid; PADDING-RIGHT: 3px; BACKGROUND-POSITION: left top; BORDER-TOP: #d5dee9 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #d5dee9 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #d5dee9 1px solid; BACKGROUND-REPEAT: no-repeat}
+		.styletext1 {BORDER-BOTTOM-COLOR: #9D9D9D; LINE-HEIGHT: normal; BORDER-RIGHT-WIDTH: 0px; BACKGROUND-COLOR: #ffffff; FONT-VARIANT: normal; FONT-STYLE: normal; BORDER-TOP-COLOR: black; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 1px; COLOR: #000000; BORDER-RIGHT-COLOR: black; FONT-SIZE: 10pt; BORDER-LEFT-COLOR: black; BORDER-LEFT-WIDTH: 0px; FONT-WEIGHT: normal}
+		.stylelabel{font-size: 11pt;color:#333333}
+		.stylelabel1{font-size: 16pt;color:#333333}
+		.stylerb{font-size: 16pt;color:#333333}
+		.stylecb{font-size: 16pt;color:#333333}
+		.HTDIV{
+			width:96%;
+			height:200px;
+			margin:auto;
+			border: 1px solid #696;padding:5px 5px 20px 20px; width: 96%;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-webkit-box-shadow: #666 0px 0px 10px;
+			-moz-box-shadow: #666 0px 0px 10px;
+			box-shadow: #666 0px 0px 10px;
+			overflow-y:auto;
+		}
+	</style>
+</head>
+
+
+<body  bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+	<form method="post" action="list_bill.aspx?TNW=BLANK&amp;Tformnamecn=686&amp;Turl=GZRZ.ASPX&amp;Ttablename=GZRZ&amp;" id="form1" style="height:100%">
+		<div class="aspNetHidden">
+			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+			<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTg4Mjk4MDI1D2QWBGYPFgIeCWlubmVyaHRtbAUS5bel5L2c5pel5b+X5YiX6KGoZAIBD2QWFGYPDxYCHgRUZXh0BRLlt6XkvZzml6Xlv5fliJfooahkZAIBDzwrAAkBAA8WBB4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnQCBGQWCGYPZBYCZg8VAwtDeE1lbnUuYXNweBgyMDE1MDYyOTE2MDQzNzI1ODQ4YWRtaW4Y5bel5L2c5pel5b+X5aGr5YaZ5p+l6K+iZAIBD2QWAmYPFQMLQ3hNZW51LmFzcHgZMjAxMTAzMTcyMTMxNDk0ODY1NllMTElORxjlt6XkvZzlh7rli6TnirblhrXmn6Xor6JkAgIPZBYCZg8VAwtDeE1lbnUuYXNweA4yMDA2MzE3ODUyNDMyNBLlt6XkvZzml6Xlv5fmn6Xor6JkAgMPZBYCZg8VAwtDeE1lbnUuYXNweBkyMDExMDMyMzIxNDkyNzYyODQyWUxMSU5HGeeOsOWcuuWunuaWveafpeivol/lvZPlpKlkAgMPFgIeB1Zpc2libGVoZAIIDw8WBB8BBQzlt6XkvZzml6Xlv5ceB1Rvb2xUaXAFIjE4NjAsMjM3MCwxODYyLDE5NjksMTg2MSwyMjYyLDE5NzBkZAIJDw8WAh8BBZkB5bel5L2c5pel5b+XLeWItuiuoizlt6XkvZzml6Xlv5ct5Li7566h5a6h5om5LOW3peS9nOaXpeW/ly3nm7TlsZ7pooblr7zlrqHmibks5bel5L2c5pel5b+XLeehruiupCw5OeeUn+aViC/lvZLmoaMs5bel5L2c5pel5b+XLemUgeWumizlt6XkvZzml6Xlv5ct5L2c5bqfZGQCCg8PFgIfAQUER1pSWmRkAgwPDxYCHwEFCUdaUlouQVNQWGRkAg0PDxYCHwEFpAd7IlJFQ09SRENPVU5UIjoyMCwiSVNTSE9XRklFTERTRUFSQ0giOnRydWUsIkZPUk1BVFNUUklORyI6InsxN31bMTcsTiwyXSIsIlhMU0ZJTEUiOiLlt6XkvZzml6Xlv5ct5bel5L2c5pel5b+XLeWItuiuoi5YTFMiLCJGSUVMRExJU1QiOiIgc3lzdGVtX2lkIGFzIFNZU1RFTV9JRCxTWVNURU1fVVJMIEFTIOe8lui+kSxzeXN0ZW1fbGNteG1jIGFzIOWNleaNrua1geeoi+eKtuaAgSxjYXN0KGlzbnVsbCh0YWJsZV94aCwwKSBhcyBpbnQpIGFzIOWNsOaVsCwgUlEgIGFzICBb5pel5pyfXSwgREggIGFzICBb5Y2V5Y+3XSwgR1pMQiAgYXMgIFvlt6XkvZznsbvliKtdLCBGWlIgIGFzICBb6LSf6LSj5Lq6XSwgQk0gIGFzICBb6YOo6ZeoXSwgQ1FKTFNQICBhcyAgW+WHuuWLpOiusOW9leWuoeaJuV0sIFNQTEIgIGFzICBb5a6h5om557G75YirXSwgR1pMICBhcyAgW+W3peS9nOmHj10sIEtOWlMgIGFzICBb5Zuw6Zq+5oyH5pWwXSwgTU1aUyAgYXMgIFvov7fojKvmjIfmlbBdLCBZTVpTICBhcyAgW+mDgemXt+aMh+aVsF0sIEdUS0ZZWSAgYXMgIFvmsp/pgJrmiaPliIbljp/lm6BdLCBISkRGICBhcyAgW+WQiOiuoeW+l+WIhl0iLCJEQVRBS0VZRklFTEQiOiJTWVNURU1fSUQiLCJUQUJMRU5BTUUiOiJHWlJaIiwiV09SS0ZMT1dTVFJJTkciOiJb5bel5L2c5pel5b+XXVvlt6XkvZzml6Xlv5ct5Yi26K6iXVtHWlJaLkFTUFhdW+W3peS9nOaXpeW/ly3liLborqIs5bel5L2c5pel5b+XLeS4u+euoeWuoeaJuSzlt6XkvZzml6Xlv5ct55u05bGe6aKG5a+85a6h5om5LOW3peS9nOaXpeW/ly3noa7orqQsOTnnlJ/mlYgv5b2S5qGjLOW3peS9nOaXpeW/ly3plIHlrpos5bel5L2c5pel5b+XLeS9nOW6n10iLCJJU0xJU1RUT0VYQ0VMIjp0cnVlLCJJU1NIT1dTRUFSQ0giOmZhbHNlLCJJU1RPRVhDRUwiOnRydWUsIklTU0hPV1JFQ09SRENPVU5UIjp0cnVlfWRkAhIPDxYCHwEFAjIwZGQCGA8PFgIfAQUObGlzdF9iaWxsLmFzcHhkZGTvhi9mnaXNKYyYkkQrVWGYEqx3ZI4P7DZjq8lusEDLEQ==" />
+		</div>
+
+		<script type="text/javascript">
+
+			var theForm = document.forms['form1'];
+			if (!theForm) {
+				theForm = document.form1;
+			}
+			function __doPostBack(eventTarget, eventArgument) {
+				if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+					theForm.__EVENTTARGET.value = eventTarget;
+					theForm.__EVENTARGUMENT.value = eventArgument;
+					theForm.submit();
+				}
+			}
+
+		</script>
+
+
+		<!--Layout-->
+		<div id="layout1" class="mini-layout" style="width:100%;height:100%;">
+			<div class="header" region="north" height="35" showSplit="false" showHeader="false">
+				<div class="mini-toolbar" style="border-bottom:0;padding:0px;">
+					<table style="width:100%;">
+						<tr>
+							<td style="width:450px;">
+								<a class="mini-button" iconCls="icon-add" plain="true"  onclick="addrecord()">新增</a>
+								<a class="mini-button" iconCls="icon-folder" onclick="gotomain()" plain="true">主界面</a> 
+								<a class="mini-menubutton" plain="true" menu="#moreaction">更多</a> 
+								<!--加上帮助-->
+								<a class="mini-menubutton" plain="true" menu="#popupMenuhelp">帮助</a>
+								<div id="ckautoload" name="ckautoload" class="mini-checkbox" style="color:#800000" readOnly="false" text="初始化打开时候不加载数据" ></div>
+							</td>
+							<td align="center"> 					
+								<span id="lbformtitile" style="color:#006600;font-family:黑体,宋体;font-size:18px;font-weight:bold;">工作日志列表</span>					
+							</td>
+						</tr>
+					</table>           
+				</div>
+			</div>  
+			<div title="center" region="center" style="border:0;" bodyStyle="overflow:hidden;">
+				<!--Splitter-->
+				<div class="mini-splitter" style="width:100%;height:100%;" borderStyle="border:1px;">
+					<div size="200" maxSize="350" minSize="150" showCollapseButton="true" style="border:0;">
+						<!--outlookbar1-->
+						<div id="outlookbar1" class="mini-outlookbar " activeIndex="0"  style="width:100%;height:98%;" autoCollapse="true">
+
+							<div title="单据流程" >
+								<div class="mini-toolbar" style="border-bottom:0;padding:0px;">     
+								</div>
+								<div class="mini-fit" >
+									<ul id="tree2" class="mini-tree" url="/ERPindex/apps/receipt/data/datalistTree.txt" 
+									showTreeIcon="true" textField="text" idField="id" parentField="pid" resultAsTree="false"  
+									showCheckBox="true" checkRecursive="true"  onnodecheck="getCheckedNodes()" allowSelect="false" enableHotTrack="false"
+									>
+								</ul>
+							</div>
+						</div>
+						<div title="相关查询">
+							<table border="0" width="99%" height="100%" cellspacing="1" cellpadding="0">
+								<tr >
+									<td valign="middle" align="left"  width="100%">
+										<table id="List_Function" cellspacing="0" style="border-collapse:collapse;">
+											<tr>
+												<td>
+													<TABLE height="100%" cellSpacing=0 cellPadding=0 bgcolor="#FFFFFF"  border=0>
+														<TBODY>
+															<TR align =left height="100%"  valign=center ><TD align =left align="center" width="10px" HEIGHT="25px"></td>										
+																<TD align =left align="left"  HEIGHT="25px">
+																	<a  href="CxMenu.aspx?TNW=BLANK&tsystem_id=2015062916043725848admin"  target="_blank"><font  style="font-size: 9pt" color="#000000">工作日志填写查询</font></a>	
+																</TD></TR>
+															</TBODY>
+														</TABLE>
+													</td>
+												</tr><tr>
+													<td>
+														<TABLE height="100%" cellSpacing=0 cellPadding=0 bgcolor="#FFFFFF"  border=0>
+															<TBODY>
+																<TR align =left height="100%"  valign=center ><TD align =left align="center" width="10px" HEIGHT="25px"></td>										
+																	<TD align =left align="left"  HEIGHT="25px">
+																		<a  href="CxMenu.aspx?TNW=BLANK&tsystem_id=2011031721314948656YLLING"  target="_blank"><font  style="font-size: 9pt" color="#000000">工作出勤状况查询</font></a>	
+																	</TD></TR>
+																</TBODY>
+															</TABLE>
+														</td>
+													</tr><tr>
+														<td>
+															<TABLE height="100%" cellSpacing=0 cellPadding=0 bgcolor="#FFFFFF"  border=0>
+																<TBODY>
+																	<TR align =left height="100%"  valign=center ><TD align =left align="center" width="10px" HEIGHT="25px"></td>										
+																		<TD align =left align="left"  HEIGHT="25px">
+																			<a  href="CxMenu.aspx?TNW=BLANK&tsystem_id=20063178524324"  target="_blank"><font  style="font-size: 9pt" color="#000000">工作日志查询</font></a>	
+																		</TD></TR>
+																	</TBODY>
+																</TABLE>
+															</td>
+														</tr><tr>
+															<td>
+																<TABLE height="100%" cellSpacing=0 cellPadding=0 bgcolor="#FFFFFF"  border=0>
+																	<TBODY>
+																		<TR align =left height="100%"  valign=center ><TD align =left align="center" width="10px" HEIGHT="25px"></td>										
+																			<TD align =left align="left"  HEIGHT="25px">
+																				<a  href="CxMenu.aspx?TNW=BLANK&tsystem_id=2011032321492762842YLLING"  target="_blank"><font  style="font-size: 9pt" color="#000000">现场实施查询_当天</font></a>	
+																			</TD></TR>
+																		</TBODY>
+																	</TABLE>
+																</td>
+															</tr>
+														</table>		
+													</td>
+												</tr>
+											</table>						
+										</div>
+									</div>                
+								</div>
+								<div showCollapseButton="false" style="border:0;">
+									<!--Tabs-->
+									<div id="mainTabs" class="mini-tabs" activeIndex="0" style="width:100%;height:100%;"      
+									plain="false"     >
+									<div title="明细数据" id="mainTabs01" name="mainTabs01"  >  
+										<!--明细数据Start-->
+										<div class="mini-toolbar" style="border-bottom:1;padding:0px;">
+											<table style="width:100%;">
+												<tr>
+													<td style="width:100%;">								
+														<a class="mini-button" iconCls="icon-remove" plain="true"  onclick="remove()">删除</a>
+													</td>
+													<td style="white-space:nowrap;"><input name="TTreeText" type="text" id="TTreeText" style="width:0px;" class="mini-textbox" allowInput="false" enabled="true" required="true" /><input id="TAddText"  name="TAddText" style="width:0px;"  class="mini-textbox"  allowInput="false" enabled="true" visible="false"  required="true" />	
+														<input id="FLD1" name="FLD1"  class="mini-combobox" style="width:90px;" textField="TEXT" valueField="ID" onvaluechanged="onFLD1Changed"/> 
+														<input id="LUOJI1" name="LUOJI1"  class="mini-combobox" style="width:80px;" textField="TEXT" valueField="ID"  /> 
+														<input id="DATE1"    name="DATE1"   style="width:120px;"   onenter="onKeyEnter" class="mini-datepicker"  format="yyyy-MM-dd" timeFormat="H:mm:ss" showTime="false" showOkButton="false" showClearButton="false" showTodayButton="true" allowInput="true"  enabled="true"  />
+														<input id="TIME1"    name="TIME1"   style="width:130px;"   onenter="onKeyEnter" class="mini-datepicker"  format="yyyy-MM-dd H:mm:ss" timeFormat="H:mm:ss" showTime="true" showOkButton="false" showClearButton="false" showTodayButton="true" allowInput="true"  enabled="true"  />
+														<input id="KEY1" name="KEY1" class="mini-textbox"  style="width:120px;" onenter="onKeyEnter"/>
+														<input id="FLD2" name="FLD2"  class="mini-combobox" style="width:90px;" textField="TEXT" valueField="ID" onvaluechanged="onFLD2Changed"/> 
+														<input id="LUOJI2" name="LUOJI2"  class="mini-combobox" style="width:80px;" textField="TEXT" valueField="ID"  /> 
+														<input id="DATE2"    name="DATE2"   style="width:120px;"   onenter="onKeyEnter" class="mini-datepicker"  format="yyyy-MM-dd" timeFormat="H:mm:ss" showTime="false" showOkButton="false" showClearButton="false" showTodayButton="true" allowInput="true"  enabled="true"  />
+														<input id="TIME2"    name="TIME2"   style="width:120px;"   onenter="onKeyEnter" class="mini-datepicker"  format="yyyy-MM-dd H:mm:ss" timeFormat="H:mm:ss" showTime="true" showOkButton="false" showClearButton="false" showTodayButton="true" allowInput="true"  enabled="true"  />
+														<input id="KEY2" name="KEY2" class="mini-textbox"  style="width:120px;" onenter="onKeyEnter"/>
+														<a class="mini-button"   onclick="treegridsearch()">查询</a> 								 
+													</td>
+												</tr>
+											</table>           
+										</div>
+										<div class="mini-fit" >
+											<div id="grid1" class="mini-datagrid" style="width:100%;height:100%;" borderStyle="border:1px;"  multiSelect="true"  allowResize="true" idField="SYSTEM_ID"  allowCellWrap="true" showColumnsMenu="true" sizeList="[20,50,100,200,500,900]" showSummaryRow="true" pagesize="20" showFilterRow="true" >
+												<div property="columns"> 
+													<div type="checkcolumn" name="checkcolumn" ></div> 
+													<div name="编辑" field="编辑"  headerAlign="center"   width="40"  visible="true"   autoEscape="false" allowSort="true">编辑<input id="FLT编辑"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="单据流程状态" field="单据流程状态"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">单据流程状态<input id="FLT单据流程状态"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="印数" field="印数"  headerAlign="center"  width="40"  visible="true"  align="right"summaryType="sum" autoEscape="false" allowSort="true">印数<input id="FLT印数"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="日期" field="日期"  headerAlign="center" align="center"   width="85px"  visible="true"  dateFormat="yyyy-MM-dd" autoEscape="false" allowSort="true">日期<input id="FLT日期"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="单号" field="单号"  headerAlign="center"   width="130"  visible="true"   autoEscape="false" allowSort="true">单号<input id="FLT单号"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="工作类别" field="工作类别"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">工作类别<input id="FLT工作类别"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="负责人" field="负责人"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">负责人<input id="FLT负责人"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="部门" field="部门"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">部门<input id="FLT部门"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="出勤记录审批" field="出勤记录审批"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">出勤记录审批<input id="FLT出勤记录审批"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="审批类别" field="审批类别"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">审批类别<input id="FLT审批类别"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="工作量" field="工作量"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">工作量<input id="FLT工作量"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="困难指数" field="困难指数"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">困难指数<input id="FLT困难指数"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="迷茫指数" field="迷茫指数"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">迷茫指数<input id="FLT迷茫指数"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="郁闷指数" field="郁闷指数"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">郁闷指数<input id="FLT郁闷指数"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="沟通扣分原因" field="沟通扣分原因"  headerAlign="center"   width="110"  visible="true"   autoEscape="false" allowSort="true">沟通扣分原因<input id="FLT沟通扣分原因"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+													<div name="合计得分" field="合计得分"  headerAlign="center"  width="110"  visible="true"  align="right"summaryType="sum" autoEscape="false" allowSort="true">合计得分<input id="FLT合计得分"  property="filter" class="mini-filteredit" onvaluechanged="onFilterChanged" value="" filterValue="like" filterData="filters" showClose="false" style="width:100%;"/></div>
+												</div>
+											</div> 		
+										</div>
+										<!--明细数据End-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul id="moreaction" class="mini-menu" style="display:none;">
+					<li iconCls="icon-print"   onclick="ListPrint()">【列印单据(远程)】</li> 
+					<li class="separator"></li>
+					<li iconCls="icon-split"  onclick="GridfrozenColumns('grid1','','')" >【冻结/取消冻结列】</li>
+					<li iconCls="icon-collapse"   onclick="muliSelect()">【多选记录】</li> 
+					<li class="separator"></li>
+					<li iconCls="icon-ok"   onclick="DijiaoBat()">【批量审批】</li>
+					<li iconCls="icon-close"  onclick="ReturnBat()">【批量回退】</li>
+					<li class="separator"></li>
+					<li iconCls="icon-node"  onclick="DatabaseToExcel()">【导出数据】</li>
+					<li iconCls="icon-node"  onclick="EXCELTODATABASE()">【导入数据】</li>
+					<li iconCls="icon-edit"   onclick="edit()">【打开选定单据】</li> 
+					<li iconCls="icon-edit" onclick="SetMuliRowsShow('grid1','','1')">【设置多行显示】</li>
+					<li iconCls="icon-node" onclick="SetMuliRowsShow('grid1','','0')">【取消多行显示】</li>
+					<li class="separator"></li>
+					<li iconCls="icon-save" onclick="GridminiSaveSetting()">【保存设置】</li>
+					<li iconCls="icon-remove" onclick="GridminiDelSetting()">【清除设置】</li>
+					<li class="separator"></li>
+					<li iconCls="icon-ok" ></li>
+					<li iconCls="icon-close"><a id="cmddesktopdel" href="javascript:__doPostBack(&#39;cmddesktopdel&#39;,&#39;&#39;)">从桌面删除</a></li>	
+				</ul>
+				<!--menu-->
+				<ul id="popupMenuhelp" class="mini-menu" style="display:none;">
+					<li iconCls="icon-camera" ><a onclick="this.disabled=true ;" id="lb_helpdx" UseSubmitBehavior="False " href="javascript:__doPostBack(&#39;lb_helpdx&#39;,&#39;&#39;)" style="font-size: 12px; color: #000000; font-family:宋体">视频帮助(电信)</a></li>
+					<li iconCls="icon-camera" ><a onclick="this.disabled=true ;" id="lb_helpwt" UseSubmitBehavior="False " href="javascript:__doPostBack(&#39;lb_helpwt&#39;,&#39;&#39;)" style="font-size: 12px; color: #000000; font-family: 宋体">视频帮助(网通)</a></li>	
+				</ul>
+
+				<input name="tformnamecn" type="text" id="tformnamecn" style="width:0px;" class="mini-textbox" allowInput="true" enabled="false" required="true" value="686" />
+
+				<div id="message"></div>
+
+				<input name="Tminisql" type="text" id="Tminisql" style="width:0px;" class="mini-textarea" allowInput="true" enabled="false" required="true" value="select  system_id as SYSTEM_ID,SYSTEM_URL AS 编辑,system_lcmxmc as 单据流程状态,cast(isnull(table_xh,0) as int) as 印数, RQ  as  [日期], DH  as  [单号], GZLB  as  [工作类别], FZR  as  [负责人], BM  as  [部门], CQJLSP  as  [出勤记录审批], SPLB  as  [审批类别], GZL  as  [工作量], KNZS  as  [困难指数], MMZS  as  [迷茫指数], YMZS  as  [郁闷指数], GTKFYY  as  [沟通扣分原因], HJDF  as  [合计得分]  from GZRZ  WHERE  1=1 " />
+				<input name="DTLBFIELDNAME" type="text" id="DTLBFIELDNAME" style="width:0px;" class="mini-textarea" allowInput="true" enabled="false" required="true" />
+				<input name="TLIUCHENGMC" type="text" id="TLIUCHENGMC" style="width:0px;" class="mini-textbox" allowInput="true" enabled="false" required="true" value="工作日志" />	
+				<input id="tactionmessage"  name="tactionmessage" style="width:100px;"  class="mini-textbox"  allowInput="true" enabled="false" visible="false"   required="false" />	
+
+				<input name="TFLID" type="text" id="TFLID" style="width:0px;" class="mini-textbox" allowInput="true" enabled="false" required="true" />	
+				<input name="TDATASYSTEM_ID" type="text" id="TDATASYSTEM_ID" style="width:0px;" class="mini-textbox" allowInput="true" enabled="false" required="true" />	
+				<input name="addurl" type="text" id="addurl" style="width:0px;" class="mini-textbox" allowInput="true" enabled="false" required="true" value="GZRZ.ASPX?TNW=BLANK&amp;Tlcindex_id=1860" />	
+				<input name="TEXCELTODATABASE" type="text" id="TEXCELTODATABASE" style="width:0px;" class="mini-textbox" allowInput="true" enabled="false" required="true" />	
+				<input name="whurl" type="text" id="whurl" style="width:0px;" class="mini-textbox" allowInput="true" enabled="false" required="true" />
+
+	</form>
+	<script language=JavaScript>
+		function sWin(url){
+			window.open(url, '_blank');
+		}
+
+		function SWIN_MINI(url){
+
+			window.open(url, '_blank');
+
+		}
+
+		function mWin(url){
+			splashWin = window.open(url, '_blank', 'fullscreen=0,toolbar=0,location=0,directories=0,status=0,menubar=1,scrollbars=1,resizable=1,left=0,top=60,height=650,width=1000'  );
+		}
+
+		function sWin_half(url){
+			splashWin = window.open(url, '_blank', 'fullscreen=0,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,left=0,top=60,height=300,width=1000'  );
+		}
+
+		function showwindow(url,fheight,fwidth){
+			var vflag='fullscreen=0,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,left=0,top=60,height='+fheight+',width='+fwidth;
+			showWin = window.open(url, '_blank', vflag);
+		}
+
+		function showmodalwin(url){
+			showWin=window.showModalDialog(url,null,'status:no;dialogWidth:530px;dialogHeight:300px;dialogHide:true;help:no;scroll:no');
+		}
+
+		var lastClickNode = null;
+		function SetDetailDataGridBackColor(oTr) {
+			if (lastClickNode) {
+				lastClickNode.style.backgroundColor = lastClickNode.getAttribute("oldColor");
+			}
+			oTr.setAttribute("oldColor", oTr.style.backgroundColor);
+			oTr.style.backgroundColor = "#C0C0C0";
+			lastClickNode = oTr;
+		} 
+
+		var filters = [{"value": "=", "text": "等于"},{"value": ">", "text": "大于"},{"value": ">=", "text": "大于等于"},{"value": "<", "text": "小于"},{"value": "<=", "text": "小于等于"},{"value": "!=", "text": "不等于"},{"value": "like", "text": "包含"},{"value": "likea", "text": "左包含"},{"value": "likeb", "text": "右包含"},{"value": "likec", "text": "不包含"}];
+		mini.parse();      
+		var DATALUOJI = [{"ID": "=", "TEXT": "等于"},{"ID": ">", "TEXT": "大于"},{"ID": ">=", "TEXT": "大于等于"},{"ID": "<", "TEXT": "小于"},{"ID": "<=", "TEXT": "小于等于"},{"ID": "!=", "TEXT": "不等于"},{"ID": "like", "TEXT": "包含"},{"ID": "likea", "TEXT": "左包含"},{"ID": "likeb", "TEXT": "右包含"},{"ID": "likec", "TEXT": "不包含"}];
+
+		var DATAFLD=[{"TEXT":"日期","ID":"D日期"},{"TEXT":"合计得分","ID":"K合计得分"},{"TEXT":"全部","ID":"ALL"},{"TEXT":"印数","ID":"K印数"}];
+		var grid1 = mini.get("grid1");
+		var ckautoload=mini.get("ckautoload");
+		var gridnumberformat= new Array();
+		//grid1格式设置； 
+		gridnumberformat[1]={"困难指数":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"编辑":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"单据流程状态":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"印数":{"自定义合计字段":"","对齐方式":"center","运算格式":"","是否合并":"否","小数位数":"0"},"工作量":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"部门":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"日期":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"单号":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"迷茫指数":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"工作类别":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"审批类别":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"出勤记录审批":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"郁闷指数":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"负责人":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"SYSTEM_ID":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"沟通扣分原因":{"自定义合计字段":"","对齐方式":"left","运算格式":"","是否合并":"否","小数位数":"无"},"合计得分":{"自定义合计字段":"","对齐方式":"right","运算格式":"","是否合并":"否","小数位数":"2"}};
+
+		//智能搜索
+		var FLD1 = mini.get("FLD1");
+		var LUOJI1=mini.get("LUOJI1");
+		var DATE1=mini.get("DATE1");
+		var TIME1=mini.get("TIME1");
+		var KEY1=mini.get("KEY1");
+		var FLD2 = mini.get("FLD2");
+		var LUOJI2=mini.get("LUOJI2");
+		var DATE2=mini.get("DATE2");
+		var TIME2=mini.get("TIME2");
+		var KEY2=mini.get("KEY2");
+		var Tminisql=mini.get("Tminisql");
+		FLD1.setData(DATAFLD);	
+		FLD1.select(0);
+		FLD2.setData(DATAFLD);	
+		//FLD2.select(0);
+		LUOJI1.setData(DATALUOJI);
+		//LUOJI1.select(2);
+		LUOJI2.setData(DATALUOJI);
+		//LUOJI2.select(4);
+		DATE2.setVisible(false);
+		TIME2.setVisible(true);
+		KEY2.setVisible(false);
+		onFLD1Changed(FLD1);
+
+		var TLIUCHENGMC = mini.get("TLIUCHENGMC");
+		var tactionmessage = mini.get("tactionmessage");
+
+		grid1.setUrl("/ERPindex/apps/receipt/data/AjaxDataGridcx_allfield.txt?Tmethod=list.loadforid");
+		var gridid ="LIST_BILLTREE.ASPX"+"."+TLIUCHENGMC.getValue();
+		var keyocx = mini.get("key");
+
+		grid1.on("drawcell", function (e) {
+			onDrawCell(e);
+		});
+		grid1.on("drawsummarycell", function (e) {
+			onDrawSummaryCell(e);
+		});
+			
+		var tformnamecn =mini.get("tformnamecn");
+		var TAddText=mini.get("TAddText");
+		var TFLID =mini.get("TFLID");
+		var TDATASYSTEM_ID=mini.get("TDATASYSTEM_ID");
+		var keyocx = mini.get("key");
+		var TTreeText=mini.get("TTreeText");
+
+		var tree2 = mini.get("tree2");	
+		var nodes = tree2.getAllChildNodes(tree2.getRootNode());
+
+		tree2.checkNodes(nodes);
+		tree2.expandAll();
+
+		TreeGridInit("grid1",gridid,encodeURIComponent(Tminisql.getValue()),"[LIST_BILLTREE]","GZRZ","GZRZ.ASPX",encodeURIComponent(TLIUCHENGMC.getValue()),tree2.getValue(),ckautoload,tree2);
+
+
+
+		//DatabaseToExcel
+		function GridminiSaveSetting() {
+			var gridid ="LIST_BILLTREE.ASPX"+"."+TLIUCHENGMC.getValue();
+			GridSaveSettingDATA(grid1,gridid,ckautoload,tree2);
+			return;
+		}
+		function GridminiDelSetting() {
+			var gridid ="LIST_BILLTREE.ASPX"+"."+TLIUCHENGMC.getValue();
+			GridDelSetting(grid1,gridid);
+			return;
+		}
+		function GridDelSetting(grid,gridid){
+			var form1 = new mini.Form("#form1"); 
+			form1.loading("系统在运行，请稍后....");
+			$.ajax({
+				url: "data/AjaxDataGridcx_allfield2.txt?Tmethod=GridSetting.Del",
+				data: {gridid:gridid},
+				type: "post",
+				success: function (text) {
+					alert(text);
+					form1.unmask();
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					miniopenwin(jqXHR.responseText,800);
+					form1.unmask();
+				}
+			});
+		}
+		function DatabaseToExcel() {
+
+			var form = new mini.Form("#form1"); 
+			form.loading("系统在运行，请稍后....")
+			$.ajax({
+				url: "data/AjaxDataGridcx_allfield.aspx?Tmethod=list.loadforid",
+				data: {tsql:encodeURIComponent(Tminisql.getValue()),twheresql:getsearchwheresql(),TFLID:TFLID.getValue(),TDATASYSTEM_ID:TDATASYSTEM_ID.getValue(),Ttext:TTreeText.getValue(),Tlbtablename:"[LIST_BILLTREE]",Tmaintablename:"GZRZ",TFormName:"GZRZ.ASPX",Tflow:encodeURIComponent(TLIUCHENGMC.getValue()),TFunction:tree2.getValue(),tflag:"print",fworkflow:"%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97%5d%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e5%88%b6%e8%ae%a2%5d%5bGZRZ.ASPX%5d%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e5%88%b6%e8%ae%a2%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e4%b8%bb%e7%ae%a1%e5%ae%a1%e6%89%b9%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e7%9b%b4%e5%b1%9e%e9%a2%86%e5%af%bc%e5%ae%a1%e6%89%b9%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e7%a1%ae%e8%ae%a4%2c99%e7%94%9f%e6%95%88%2f%e5%bd%92%e6%a1%a3%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e9%94%81%e5%ae%9a%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e4%bd%9c%e5%ba%9f%5d",ftreeworkflowmx:encodeURIComponent(tree2.getValue())},
+				type: "post",
+				success: function (text) {
+					form.unmask();
+					tactionmessage.setValue(text);
+					//minialert(text);
+					var jsondata =mini.decode(text); 
+					if (jsondata["RESULT"] =="[0]") 
+					{
+						minialert(jsondata["MSG"]);
+						return;
+					}
+					else
+					{
+						if (jsondata["PAPA3"] !=null && jsondata["PAPA3"] !="") 
+							{window.open(jsondata["PAPA3"],"_blank");}
+						return;
+					}
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					minialert(jqXHR.responseText,800);
+				}
+			});						
+		}
+		function onKeyEnter(e) {
+			treegridsearch();
+		}
+
+		function onFilterChanged(e) {
+			treegridsearch();
+			return
+			var textbox = e.sender;
+			var textboxid=e.sender.id;
+			var fieldname=textboxid.substr(3,textboxid.length-3)
+			var key = textbox.getValue().toLowerCase();	
+			grid1.load({tsql:encodeURIComponent(Tminisql.getValue()),tkeyvalue:key,tkeyfieldname:fieldname});
+			return;
+			//客户端搜索
+			grid1.filter(function (row) {
+				var name = String(row[fieldname]).toLowerCase();
+				if (name.indexOf(key) != -1) return true;
+				return false;
+			});
+		}
+		function remove() {            
+			var rows = grid1.getSelecteds();
+			if (rows.length > 0) {
+				if (confirm("确定删除选中记录？")) {
+					var ids = [];
+					for (var i = 0, l = rows.length; i < l; i++) {
+						var r = rows[i];
+						ids.push(r.SYSTEM_ID);
+
+					}
+					var id = ids.join(',');
+					grid1.loading("操作中，请稍后......");
+					$.ajax({
+						url:"data/AjaxDataGridcx_allfield.aspx?Tmethod=Delete",
+						type: "post",
+						data: {id:id,PDeleteTable:"",PWorkflowString:"%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97%5d%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e5%88%b6%e8%ae%a2%5d%5bGZRZ.ASPX%5d%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e5%88%b6%e8%ae%a2%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e4%b8%bb%e7%ae%a1%e5%ae%a1%e6%89%b9%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e7%9b%b4%e5%b1%9e%e9%a2%86%e5%af%bc%e5%ae%a1%e6%89%b9%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e7%a1%ae%e8%ae%a4%2c99%e7%94%9f%e6%95%88%2f%e5%bd%92%e6%a1%a3%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e9%94%81%e5%ae%9a%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e4%bd%9c%e5%ba%9f%5d"},
+						success: function (text) { 
+							if (text=="[1]") {
+								grid1.unmask();
+								grid1.reload();
+							}
+							else
+							{
+								minialert(text);
+								grid1.unmask();
+							}
+
+						},
+						error: function (text) {
+							alert(text);
+							grid1.unmask();
+						}
+					});
+				}
+			} else {
+				alert("请选中一条记录");
+			}
+		}
+		function updatetype() {
+			var tempvalue=tree2.getValue();
+			tempvalue=tempvalue.replace(new RegExp("tree,","gm"), "")
+			if (tempvalue.indexOf(",") !=-1 && "工作日志-制订,工作日志-主管审批,工作日志-直属领导审批,工作日志-确认,99生效/归档,工作日志-锁定,工作日志-作废" !="98基本数据") {
+				minialert("在多选单据流程状态下禁止修改");
+				return;
+			}
+			var rows = grid1.getSelecteds();
+			if (rows.length > 0) {
+				var ids = [];
+				for (var i = 0, l = rows.length; i < l; i++) {
+					var r = rows[i];
+					ids.push(r.SYSTEM_ID);
+
+				}
+				var id = ids.join(',');
+				mini.open({
+					url: "SelectTreeWindow_Type.aspx",
+					title: "选择树形类别",
+					width: 800,
+					height: 580,
+					onload: function () {
+						var iframe = this.getIFrameEl();
+						var data = {id:id,tliuchengmc:encodeURIComponent(TLIUCHENGMC.getValue()),action:"search"};					 
+						iframe.contentWindow.SetData(data);
+					},
+					ondestroy: function (action) {
+
+						if (action == "ok") {
+							var form = new mini.Form("#form1"); 
+							form.loading("系统在运行，请稍后....")
+							var iframe = this.getIFrameEl();
+							var datawindow = iframe.contentWindow.GetData();
+							datawindow = mini.clone(datawindow); //必须
+
+							$.ajax({
+								url: "data/FormService.aspx?Tmethod=form.updatetype",
+								type: "post",
+								data: {tid:id,tlb:datawindow,tliuchengmc:encodeURIComponent(TLIUCHENGMC.getValue()),tliuchengmxmcid:tempvalue,ttablename:"GZRZ"},
+								success: function (text) {
+									minialert(text);
+									if (text.substr(0,3)=="[1]") {
+										treegridsearch();
+									}
+									form.unmask();
+									return;
+								}
+							});
+							form.unmask();
+
+						}
+					}
+				});
+			}else {
+				alert("请选中一条记录");
+			}
+		}
+		function ListPrint() { 
+
+			var rows = grid1.getSelecteds();
+			if (rows.length > 0) {
+
+				var ids = [];
+				for (var i = 0, l = rows.length; i < l; i++) {
+					var r = rows[i];
+					ids.push(r.SYSTEM_ID);
+
+				}
+				var id = ids.join(',');
+
+				var TempSystem_Id=" where system_id in (" &TempSystem_Id &")"
+				grid1.loading("操作中，请稍后......");
+				$.ajax({
+					url:"data/FormService.aspx?Tmethod=ListPrint",
+					type: "post",
+					data: {id:id,PDeleteTable:"",tmaintablename:"GZRZ",fworkflow:"[工作日志][工作日志-制订][GZRZ.ASPX][工作日志-制订,工作日志-主管审批,工作日志-直属领导审批,工作日志-确认,99生效/归档,工作日志-锁定,工作日志-作废]",ftreeworkflowmx:encodeURIComponent(tree2.getValue()),tsortfield:encodeURIComponent(grid1.getSortField()),TsortOrder:grid1.getSortOrder()},
+					success: function (text) { 
+
+						if (text.substr(0,3)=="[0]") {
+							grid1.unmask();
+							alert(text);
+						}
+						else
+						{
+							window.open("outputexcel_listprint.aspx?fworkflow=%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97%5d%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e5%88%b6%e8%ae%a2%5d%5bGZRZ.ASPX%5d%5b%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e5%88%b6%e8%ae%a2%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e4%b8%bb%e7%ae%a1%e5%ae%a1%e6%89%b9%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e7%9b%b4%e5%b1%9e%e9%a2%86%e5%af%bc%e5%ae%a1%e6%89%b9%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e7%a1%ae%e8%ae%a4%2c99%e7%94%9f%e6%95%88%2f%e5%bd%92%e6%a1%a3%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e9%94%81%e5%ae%9a%2c%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97-%e4%bd%9c%e5%ba%9f%5d");
+							grid1.unmask();
+						}
+
+					},
+					error: function (text) {
+						alert(text);
+						grid1.unmask();
+					}
+				});
+			} else {
+				alert("请选中一条记录");
+			}
+		}
+		function DijiaoBat() {            
+			var rows = grid1.getSelecteds();
+			if (rows.length > 0) {
+				var ids = [];
+				for (var i = 0, l = rows.length; i < l; i++) {
+					var r = rows[i];
+					ids.push(r.SYSTEM_ID);
+				}
+				var id = ids.join(',');
+				window.open("GZRZ.ASPX?Tflag=9&TAUTOCLOSE=2&tsystem_idlist="+id);
+
+			} else {
+				alert("请选中一条记录");
+			}
+		}
+		function ReturnBat() {            
+			var rows = grid1.getSelecteds();
+			if (rows.length > 0) {
+				var ids = [];
+				for (var i = 0, l = rows.length; i < l; i++) {
+					var r = rows[i];
+					ids.push(r.SYSTEM_ID);
+				}
+				var id = ids.join(',');
+				window.open("GZRZ.ASPX?Tflag=8&TAUTOCLOSE=2&tsystem_idlist="+id);
+
+			} else {
+				alert("请选中一条记录");
+			}
+		}
+		function edit() {            
+			var rows = grid1.getSelecteds();
+			if (rows.length > 0) {           
+				var ids = [];
+				for (var i = 0, l = rows.length; i < l; i++) {
+					var r = rows[i];
+
+					window.open("GZRZ.ASPX?tsystem_id="+r.SYSTEM_ID);
+				}                    
+			}
+			else {
+				alert("请选中一条记录");
+			}
+		}
+
+		function muliSelect() {            
+			var rows = grid1.getData();
+			var rowisselect =false;
+			if (rows.length > 0) {           
+				var ids = [];
+				for (var i = 0, l = rows.length; i < l; i++) {
+					if (grid1.isSelected(rows[i])==true)
+					{
+						if (rowisselect==true) 
+						{
+							rowisselect=false;
+
+							return;
+						}
+						else
+						{
+							rowisselect=true;
+						}
+					}
+					else
+					{
+						if (rowisselect==true) 
+						{
+							grid1.select(rows[i]);
+						}
+					}
+
+				}                    
+			}
+			else {
+				alert("当前列表无数据");
+			}
+		}
+		function minialert(text){
+			//提示信息，自动根据信息对警报颜色分类：[0]出错信息;[1]成功信息;[2]警报信息;
+			var msglb="<span style=\"color: #006600;Font-weight: bold;\">提示信息：</span>";
+			if (text.substr(0,3)=="[0]") {
+				msglb="<span style=\"color: #990000;Font-weight: bold;\">糟糕，出错了！</span>";
+			}
+			if (text.substr(0,3)=="[1]") {
+				msglb="<span style=\"color: #006600;Font-weight: bold;\">提示信息：</span>";
+			}
+			if (text.substr(0,3)=="[2]") {
+				msglb="<span style=\"color: #FF9900;Font-weight: bold;\">警报信息：</span>"				
+			}
+			var debugmsg =""
+
+
+			mini.showMessageBox({
+				width: 400,
+				title: "软件信息",
+				buttons: ["确认"],
+
+				message: "自定义HHTM",
+				html:msglb+text+debugmsg,
+				showModal: true,
+				callback: function (action) {
+
+				}
+			});
+		}
+
+		function opendebugwin(e) {
+			//打开调试窗口，只有是开发平台管理员权限（KFPT_MANAGER）才能自动显示；调试信息存储在tactionmessage控件中；
+			mini.open({
+				url: "debug_mini.aspx",
+				title: "执行调试信息",
+				width: 960,
+				height: 600,
+				onload: function () {
+					var iframe = this.getIFrameEl();
+
+			var data = tactionmessage.getValue();				 
+			iframe.contentWindow.SetData(data);                 
+			},
+			ondestroy: function (action) {
+				if (action == "ok") {
+
+			}
+			}
+			});
+		}
+
+		//冻结列；
+		function GridfrozenColumns(gridocxid,ttablename,fsaveflag) {
+			var gridocx=mini.get(gridocxid);
+			if  (gridocx==null) {
+				alert("找不到控件");
+				return;
+			}
+			var tempcolcount="";
+			tempcolcount=prompt("请输入需要冻结的列数(如：1，2，3，4，5)？","1"); 
+			if (tempcolcount=="" || tempcolcount==null) {return;}
+			if (isNaN(tempcolcount)) {alert("请输入数字.");return;}
+			if (tempcolcount=="0") {
+				gridocx.unFrozenColumns();
+				return;
+			}
+			tempcolcount=parseInt(tempcolcount);
+			gridocx.frozenColumns(0,tempcolcount);
+		}
+		function getCheckedNodes() {
+			var value = tree2.getValue();
+			if (value==""){
+			//alert("请选择需要查询的流程");
+			//return;
+			}
+			//value=value.replace(new RegExp(",","gm"), "][")
+			treegridsearch();
+		}
+		function onBeforeTreeLoad(e) {
+			var tree = e.sender;    //树控件
+			var node = e.node;      //当前节点
+			var params = e.params;  //参数对象        
+			//可以传递自定义的属性
+			params.myField = "123"; //后台：request对象获取"myField"        
+		}
+		function refreshNode() {
+			// var tree = mini.get("tree1");
+			var node = tree.getSelectedNode();
+			if (node) {
+				tree.loadNode(node);
+			}
+		}
+		function EditType() {
+			var whurlocx=mini.get("whurl");
+			var tempvalue=whurlocx.getValue();
+			//alert(tempvalue);
+			if (tempvalue=="") {minialert("[0][系统未定义维护资料的URL]");return;}
+			window.open(tempvalue);        
+		}
+		function addrecord() {  
+			var addurlocx=mini.get("addurl");
+			var tempvalue=addurlocx.getValue();
+			var TAddText =mini.get("TAddText");
+			if (tempvalue=="") {minialert("[0][权限不允许]");return;}
+			//if (TAddText.getValue()==""){minialert("[0][未选定最末级的树形类别,无法新增]");return;}
+			window.open(tempvalue +"&Tfllb=" +encodeURIComponent(TAddText.getValue()));          
+		}
+		//addchild
+		function addchild() {  
+			var addurlocx=mini.get("addurl");
+			var tempvalue=addurlocx.getValue();
+			if (tempvalue=="") {minialert("[0][权限不允许]");return;}			
+			window.open(tempvalue+"&tflid="+TDATASYSTEM_ID.getValue());          
+		}
+		//TEXCELTODATABASE
+		function EXCELTODATABASE() {
+			//var TEXCELTODATABASE=mini.get("TEXCELTODATABASE");
+			var tempvalue=tree2.getValue();
+			//alert(tempvalue);
+			tempvalue=tempvalue.replace(new RegExp("tree,","gm"), "")
+			if (tempvalue.indexOf(",") !=-1 && "工作日志-制订,工作日志-主管审批,工作日志-直属领导审批,工作日志-确认,99生效/归档,工作日志-锁定,工作日志-作废" !="98基本数据") {
+				minialert("在多选单据流程状态下禁止导入");
+				return;
+			}
+			var tempurl ="EXCELTODATABASE.ASPX?TFN=GZRZ.ASPX&TTN=GZRZ&TLC=[%e5%b7%a5%e4%bd%9c%e6%97%a5%e5%bf%97]&TLCMXID=["+tree2.getValue()+"]";
+			window.open(tempurl);
+		} 
+		function treegridsearch() {
+
+			grid1.load({tsql:encodeURIComponent(Tminisql.getValue()),twheresql:getsearchwheresql(),TFLID:TFLID.getValue(),TDATASYSTEM_ID:TDATASYSTEM_ID.getValue(),Ttext:TTreeText.getValue(),Tlbtablename:"[LIST_BILLTREE]",Tmaintablename:"GZRZ",TFormName:"GZRZ.ASPX",Tflow:encodeURIComponent(TLIUCHENGMC.getValue()),TFunction:tree2.getValue()});	
+		}
+		function gotomain() {            
+			window.open("menu.aspx?TNW=BLANK");          
+		}
+		function deluploadfileforid(fformname,ftablename,fsystem_id,frow,fcol,ffieldname,fid,fflag){
+			minialert("系统不支持列表上删除，若要执行删除操作，请点击【编辑】后，进入单据界面再执行");
+		}
+	</script>
+
+</body>
+</html>
