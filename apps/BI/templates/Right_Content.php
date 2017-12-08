@@ -81,13 +81,11 @@
         </div>
       </div>
       <div class="row">
-
         <div class="col-lg-4">
           <div class="card-box">
             <h4 class="text-dark header-title m-t-0 m-b-30">Daily Sales</h4>
-
             <div class="widget-chart text-center">
-              <div id="sparkline3"></div>
+              <div id="sparkline3" style="width: 100%;height: 100%;"></div>
               <ul class="list-inline m-t-15">
                 <li>
                   <h5 class="text-muted m-t-20">Target</h5>
@@ -104,7 +102,6 @@
               </ul>
             </div>
           </div>
-
         </div>
 
         <div class="col-lg-4">
@@ -265,6 +262,7 @@
           </div>
         </div> <!-- end col -->
       </div>
+
       <!-- end row -->
       <div class="row">
         <div class="col-lg-12">

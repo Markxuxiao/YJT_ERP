@@ -15,9 +15,8 @@
 
         <title>万维BI系统</title>
         <link href="http://oa.gzwebway.com:8888/oa/scripts/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css">
-        <link href="http://www.miniui.com/scripts/miniui/themes/bootstrap/skin.css" rel="stylesheet" type="text/css">
+        <link href="./css/YHminiui.css" rel="stylesheet" type="text/css" />
         <link href="<?PHP echo(ROOT_PATH) ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
         <link href="<?PHP echo(ROOT_PATH) ?>assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="./css/core.css" rel="stylesheet" type="text/css" />
         <link href="./css/components.css" rel="stylesheet" type="text/css" />
@@ -45,11 +44,11 @@
         <script src="http://oa.gzwebway.com:8888/oa/scripts/miniui/miniui.js" type="text/javascript"></script>
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/bootstrap.min.js"></script>
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/jquery.nicescroll.js"></script>
-
+        <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.min.js"></script>
 
         
         <script src="./js/jquery.app.js"></script>
-        <script src="./js/jquery.dashboard_3.js"></script>
+        <script src="./js/jquery.dashboard.js"></script>
 
         <script type="text/javascript">
           
