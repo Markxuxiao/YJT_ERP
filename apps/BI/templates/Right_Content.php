@@ -4,10 +4,13 @@
     <div class="container">
 
       <!-- Page-Title -->
-      <div class="row">
+      <div class="row" style="margin-bottom: 10px;">
         <div class="col-sm-12">
-          <h4 class="page-title">Dashboard 3</h4>
-          <p class="text-muted page-title-alt">Welcome to Ubold admin panel !</p>
+          <div class="btn-group" role="group">
+            <a href="#" type="button" class="btn btn-white">按时间</a>
+            <a href="#"  type="button" class="btn btn-white">按销售额</a>
+            <a href="#"  type="button" class="btn btn-white">按XX维度</a>
+          </div>
         </div>
       </div>
       <div class="row">
