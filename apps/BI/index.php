@@ -1,10 +1,4 @@
-<?php
-  define("APP_ROOT",dirname(__FILE__));
-  define('BASE_PATH','http://'.$_SERVER['HTTP_HOST'].'/ERPindex/apps/BI/');
-  define('ROOT_PATH','http://'.$_SERVER['HTTP_HOST'].'/ERPindex/');
-
-  // echo ROOT_PATH;
-?>
+<?php include_once './config.php' ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,6 +14,7 @@
         <link href="<?PHP echo(ROOT_PATH) ?>assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="./css/core.css" rel="stylesheet" type="text/css" />
         <link href="./css/components.css" rel="stylesheet" type="text/css" />
+        <link href="./css/bi_components.css" rel="stylesheet" type="text/css" />
         <link href="./css/pages.css" rel="stylesheet" type="text/css" />
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/modernizr.min.js"></script>
         
@@ -34,25 +29,22 @@
         <!-- ========== Left Sidebar Start ========== -->
         <?php include_once './templates/Left_Sidebar.php' ?>
         <!-- Start right Content here -->                     
-        <?php include_once './templates/Right_Content.php' ?>
+        <?php include_once './templates/page/'.PAGE.'.php' ?>
         <!-- End Right content here -->
       </div>
       <!-- END wrapper -->
 
         <!-- jQuery  -->
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/jquery.min.js"></script>
-        <script src="http://oa.gzwebway.com:8888/oa/scripts/miniui/miniui.js" type="text/javascript"></script>
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/bootstrap.min.js"></script>
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/jquery.nicescroll.js"></script>
-        <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.min.js"></script>
 
+        <script src="http://oa.gzwebway.com:8888/oa/scripts/miniui/miniui.js" type="text/javascript"></script>
+        <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.min.js"></script>
+        <script src="./js/jquery.echart_rander.js"></script>
         
         <script src="./js/jquery.app.js"></script>
-        <script src="./js/jquery.dashboard.js"></script>
-
-        <script type="text/javascript">
-          
-        </script>
+        <script src="./js/page/<?PHP echo(PAGE) ?>.js"></script>
 
     </body>
 </html>

@@ -1,0 +1,21 @@
+.rank-height1{
+  width: 100%;
+  height: 250px;
+}
+.rank-height2{
+  width: 100%;
+  height: 200px;
+}
+.rank-height3{
+  width: 100%;
+  height: 150px;
+}
+.over-hidden{
+  overflow: hidden;
+}
+.p-5{
+  padding:5px;
+}
+.bg-dark{
+  background-color:#999;
+}

@@ -1,32 +1,15 @@
+
+
 <div class="left side-menu">
   <div class="sidebar-inner slimscrollleft">
     <!--- Divider -->
     <div id="sidebar-menu">
       <ul>
-        <li class="has_sub">
-          <a href="#" class="waves-effect active"><i class="ti-home"></i> <span> 数据看板1 </span> </a>
-        </li>
-        <li class="has_sub">
-          <a href="#" class="waves-effect "><i class="ti-home"></i> <span> 数据看板2 </span> </a>
-        </li>
-        <li class="has_sub">
-          <a href="#" class="waves-effect "><i class="ti-bar-chart"></i> <span> 数据看板3 </span> </a>
-        </li>
-        <li class="has_sub">
-          <a href="#" class="waves-effect "><i class="ti-bar-chart"></i> <span> 数据看板4 </span> </a>
-        </li>
-        <li class="has_sub">
-          <a href="#" class="waves-effect "><i class="ti-location-pin"></i> <span> 数据看板5 </span> </a>
-        </li>
-        <li class="has_sub">
-          <a href="#" class="waves-effect "><i class="ti-location-pin"></i> <span> 数据看板6 </span> </a>
-        </li>
-        <li class="has_sub">
-          <a href="#" class="waves-effect "><i class="ti-home"></i> <span> 数据看板7 </span> </a>
-        </li>
-        <li class="has_sub">
-          <a href="#" class="waves-effect "><i class="ti-home"></i> <span> 数据看板8 </span> </a>
-        </li>
+        <?php foreach($sidebar as $x=>$x_value) {?>
+            <li class="has_sub">
+              <a href="<?php  echo 'http://localhost/ERPindex/apps/BI/index.php?page='.$x ?>" class="waves-effect <?php  echo $x == PAGE?'active':'' ?>"><i class="ti-home"></i> <span> <?php  echo $x_value ?> </span> </a>
+            </li>
+        <?php } ?>
       </ul>
       <div class="clearfix"></div>
     </div>
