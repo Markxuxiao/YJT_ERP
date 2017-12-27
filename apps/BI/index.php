@@ -35,6 +35,7 @@
       <!-- END wrapper -->
 
         <!-- jQuery  -->
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=REnvTxZpnbxWN1H8RXxyNhafDLacomcY"></script>
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/jquery.min.js"></script>
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/bootstrap.min.js"></script>
         <script src="<?PHP echo(ROOT_PATH) ?>assets/js/jquery.nicescroll.js"></script>
@@ -44,6 +45,7 @@
         <script src="./js/jquery.echart_rander.js"></script>
         
         <script src="./js/jquery.app.js"></script>
+
         <script src="./js/page/<?PHP echo(PAGE) ?>.js"></script>
 
     </body>

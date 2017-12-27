@@ -6,15 +6,21 @@ $(function(){
     grid.load();
 	
 	
-	$('#barChart1').echarts_factory({'opid':'option1','data':''});
-	$('#barChart2').echarts_factory({'opid':'option2','data':''});
-	$('#lineChart1').echarts_factory({'opid':'option3','data':''});
-	$('#lineChart2').echarts_factory({'opid':'option4','data':''});
-	$('#pieChart1').echarts_factory({'opid':'option5','data':''});
-	$('#pieChart2').echarts_factory({'opid':'option6','data':''});
-	$('#pieChart3').echarts_factory({'opid':'option7','data':''});
-	$('#gaugeChart').echarts_factory({'opid':'option8','data':''});
-	$('#funnelChart').echarts_factory({'opid':'option9','data':''});
+	$('#barChart1').echarts_factory({'type':'bar_1','data':{'x':['sf','fs','dd'],'y':[33,44,55]}});
+	$('#barChart1').data('echarts').Chart.on('click',function(params){console.log(params)})
+	
+	$('#barChart2').echarts_factory({'type':'bar_2','data':{'x':[33,44,55],'y':['sf','fs','dd']}});
+	$('#barChart2').data('echarts').Chart.on('click',function(params){console.log(params)})
+
+	$('#lineChart1').echarts_factory({'type':'line_1','data':''});
+	$('#lineChart1').data('echarts').Chart.on('click',function(params){console.log(params)})
+
+	$('#lineChart2').echarts_factory({'type':'line_2','data':''});
+	$('#pieChart1').echarts_factory({'type':'pie_1','data':''});
+	$('#pieChart2').echarts_factory({'type':'pie_2','data':''});
+	$('#pieChart3').echarts_factory({'type':'pie_3','data':''});
+	$('#gaugeChart').echarts_factory({'type':'gauge_1','data':''});
+	$('#funnelChart').echarts_factory({'type':'funnel_1','data':''});
 });
 
 

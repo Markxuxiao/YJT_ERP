@@ -5,7 +5,9 @@
       <!-- 表格 -->
       <div class="row">
         <div class="col-lg-12">
-          <?php include_once './templates/table/Table.php' ?>
+          <div class="card-box" style="height: 500px;">
+            <?php include_once './templates/table/Table.php' ?>
+          </div>
         </div> <!-- end col -->
       </div>
       <!-- end row -->
@@ -22,9 +24,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="card-box" >
-            <div class="row" id="Jtbbox">
-
-            </div>
+            <div class="row" id="Jtbbox"></div>
           </div>
         </div> <!-- end col -->
       </div>

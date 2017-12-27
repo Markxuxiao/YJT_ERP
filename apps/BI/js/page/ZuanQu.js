@@ -1,15 +1,13 @@
 $(function(){
-
 	var mock_data_ecart = [
 		{'id':'0','x':['第1季度','第2季度','第3季度','第4季度'],'y':[33,44,55,23]},
 		{'id':'1','x':['第1季度','第2季度','第3季度','第4季度'],'y':[23,24,53,33]},
 		{'id':'2','x':['第1季度','第2季度','第3季度','第4季度'],'y':[34,34,65,33]}
 	];
-
 	function rander_echart(id){
 		//这里的data应该根据id动态取
 		var data = mock_data_ecart[parseInt(id)]
-		$('#barChart1').echarts_factory({'data':data});
+		$('#barChart1').echarts_factory({'type':'bar_1','data':data});
 	}
 
 	(function(){
@@ -26,25 +24,16 @@ $(function(){
 		    }
 		})
 
-	})();
-	(function(){
-		//echart模块
-		$('#barChart1').echarts_factory({'type':'bar_1','data':mock_data_ecart[0]});
-		$('#barChart1').data('echarts').Chart.on('click',function(params){console.log(params)})
+
+		var grid2 = mini.get("grid2");
+		grid2.load();
 
 	})();
-	(function(){
-		//地图模块
-		var data = [{x:116.417854,y:39.921988,massage:"富力天朗明居",id:"0"},
-					{x:116.406605,y:39.921585,massage:"富力半岛花园",id:"1"},
-					{x:116.412222,y:39.912345,massage:"棠德花园",id:"2"}];
-		$('#Jbaiduditu').baidu_map(data)
-		$('#Jbaiduditu').on('click_marker.baidu_map',function(e,makerData){
-			console.log(makerData)
-			rander_echart(makerData.id)
-		})
-	})();
-	
 	
 
+	rander_echart(0)
+	$('#barChart1').data('echarts').Chart.on('click', function (params) {
+	    console.log(params);
+	    //todo reload grid2
+	});
 });

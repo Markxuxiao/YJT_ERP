@@ -29,9 +29,6 @@
 
 $('.portlet').Portlet();
 
-
-
-
 $('.slimscrollleft').niceScroll({cursorcolor:"#dcdcdc"});
 
 

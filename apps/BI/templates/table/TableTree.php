@@ -6,8 +6,8 @@
     <div class="clearfix"></div>
   </div>
   <div class="panel-collapse collapse in">
-    <div class="portlet-body">
-      <div id="treegrid1" class="mini-treegrid" style="width:100%;height:350px;"     
+    <div class="portlet-body" style="height: 500px;">
+      <div id="treegrid1" class="mini-treegrid" style="width:100%;height:100%;"     
           url="./data/tableTree.txt" showTreeIcon="true" 
           treeColumn="taskname" idField="UID" parentField="ParentTaskUID" resultAsTree="false"  
           onselectionchanged="table_onselectionchanged"

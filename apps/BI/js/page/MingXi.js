@@ -27,11 +27,11 @@ $(function(){
     }
 
     function onSelectionChanged(e) {
-            var grid = e.sender;
-            var record = grid.getSelected();
-            if (record) {
-            	var el = document.getElementById('Jtbbox')
-            	randerSelected(el,record,grid.columns)
-            }
+        var grid = e.sender;
+        var record = grid.getSelected();
+        if (record) {
+        	var el = document.getElementById('Jtbbox')
+        	randerSelected(el,record,grid.columns)
         }
+    }
 });
