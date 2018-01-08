@@ -4,7 +4,6 @@ $(function(){
     var grid = mini.get("grid1");
     grid.load();
     grid.on('selectionchanged',onSelectionChanged)
-
     /**
      * 渲染选中数据
      * @param  {json} data   grid.getSelected()获取的json
@@ -34,4 +33,30 @@ $(function(){
         	randerSelected(el,record,grid.columns)
         }
     }
+
+
+     //树渲染
+    var list = [
+        { id: "base", text: "Base" },            
+        { id: "ajax", text: "Ajax", pid: "base" },
+        { id: "json", text: "JSON", pid: "base" },
+        { id: "date", text: "Date", pid: "base" },
+        { id: "control", text: "Control", pid: "base" },
+        { id: "forms", text: "Forms", pid: "base" },
+        { id: "button", text: "Button", pid: "forms" },
+        { id: "listbox", text: "ListBox", pid: "forms" },
+        { id: "checkboxlist", text: "CheckBoxList", pid: "forms" },
+        { id: "lists", text: "Lists" },
+        { id: "datagrid", text: "DataGrid", pid: "lists" },
+        { id: "tree", text: "Tree", pid: "lists" },
+        { id: "treegrid", text: "TreeGrid ", pid: "lists" }
+    ];
+    var tree3 = mini.get("tree3");
+    tree3.loadList(list, "id", "pid");
+    tree3.on('nodeselect',onNodeselect)
+
+    function onNodeselect(e){
+        alert(e.selected.id)
+    }
+    ///////////////////////////////////
 });

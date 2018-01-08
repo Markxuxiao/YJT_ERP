@@ -1,4 +1,4 @@
-<div id="grid2" class="mini-datagrid"  style="width:100%;height:350px;"
+<div id="grid2" class="mini-datagrid"  style="width:100%;height:100%;"
   url="./data/AjaxDataGridcx_allfield.txt?method=SearchEmployees"
   idField="SYSTEM_ID"
   sizeList="[20,50,100,200,500,900]"

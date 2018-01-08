@@ -17,8 +17,8 @@ $(function(){
 		var data2 = mock_data_ecart2[parseInt(id)]
 		$('#barChart1').echarts_factory({'type':'bar_1','data':data});
 		$('#barChart2').echarts_factory({'type':'bar_2','data':data2});
-		$('#pieChart1').echarts_factory({'type':'pie_1','data':''});
-		$('#pieChart2').echarts_factory({'type':'pie_2','data':''});
+		$('#pieChart1').echarts_factory({'type':'pie_1','data':data});
+		$('#pieChart2').echarts_factory({'type':'pie_2','data':data});
 	}
 
 	(function(){

@@ -6,13 +6,13 @@
       <div class="row">
         <div class="col-xs-6">
           <div class="card-box" >
-            <div id="Jbaiduditu" style="width:100%;height:500px;">
+            <div id="Jbaiduditu" style="width:100%;height:400px;">
             </div>
           </div>
         </div> <!-- end col -->
         <div class="col-xs-6">
           <div class="card-box" >
-            <div id="barChart1" style="width: 100%;height: 500px;">
+            <div id="barChart1" style="width: 100%;height: 400px;">
             </div>
           </div>
         </div> <!-- end col -->

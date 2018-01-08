@@ -111,10 +111,20 @@
       <!-- 表格 -->
       <div class="row">
         <div class="col-lg-12">
-          <div class="card-box">
-            <?php include_once './templates/table/Table.php' ?>
+          <div class="portlet">
+            <div class="portlet-heading">
+                <h3 class="portlet-title text-dark text-uppercase">
+                    表格控件
+                </h3>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-collapse collapse in">
+              <div class="portlet-body" style="height: 300px;">
+                <?php include_once './templates/table/Table.php' ?>
+              </div>
+            </div>
           </div>
-        </div> <!-- end col -->
+        </div>
       </div>
       <!-- end row -->
 

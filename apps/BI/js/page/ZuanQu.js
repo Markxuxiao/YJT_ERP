@@ -33,7 +33,7 @@ $(function(){
 
 	rander_echart(0)
 	$('#barChart1').data('echarts').Chart.on('click', function (params) {
-	    console.log(params);
+	    alert(params.name +":"+ params.value);
 	    //todo reload grid2
 	});
 });

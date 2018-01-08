@@ -823,6 +823,7 @@ File: Components
   margin-top: 0;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  line-height: 15px;
 }
 .portlet .portlet-heading .portlet-widgets {
   display: inline-block;

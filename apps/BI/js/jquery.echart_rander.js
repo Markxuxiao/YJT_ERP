@@ -2,12 +2,13 @@
  * 数据可视化模块 依赖百度echartAPI
  * 使用场景：渲染多种模板的图形，如饼图、柱状图、漏斗等
  * 各种图形的data接口查看Default配置
- * @todo 只写了柱状图data接口
+ * @todo 只写了柱状图,饼图data接口
  */
 ;(function(){
 	var echarts_factory = function(ele,type,data){
 		var that = this;
-		var Colors = ['#5793f3', '#d14a61', '#675bba'];
+		var Colors1 = ['#CDEA57', '#0CB2EC', '#675bba','#d48265', '#91c7ae','#749f83', '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'];
+		var Colors = ['#5793f3', '#d14a61', '#675bba','#d48265', '#91c7ae','#749f83', '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'];
 		var Default = {
 			type : {
 				// 柱状图
@@ -43,8 +44,9 @@
 						}]
 					},
 					/**
-					 * @param {array} data.x x轴显示数据
-					 * @param {array} data.y y轴显示数据
+					 * @param {object}	data 	json格式参数
+					 * @param {array} 	data.x 	x轴显示数据
+					 * @param {array}	data.y 	y轴显示数据
 					 */
 					setOption:function(op,data){
 						var option = $.extend({},op)
@@ -87,8 +89,9 @@
 					    ]
 					},
 					/**
-					 * @param {array} data.x x轴显示数据
-					 * @param {array} data.y y轴显示数据
+					 * @param {object}	data 	json格式参数
+					 * @param {array} 	data.x 	x轴显示数据
+					 * @param {array}	data.y 	y轴显示数据
 					 */
 					setOption:function(op,data){
 						var option = $.extend({},op)
@@ -183,7 +186,7 @@
 								axisLine: {
 									onZero: false,
 									lineStyle: {
-										color: Colors[1]
+										color: Colors
 									}
 								},
 								axisPointer: {
@@ -204,7 +207,7 @@
 								axisLine: {
 									onZero: false,
 									lineStyle: {
-										color: Colors[0]
+										color: Colors
 									}
 								},
 								axisPointer: {
@@ -258,7 +261,7 @@
 							type: 'pie',
 							radius: '70%',
 							center: ['50%', '50%'],
-							color: ['#CDEA57', '#0CB2EC'],
+							color: Colors1,
 							label: {
 								normal: {
 									show: true,
@@ -285,8 +288,19 @@
 							}
 						}]
 					},
+					/**
+					 * @param {object}	data 	json格式参数
+					 * @param {array} 	data.x 	数据key
+					 * @param {array}	data.y 	数据value
+					 */
 					setOption:function(op,data){
 						var option = $.extend({},op)
+						var arr = []
+						option.legend.data = data.x
+						$.each(data.x,function(i,n){
+							arr[i]={'value':data.y[i],'name':n}
+						})
+						option.series[0].data = arr
 						return option
 					}
 				},
@@ -336,8 +350,19 @@
 					        }
 					    ]
 					},
+					/**
+					 * @param {object}	data 	json格式参数
+					 * @param {array} 	data.x 	数据key
+					 * @param {array}	data.y 	数据value
+					 */
 					setOption:function(op,data){
 						var option = $.extend({},op)
+						var arr = []
+						option.legend.data = data.x
+						$.each(data.x,function(i,n){
+							arr[i]={'value':data.y[i],'name':n}
+						})
+						option.series[0].data = arr
 						return option
 					}
 				},
@@ -556,8 +581,6 @@
      
     }
 
-    
-    
     echarts_factory.prototype._setOptionData = function(data){
     	var op = this.setOption(this.option,data)
     	this.option = op;
@@ -567,7 +590,6 @@
     	that._setOptionData(data)
     	that.Chart.setOption(that.option);
     }
-
 
 	$.fn.echarts_factory = function(op){
 		return this.each(function () {
