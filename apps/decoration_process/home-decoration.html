@@ -14,6 +14,9 @@
         ul,li{
             list-style: none;
         }
+        .box {
+            width: 180px;
+        }
         .service-content{
             position: absolute;
             width: 126px;
@@ -23,10 +26,17 @@
             background: #efefef;
             border-radius: 15px;
             border: 1px solid #ddd;
+            z-index: 2;
+        }
+        a.desable{
+            color: #999 !important;
+            cursor: not-allowed;
+            text-decoration-line: none;
         }
         .service-lists{
             padding-top: 10px;
             padding-left: 0px;
+            
         }
         .pointer-icon{
             position: relative;
@@ -42,9 +52,6 @@
         .item-img{
             width: 100px;
             height: 100px;
-        }
-        .list-block{
-            width:180px;
         }
         .li-top{
             width: 100px;
@@ -88,6 +95,14 @@
         .service-content a,.li-bottom a{
             color: #6c6f71;
         }
+        #list05{
+            left: 725px !important;
+            width:200px; 
+        }
+        #list14{
+            left: 139px !important;
+            width: 200px;
+        }
         #list09{
             width: 380px;
         }
@@ -103,7 +118,7 @@
     </style>
 </head>
 <body>
-    <div class="container" style="position:relative;margin-top: 20px">
+    <div style="position:relative;margin: 20px auto;width: 1080px;">
         <div class="service-content">
             <div><img src="images/5.png" alt="" class="item-img"></div>
             <div style="margin-top: 10px;font-size: 16px;font-weight: 600;font-family: Microsoft YaHei">客户服务流程</div>
@@ -192,6 +207,114 @@
                 </ul>
             </div>
         </div>
+        <div class="service-content" style="left: 950px;">
+            <div style="margin-top: 10px;font-size: 16px;font-weight: 600;font-family: Microsoft YaHei">相关查询</div>
+            <div>
+                <ul class="service-lists">
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;" class="desable">客户建档</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">客户跟踪</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">预约量房</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">客户建档</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">客户建档</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">项目造价</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">预算报价</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">合同签订</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">客户交定</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">项目外包</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">材料采购</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">材料付款</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">施工方案</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">现场监理</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">费用报销</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">装修验收</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">工程收款</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">财务结算</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="margin-bottom:10px;">
+                            <a href="javascript:;">竣工调查</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="javascript:;">项目维护</a>
+                        </div>
+                    </li>
+        
+                </ul>
+            </div>
+        </div>
         <div class="pointer-icon">
             <span style="top:35px;left: 320px;"><i class="glyphicon glyphicon-chevron-right"></i></span>
             <span style="top:35px;left: 520px;"><i class="glyphicon glyphicon-chevron-right"></i></span>
@@ -215,7 +338,7 @@
             <span style="top:155px;left: 433px;"><img src="images/1.png" alt="" style="width: 370px"></span>
             <span style="top:566px;left: 430px;"><img src="images/2.png" alt="" style="width: 400px"></span>
         </div>
-        <div class="lists-content" id="listsbox" style="position:relative;">
+        <div class="lists-content" id="listsbox" style="position:relative;height:1300px;">
         </div>
     </div>
     <div id="sdf1"></div>
@@ -224,6 +347,32 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../assets/js/art_template.js"></script>
     <!--用于存放的模板-->
+    <script id="template_listsbox" type="text/html">
+        <div id="listsbox" class="lists-content" style="position:relative;">
+                <div class="text-center box" id="list22" style="position: absolute;left: 148px;top: 1020px;">
+                    <div class="list-block">
+                        <div>
+                            <div class="li-top bg-cl4">
+                                <i class="fa fa-folder txt-cl4" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="li-middle">
+                            <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                基础数据档案
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">选项11</a></li>
+                                <li><a href="#">选项22</a></li>
+                                <li><a href="#">选项33</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </script>
     <script id="template" type="text/html">
         {{each arr value i}}
             <div class="text-center box" id="{{value.id}}"  style="{{value.style}}">
@@ -254,31 +403,11 @@
         </div>
     </script>
     <script>
-        var data ={ arr:[
-            { id:"list01",num:"01",name:"客户跟踪流程",div_classname:"li-top bg-cl1",i_classname:"fa fa-user txt-cl1",style:"position: absolute;left: 148px;top: 0px;",item:[{name:"建档",url:"javascript:;"},{name:"邀约",url:"javascript:;"},{name:"跟踪",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list02",num:"02",name:"预约量房流程",div_classname:"li-top bg-cl2",i_classname:"fa fa-bookmark txt-cl2",style:"position: absolute;left: 340px;top: 0px;",item:[{name:"预约",url:"javascript:;"},{name:"派工",url:"javascript:;"},{name:"测量",url:"javascript:;"},{name:"设计",url:"javascript:;"},{name:"确认",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list03",num:"03",name:"项目造价流程",div_classname:"li-top bg-cl3",i_classname:"fa fa-jpy txt-cl3",style:"position: absolute;left: 536px;top: 0px;",item:[{name:"造价",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list04",num:"04",name:"预算报价流程",div_classname:"li-top bg-cl1",i_classname:"fa fa-calculator txt-cl1",style:"position: absolute;left: 733px;top: 0px;",item:[{name:"报价",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list05",num:"05",name:"合同签订流程",div_classname:"li-top bg-cl3",i_classname:"fa fa-file-text-o txt-cl3",style:"position: absolute;left: 733px;top: 204px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"外包",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list06",num:"06",name:"客户交定流程",div_classname:"li-top bg-cl2",i_classname:"fa fa-handshake-o txt-cl2",style:"position: absolute;left: 733px;top: 408px;",item:[{name:"收定",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list07",num:"00",name:"报价模板",div_classname:"li-top bg-cl1",i_classname:"fa fa-files-o txt-cl1",style:"position: absolute;left: 340px;top: 204px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list08",num:"06",name:"项目外包流程",div_classname:"li-top bg-cl2",i_classname:"fa fa-cubes txt-cl2",style:"position: absolute;left: 536px;top: 204px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list09",num:"07",name:"材料采购流程",div_classname:"li-top bg-cl3",i_classname:"fa fa-cart-arrow-down txt-cl3",style:"position: absolute;left: 438px;top: 408px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list10",num:"00",name:"材料采购直供单",div_classname:"li-top bg-cl3",i_classname:"fa fa-file-o txt-cl3",style:"position: absolute;left: 340px;top: 612px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list11",num:"00",name:"材料采购入库单",div_classname:"li-top bg-cl3",i_classname:"fa fa-file-o txt-cl3",style:"position: absolute;left: 536px;top: 612px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list12",num:"00",name:"材料领用单",div_classname:"li-top bg-cl3",i_classname:"fa fa-file-o txt-cl3",style:"position: absolute;left: 733px;top: 612px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list13",num:"08",name:"材料付款流程",div_classname:"li-top bg-cl2",i_classname:"fa fa-jpy txt-cl2",style:"position: absolute;left: 148px;top: 408px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"付款",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list14",num:"09",name:"施工方案流程",div_classname:"li-top bg-cl1",i_classname:"fa fa-clipboard txt-cl1",style:"position: absolute;left: 148px;top: 612px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"进行",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list15",num:"10",name:"现场监理流程",div_classname:"li-top bg-cl2",i_classname:"fa fa-building-o txt-cl2",style:"position: absolute;left: 148px;top: 816px;",item:[{name:"装修详情",url:"javascript:;"}]}
-             ,{ id:"list16",num:"11",name:"费用报销流程",div_classname:"li-top bg-cl1",i_classname:"fa fa-money txt-cl1",style:"position: absolute;left: 340px;top: 816px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list17",num:"12",name:"装修验收流程",div_classname:"li-top bg-cl2",i_classname:"fa fa-check-square-o txt-cl2",style:"position: absolute;left: 536px;top: 816px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list18",num:"13",name:"工程收款流程",div_classname:"li-top bg-cl3",i_classname:"fa fa-jpy txt-cl3",style:"position: absolute;left: 733px;top: 816px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list19",num:"14",name:"项目结算流程",div_classname:"li-top bg-cl1",i_classname:"fa fa-calculator txt-cl1",style:"position: absolute;left:733px;top: 1020px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list20",num:"15",name:"竣工调查流程",div_classname:"li-top bg-cl2",i_classname:"fa fa-building txt-cl2",style:"position: absolute;left: 536px;top: 1020px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-             ,{ id:"list21",num:"16",name:"项目维护流程",div_classname:"li-top bg-cl1",i_classname:"fa fa-cog txt-cl1",style:"position: absolute;left: 340px;top: 1020px;",item:[{name:"创建",url:"javascript:;"},{name:"审核",url:"javascript:;"},{name:"归档",url:"javascript:;"}]}
-            ,{ id:"list22",num:"00",name:"基础数据档案",div_classname:"li-top bg-cl4",i_classname:"fa fa-folder txt-cl4",style:"position: absolute;left: 148px;top: 1020px;",item:[{name:"验收档案",url:"javascript:;"}]}
-        ]};
+        
+        var data = { arr: [{ "div_classname": "li-top bg-cl1", "style": "position: absolute;left: 148px;top: 0px;", "id": "list01", "num": "01", "i_classname": "fa fa-user txt-cl1", "name": "装修意向单", "item": [{ "name": "制订", "url": "ZXYXD.ASPX?Tlcindex_id=4700" }, { "name": "跟踪", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1950&Turl=ZXYXD.ASPX&Ttablename=QZKHDAZB&Tliuchengmxmc=装修意向单-跟踪&" }, { "name": "成交", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1950&Turl=ZXYXD.ASPX&Ttablename=QZKHDAZB&Tliuchengmxmc=装修意向单-成交&" }, { "name": "过期", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1950&Turl=ZXYXD.ASPX&Ttablename=QZKHDAZB&Tliuchengmxmc=装修意向单-过期&" }, { "name": "失败", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1950&Turl=ZXYXD.ASPX&Ttablename=QZKHDAZB&Tliuchengmxmc=装修意向单-失败&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1950&Turl=ZXYXD.ASPX&Ttablename=QZKHDAZB&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl2", "style": "position: absolute;left: 340px;top: 0px;", "id": "list02", "num": "02", "i_classname": "fa fa-bookmark txt-cl2", "name": "装修测量单", "item": [{ "name": "制订", "url": "JZCLD.ASPX?Tlcindex_id=4699" }, { "name": "派工", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1952&Turl=JZCLD.ASPX&Ttablename=CLLSDWD&Tliuchengmxmc=装修测量单-派工&" }, { "name": "测量", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1952&Turl=JZCLD.ASPX&Ttablename=CLLSDWD&Tliuchengmxmc=装修测量单-测量&" }, { "name": "设计", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1952&Turl=JZCLD.ASPX&Ttablename=CLLSDWD&Tliuchengmxmc=装修测量单-设计&" }, { "name": "确认", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1952&Turl=JZCLD.ASPX&Ttablename=CLLSDWD&Tliuchengmxmc=装修测量单-确认&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1952&Turl=JZCLD.ASPX&Ttablename=CLLSDWD&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl3", "style": "position: absolute;left: 536px;top: 0px;", "id": "list03", "num": "03", "i_classname": "fa fa-jpy txt-cl3", "name": "项目造价单", "item": [{ "name": "制订", "url": "XMZJD.ASPX?Tlcindex_id=4708" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1954&Turl=XMZJD.ASPX&Ttablename=XMZJD&Tliuchengmxmc=项目造价单-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1954&Turl=XMZJD.ASPX&Ttablename=XMZJD&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl1", "style": "position: absolute;left: 733px;top: 0px;", "id": "list04", "num": "04", "i_classname": "fa fa-calculator txt-cl1", "name": "装修报价单", "item": [{ "name": "制订", "url": "ZXBJD.ASPX?Tlcindex_id=4723" }, { "name": "报价", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1958&Turl=ZXBJD.ASPX&Ttablename=ZXBJD&Tliuchengmxmc=装修报价单-报价&" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1958&Turl=ZXBJD.ASPX&Ttablename=ZXBJD&Tliuchengmxmc=装修报价单-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1958&Turl=ZXBJD.ASPX&Ttablename=ZXBJD&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl3", "style": "position: absolute;left: 733px;top: 204px;", "id": "list05", "num": "05", "i_classname": "fa fa-file-text-o txt-cl3", "name": "项目合同", "item": [{ "name": "制订", "url": "XMHT.ASPX?Tlcindex_id=4760" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1969&Turl=XMHT.ASPX&Ttablename=GCHTDDZB&Tliuchengmxmc=项目合同-审批&" }, { "name": "派工", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1969&Turl=XMHT.ASPX&Ttablename=GCHTDDZB&Tliuchengmxmc=项目合同-派工&" }, { "name": "外包", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1969&Turl=XMHT.ASPX&Ttablename=GCHTDDZB&Tliuchengmxmc=项目合同-外包&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1969&Turl=XMHT.ASPX&Ttablename=GCHTDDZB&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl2", "style": "position: absolute;left: 733px;top: 408px;", "id": "list06", "num": "06", "i_classname": "fa fa-handshake-o txt-cl2", "name": "预收货款", "item": [{ "name": "制订", "url": "ysfk.aspx?Tlcindex_id=1567" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=567&Turl=ysfk.aspx&Ttablename=ysfk&Tliuchengmxmc=预收货款-财务审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=567&Turl=ysfk.aspx&Ttablename=ysfk&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl1", "style": "position: absolute;left: 340px;top: 204px;", "id": "list07", "num": "06A", "i_classname": "fa fa-files-o txt-cl1", "name": "报价模板", "item": [{ "name": "制订", "url": "BJMB.ASPX?Tlcindex_id=4692" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1951&Turl=BJMB.ASPX&Ttablename=BJMB&Tliuchengmxmc=报价模板-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1951&Turl=BJMB.ASPX&Ttablename=BJMB&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl2", "style": "position: absolute;left: 536px;top: 204px;", "id": "list08", "num": "06", "i_classname": "fa fa-cubes txt-cl2", "name": "外包合同", "item": [{ "name": "制订", "url": "WBHT.ASPX?Tlcindex_id=4757" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1967&Turl=WBHT.ASPX&Ttablename=GCHTDDZB&Tliuchengmxmc=外包合同-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1967&Turl=WBHT.ASPX&Ttablename=GCHTDDZB&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl3", "style": "position: absolute;left: 438px;top: 408px;", "id": "list09", "num": "07", "i_classname": "fa fa-cart-arrow-down txt-cl3", "name": "材料采购单", "item": [{ "name": "制订", "url": "CLCGD.ASPX?Tlcindex_id=4711" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1955&Turl=CLCGD.ASPX&Ttablename=cgzxfhd&Tliuchengmxmc=材料采购单-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1955&Turl=CLCGD.ASPX&Ttablename=cgzxfhd&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl3", "style": "position: absolute;left: 340px;top: 612px;", "id": "list10", "num": "07A", "i_classname": "fa fa-file-o txt-cl3", "name": "材料采购入库单", "item": [{ "name": "制订", "url": "CLCGRKD.ASPX?Tlcindex_id=4714" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1956&Turl=CLCGRKD.ASPX&Ttablename=rkd&Tliuchengmxmc=材料采购入库单-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1956&Turl=CLCGRKD.ASPX&Ttablename=rkd&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl3", "style": "position: absolute;left: 536px;top: 612px;", "id": "list11", "num": "07B", "i_classname": "fa fa-file-o txt-cl3", "name": "材料领用单", "item": [{ "name": "制订", "url": "CLLYD.ASPX?Tlcindex_id=4729" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1959&Turl=CLLYD.ASPX&Ttablename=LSDBCKD_MAIN&Tliuchengmxmc=材料领用单-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1959&Turl=CLLYD.ASPX&Ttablename=LSDBCKD_MAIN&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl3", "style": "position: absolute;left: 733px;top: 612px;", "id": "list12", "num": "07C", "i_classname": "fa fa-file-o txt-cl3", "name": "材料采购直供单", "item": [{ "name": "制订", "url": "CLCGZGD.ASPX?Tlcindex_id=4720" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1957&Turl=CLCGZGD.ASPX&Ttablename=CLCGZGD&Tliuchengmxmc=材料采购直供单-项目经理审批&" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1957&Turl=CLCGZGD.ASPX&Ttablename=CLCGZGD&Tliuchengmxmc=材料采购直供单-财务审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1957&Turl=CLCGZGD.ASPX&Ttablename=CLCGZGD&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl2", "style": "position: absolute;left: 148px;top: 408px;", "id": "list13", "num": "08", "i_classname": "fa fa-jpy txt-cl2", "name": "预付货款", "item": [{ "name": "制订", "url": "yfhk.aspx?Tlcindex_id=1564" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=566&Turl=yfhk.aspx&Ttablename=yfhk&Tliuchengmxmc=预付货款-财务审批&" }, { "name": "支付", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=566&Turl=yfhk.aspx&Ttablename=yfhk&Tliuchengmxmc=预付货款-出纳支付&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=566&Turl=yfhk.aspx&Ttablename=yfhk&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl1", "style": "position: absolute;left: 148px;top: 612px;", "id": "list14", "num": "09", "i_classname": "fa fa-clipboard txt-cl1", "name": "装修施工方案", "item": [{ "name": "制订", "url": "ZXSGFA.ASPX?Tlcindex_id=4269" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1770&Turl=ZXSGFA.ASPX&Ttablename=ZXSGFA&Tliuchengmxmc=装修施工方案-审批&" }, { "name": "进行", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1770&Turl=ZXSGFA.ASPX&Ttablename=ZXSGFA&Tliuchengmxmc=装修施工方案-进行&" }, { "name": "评价", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1770&Turl=ZXSGFA.ASPX&Ttablename=ZXSGFA&Tliuchengmxmc=装修施工方案-评价&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1770&Turl=ZXSGFA.ASPX&Ttablename=ZXSGFA&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl2", "style": "position: absolute;left: 148px;top: 816px;", "id": "list15", "num": "10", "i_classname": "fa fa-building-o txt-cl2", "name": "装修进度详情", "item": [{ "name": "数据", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1961&Turl=ZXJDXQ.ASPX&Ttablename=ZXJDXQ&Tliuchengmxmc=98基本数据&" }] }, { "div_classname": "li-top bg-cl1", "style": "position: absolute;left: 340px;top: 816px;", "id": "list16", "num": "11", "i_classname": "fa fa-money txt-cl1", "name": "项目费用单", "item": [{ "name": "制订", "url": "XMFYD.ASPX?Tlcindex_id=4753" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1966&Turl=XMFYD.ASPX&Ttablename=CLCGZGD&Tliuchengmxmc=项目费用单-项目经理审批&" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1966&Turl=XMFYD.ASPX&Ttablename=CLCGZGD&Tliuchengmxmc=项目费用单-财务总监审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1966&Turl=XMFYD.ASPX&Ttablename=CLCGZGD&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl2", "style": "position: absolute;left: 536px;top: 816px;", "id": "list17", "num": "12", "i_classname": "fa fa-check-square-o txt-cl2", "name": "项目验收单", "item": [{ "name": "制订", "url": "XMYSD.ASPX?Tlcindex_id=4737" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1962&Turl=XMYSD.ASPX&Ttablename=ckd&Tliuchengmxmc=项目验收单-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1962&Turl=XMYSD.ASPX&Ttablename=ckd&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl3", "style": "position: absolute;left: 733px;top: 816px;", "id": "list18", "num": "13", "i_classname": "fa fa-jpy txt-cl3", "name": "收款单", "item": [{ "name": "制订", "url": "XSSK.ASPX?Tlcindex_id=2781" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=558&Turl=XSSK.ASPX&Ttablename=xssk_main&Tliuchengmxmc=收款单-财务审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=558&Turl=XSSK.ASPX&Ttablename=xssk_main&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl1", "style": "position: absolute;left:733px;top: 1020px;", "id": "list19", "num": "14", "i_classname": "fa fa-calculator txt-cl1", "name": "项目财务结算单", "item": [{ "name": "制订", "url": "XMCWYSD.ASPX?Tlcindex_id=4746" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1965&Turl=XMCWYSD.ASPX&Ttablename=ckd&Tliuchengmxmc=项目财务结算单-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1965&Turl=XMCWYSD.ASPX&Ttablename=ckd&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl2", "style": "position: absolute;left: 536px;top: 1020px;", "id": "list20", "num": "15", "i_classname": "fa fa-building txt-cl2", "name": "竣工满意调查表", "item": [{ "name": "制订", "url": "JGMYDCB.ASPX?Tlcindex_id=4743" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1964&Turl=JGMYDCB.ASPX&Ttablename=JGMYDCB&Tliuchengmxmc=竣工满意调查表-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1964&Turl=JGMYDCB.ASPX&Ttablename=JGMYDCB&Tliuchengmxmc=99生效/归档&" }] }, { "div_classname": "li-top bg-cl1", "style": "position: absolute;left: 340px;top: 1020px;", "id": "list21", "num": "16", "i_classname": "fa fa-cog txt-cl1", "name": "项目维护表", "item": [{ "name": "制订", "url": "XMWHB.ASPX?Tlcindex_id=4740" }, { "name": "审批", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1963&Turl=XMWHB.ASPX&Ttablename=XMWHB&Tliuchengmxmc=项目维护表-审批&" }, { "name": "归档", "url": "list_bill.aspx?TNW=BLANK&Tformnamecn=1963&Turl=XMWHB.ASPX&Ttablename=XMWHB&Tliuchengmxmc=99生效/归档&" }] }] };
+        
         var html=template('template',data);
+        html += document.getElementById('template_listsbox').innerHTML
         document.getElementById('listsbox').innerHTML=html;
     </script>
 </body>
