@@ -1,0 +1,27 @@
+//页面划分
+{
+	"index.html":{						//ifrem布局，换肤
+		"appManage":[
+			"appManage.html",			//拖拽排序
+			"appManage2.html"			//拖拽排序
+		],
+		"app-index":[
+			"myMassage.html",
+			"myFocus.html",
+		],
+		"app-list":[					//滚动加载，瀑布流,搜索
+			"dashboard.html",			//可视化数据，收藏
+			"warning.html",				//可视化数据，收藏
+			"myFocusList.html",			//全选、删除
+			"myOffences.html",			//全选、删除
+			"liuhuo.html"				//图片放大展示
+			"dashboard-nav.html",		//筛选
+		],
+		"search":[						//滚动加载，瀑布流,搜索
+			"searchCustomer.html",		//卡片展开
+			"searchOrderStarus.html",	//卡片展开
+			"searchStocks.html",
+			"addressBook.html",			//图片放大展示
+		]
+	}
+}

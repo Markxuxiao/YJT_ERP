@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="description" content="万维软件新界面">
+
+        <title>Anywell - 万维软件</title>
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/index.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="assets/js/modernizr.min.js"></script>
+        <style>
+            /*table-css-1*/
+                .table-css-1 th {
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: #039;
+                    padding: 10px 8px;
+                    border-bottom: 2px solid #6678b1;
+                }
+                .table-css-1 td{
+                    border-bottom: 1px solid #ccc;
+                    color: #669;
+                }
+                .table-css-1 tr:nth-child(even) {
+                    background: #e8edff;
+                }
+                .table-css-1 tr:nth-child(odd) {
+                    background: #FFF;
+                }
+
+            /*table-css-1 end*/
+            /*table-css-1-1*/
+                .table-css-1-1 th {
+                    background: #b1d4b1;
+                    color: #fff;
+                    border-bottom: 2px solid #6678b1;
+                }s
+                .table-css-1-1 td{
+                    border-bottom: 1px solid #ccc;
+                    color: #669;
+                }
+                .table-css-1-1 tr:nth-child(even) {
+                    background: #f3efe3;
+                }
+                .table-css-1-1 tr:nth-child(odd) {
+                    background: #FFF;
+                }
+
+            /*table-css-1-1 end*/
+            /*table-css-2*/
+                .table-css-2 th{
+                    background: #b9c9fe;
+                    border-top: 4px solid #aabcfe;
+                    border-bottom: 1px solid #fff;
+                    color: #039;
+                }
+                .table-css-2 td{
+                    background: #e8edff; 
+                    border-bottom: 1px solid #fff;
+                    color: #669;
+                    border-top: 1px solid transparent;
+                }
+            /*table-css-2 end*/
+            /*table-css-2-1*/
+                .table-css-2-1 th{
+                    background: #b1d4b1;
+                    border-top: 4px solid #aabcfe;
+                    border-bottom: 1px solid #fff;
+                    color: #fff;
+                }
+                .table-css-2-1 td{
+                    background: #f3efe3; 
+                    border-bottom: 1px solid #fff;
+                    color: #669;
+                    border-top: 1px solid transparent;
+                }
+            /*table-css-2-1 end*/
+
+            /*table-css-3*/
+                .table-css-3{
+                    border-collapse: collapse;
+                    border: 1px solid #69c;
+                }
+                .table-css-3 th{
+                    color: #039;
+                    border-bottom: 1px dashed #69c;
+                }
+                .table-css-3 td{
+                    color: #669;
+                }
+                .table-css-3 tbody tr:hover td{
+                    color: #339;
+                    background: #d0dafd;
+                }
+            /*table-css-3 end*/
+            /*table-css-3-1*/
+                .table-css-3-1{
+                    border-collapse: collapse;
+                    border: 1px solid #b1d4b1;
+                }
+                .table-css-3-1 th{
+                    color: #404040;
+                    border-bottom: 1px dashed #b1d4b1;
+                }
+                .table-css-3-1 td{
+                    color: #669;
+                }
+                .table-css-3-1 tbody tr:hover td{
+                    color: #339;
+                    background: #f3efe3;
+                }
+            /*table-css-3-1 end*/
+            /*table-col-1*/
+                .table-col-1 .row{
+                    border-width: 1px 0 0 1px;
+                    border-style: solid;
+                    border-color: #151a4c;
+                }
+                .table-col-1 .box {
+                    border-width: 0 1px 1px 0;
+                    border-style: solid;
+                    border-color: #151a4c;
+                    text-align: center;
+                    height: 100px;
+                    background: #130733;
+                    color: #ddc1f1;
+                    padding-top: 27px;
+                }
+
+                .table-col-1 .box .hd{
+                    margin-bottom: 5px;
+                }
+                .table-col-1 .box .bd{
+                    color: #a6a4a7;
+                    font-size: 12px;
+                }
+            /*table-col-1 end*/
+            /*table-col-1-1*/
+                .table-col-1-1 .row{
+                    border-width: 1px 0 0 1px;
+                    border-style: solid;
+                    border-color: #ccc;
+                }
+                .table-col-1-1 .box {
+                    border-width: 0 1px 1px 0;
+                    border-style: solid;
+                    border-color: #ccc;
+                    text-align: center;
+                    height: 100px;
+                    padding-top: 27px;
+                }
+
+                .table-col-1-1 .box .hd{
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                }
+                .table-col-1-1 .box .bd{
+                    color: #a6a4a7;
+                    font-size: 12px;
+                }
+            /*table-col-1-1 end*/
+            /*table-col-1-2*/
+                .table-col-1-2 .row{
+                    border-width: 1px 0 0 1px;
+                    border-style: solid;
+                    border-color: #ccc;
+                }
+                .table-col-1-2 .box {
+                    border-width: 0 1px 1px 0;
+                    border-style: solid;
+                    border-color: #ccc;
+                    text-align: center;
+                    height: 100px;
+                    padding-top: 27px;
+                    background: #f3efe3;
+                }
+
+                .table-col-1-2 .box .hd{
+                    margin-bottom: 5px;
+                }
+                .table-col-1-2 .box .bd{
+                    color: #a6a4a7;
+                    font-size: 12px;
+                }
+            /*table-col-1-2 end*/
+        </style>
+
+    </head>
+
+    <body class="fixed-left">
+
+        <!-- Start content -->
+        <div style="width: 1200px;margin:0 auto;">
+                <div class="row">
+                    <div class="col-xs-6">
+
+                        <div class="portlet">
+                            <div class="portlet-heading portlet-default clearfix">
+                                <h3 class="portlet-title text-dark">
+                                    当月市场客户装修趋势分析
+                                </h3>
+                            </div>
+                            <div class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div id="box1" style="height: 400px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6">
+
+                        <div class="portlet">
+                            <div class="portlet-heading portlet-default clearfix">
+                                <h3 class="portlet-title text-dark">
+                                    当月市场客户装修趋势分析
+                                </h3>
+                            </div>
+                            <div class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div id="box2" style="height: 400px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>    
+
+                <div  class="row">
+                    <div class="col-xs-12">
+                        <div class="portlet">
+                            <div class="portlet-heading portlet-default clearfix">
+                                <h3 class="portlet-title text-dark">
+                                    当月市场客户装修趋势分析
+                                </h3>
+                            </div>
+                            <div class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div class="table-responsive">
+                                        <table class="table m-0 table-css-3">
+                                            <thead>
+                                                <tr>
+                                                    <th>信息来源</th>
+                                                    <th>跟踪率</th>
+                                                    <th>进店率</th>
+                                                    <th>成交率</th>
+                                                    <th>进店成交率</th>
+                                                    <th>失败率</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+
+                        <div class="portlet">
+                            <div class="portlet-heading portlet-default clearfix">
+                                <h3 class="portlet-title text-dark">
+                                    当月市场客户装修趋势分析
+                                </h3>
+                            </div>
+                            <div class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div id="box3" style="height: 400px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6">
+
+                        <div class="portlet">
+                            <div class="portlet-heading portlet-default clearfix">
+                                <h3 class="portlet-title text-dark">
+                                    当月市场客户装修趋势分析
+                                </h3>
+                            </div>
+                            <div class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div id="box4" style="height: 400px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>    
+
+                <div  class="row">
+                    <div class="col-xs-12">
+                        <div class="portlet">
+                            <div class="portlet-heading portlet-default clearfix">
+                                <h3 class="portlet-title text-dark">
+                                    当月市场客户装修趋势分析
+                                </h3>
+                            </div>
+                            <div class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div class="table-responsive">
+                                        <table class="table m-0 table-css-3">
+                                            <thead>
+                                                <tr>
+                                                    <th>信息来源</th>
+                                                    <th>跟踪率</th>
+                                                    <th>进店率</th>
+                                                    <th>成交率</th>
+                                                    <th>进店成交率</th>
+                                                    <th>失败率</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                    <td>1.000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+        </div> <!-- content -->
+
+
+        <!-- 不用前端渲染可删除 -->
+        <script id="template_item" type="text/html">
+            {{each list as value i}}
+                
+            {{/each}}
+        </script>
+        <!-- end 不用前端渲染可删除 -->
+
+        <!-- common js  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.core.js"></script>
+        <!-- jQueryPlugin  -->
+        <script src="https://cdn.bootcss.com/echarts/3.7.0/echarts.min.js"></script>
+        <!-- <script src="assets/js/echarts.simple.min.js"></script> -->
+        <!-- 不用前端渲染可删除 -->
+        <script src="assets/js/template.js"></script>
+        <!-- end 不用前端渲染可删除 -->
+        <!-- page js  -->
+
+        <script type="text/javascript">
+            $(function(){
+                var data = {
+                    list: [
+                        {'目标':30,'预测':60,'订单':50,'2回款':30,'3预测':60,'4订单':50,'5回款':30}
+                    ],
+                    msg:1
+                };
+
+
+                function mark_op(data){
+                    var key = []
+                        ,value = [];
+
+                    for( var k in data){
+                      key.push(k)
+                      value.push(data[k])
+                    }
+                    var op = {
+                            title: {
+                                show:false
+                            },
+                          color: ['#3398DB'],
+                          grid: {
+                              left: '0',
+                              right: '0',
+                              bottom: '0',
+                              top: '10',
+                              containLabel: true
+                          },
+                          xAxis : [
+                              {
+                                  type : 'category',
+                                  data : key
+                              }
+                          ],
+                          yAxis : [
+                              {
+                                  type : 'value'
+                              }
+                          ],
+                          series : [
+                            {
+                              type:'bar',
+                              barWidth: '70%',
+                              data:value
+                            },
+                            {
+                                name:'邮件营销',
+                                type:'line',
+                                stack: '总量',
+                                data:[40, 70, 60,40, 70, 60,40]
+                            }
+                          ]
+                      };
+                    return op;
+                }
+                
+                var option1 = {
+                    title: {
+                        show:false
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    legend: {
+                        data: ['2011年', '2012年']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'value',
+                        boundaryGap: [0, 0.01]
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: ['巴西','印尼','美国','印度','中国','世界人口(万)']
+                    },
+                    series: [
+                        {
+                            name: '2011年',
+                            type: 'bar',
+                            data: [18203, 23489, 29034, 104970, 131744, 630230]
+                        },
+                        {
+                            name: '2012年',
+                            type: 'bar',
+                            data: [19325, 23438, 31000, 121594, 134141, 681807]
+                        }
+                    ]
+                };
+                var option3 = {
+                    grid: {
+                            left: '0',
+                            right: '0',
+                            bottom: '0',
+                            top:'10',
+                            containLabel: true
+                        },
+                  legend: {
+                      x : 'center',
+                      y : 'bottom',
+                      data:['开单','销售','收款']
+                  },
+                  calculable : true,
+                  series : [
+                      {
+                          name:'面积模式',
+                          type:'pie',
+                          radius : [30, 110],
+                          center : ['50%', '50%'],
+                          roseType : 'area',
+                          data:[
+                              {value:203, name:'开单'},
+                              {value:136, name:'销售'},
+                              {value:148, name:'收款'}
+                          ]
+                      }
+                  ]
+              };
+
+              var option4 =  {
+                        grid: {
+                            left: '10',
+                            right: '10',
+                            bottom: '10',
+                            top:'10',
+                            containLabel: true
+                        },
+                        xAxis : [
+                            {
+                                type : 'category',
+                                boundaryGap : false,
+                                data : ['周一','周二','周三','周四','周五','周六','周日']
+                            }
+                        ],
+                        yAxis : [
+                            {
+                                type : 'value'
+                            }
+                        ],
+                        series : [
+                            {
+                                name:'邮件营销',
+                                type:'line',
+                                stack: '总量',
+                                areaStyle: {normal: {}},
+                                data:[120, 132, 101, 134, 90, 230, 210]
+                            }
+                        ]
+                    };
+
+                function echarts_factory(domId,op){
+
+                  var myChart = echarts.init(document.getElementById(domId));
+                  var option = op;
+                  myChart.setOption(option);
+                  return myChart;
+                }
+
+                echarts_factory('box1',option1)
+                echarts_factory('box2',mark_op(data.list[0]))
+                echarts_factory('box3',option3)
+                echarts_factory('box4',option4)
+            });
+        </script>
+    </body>
+</html>
