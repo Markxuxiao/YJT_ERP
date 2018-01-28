@@ -6,7 +6,7 @@
       <div class="row" style="position: relative;">
         <div class="col-xs-12">
           <div class="card-box" style="position: absolute;top:0;left:10px;width:200px;min-height:544px;overflow: auto;">
-            <ul id="tree3" class="mini-tree" showTreeIcon="false" textField="text" idField="id" >        
+            <ul id="tree3" class="mini-tree" expandOnLoad="0" showTreeIcon="false" textField="text" idField="id" >        
             </ul>
           </div>
           <div style="padding-left:220px;width: 100%;">
