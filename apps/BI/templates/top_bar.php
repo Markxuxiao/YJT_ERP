@@ -4,7 +4,7 @@
   <!-- LOGO -->
   <div class="topbar-left">
     <div class="text-center">
-      <a href="index.php" class="logo"><span>万维BI系统</span></a>
+      <a href="index.php" class="logo"><span>万维BI系统万维BI系统万维BI系统</span></a>
     </div>
   </div>
 
@@ -13,10 +13,10 @@
     <div class="container">
       <div class="">
         
-        <form role="search" class="navbar-left app-search pull-left hidden-xs">
+        <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
           <input type="text" placeholder="搜索" class="form-control">
           <a href=""><i class="fa fa-search"></i></a>
-        </form>
+        </form> -->
 
 
         <!-- <ul class="nav navbar-nav navbar-right pull-right">
