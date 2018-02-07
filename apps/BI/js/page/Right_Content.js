@@ -219,14 +219,24 @@ $(function(){
 	};
 	
 	var pie_1 = {
+		title:{
+			subtext:"这里是总数100",
+			left:'center',
+			bottom:0,
+			subtextStyle:{
+				fontSize:14,
+				fontWeight:'bold',
+				color:'orange'
+			}
+		},
 		tooltip: {
 			trigger: 'item',
 			formatter: "{b} : {c} ({d}%)"
 		},
 		legend: {
-			top: 0,
+			top: 10,
 			left: 'center',
-			data: ['达成率', '未达成率']
+			data: ['adf', 'sf']
 		},
 		series: [{
 			name: '任务达成情况',
@@ -242,18 +252,9 @@ $(function(){
 					fontSize: 18
 				}
 			},
-			data: [{
-				value: 59,
-				name: 'adf'
-			},
-			{
-				value: 21,
-				name: 'sf'
-			},
-			{
-				value: 20,
-				name: 'sdff'
-			}
+			data: [
+				{value: 59,name: 'adf'},
+				{value: 41,name: 'sf'}
 			],
 			itemStyle: {
 				emphasis: {
