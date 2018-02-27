@@ -8,7 +8,7 @@
           <div class="portlet"><!-- /primary heading -->
             <div class="portlet-heading">
               <h3 class="portlet-title text-dark text-uppercase">
-                                                 排行榜(提升榜)
+                排行榜(提升榜)
               </h3>
               <div class="portlet-widgets">
                 <a href="javascript:void(0);">
@@ -20,7 +20,7 @@
             <div class="panel-collapse collapse in">
               <div class="portlet-body">
                 <div class="row">
-                  <div class="col-xs-6 text-center p-20">
+                  <div class="col-xs-12 col-sm-6 text-center p-20">
                     <div class="col-xs-4">
                       <div class="text-success h4">
                         <i class="glyphicon glyphicon-arrow-up"></i>
@@ -51,8 +51,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-xs-6">  
-                    <div class="p-20">
+                  <div class="col-xs-12 col-sm-6">  
+                    <div>
                       <table class="table table-hover m-0">
                         <thead>
                           <tr>
@@ -123,7 +123,7 @@
           <div class="portlet"><!-- /primary heading -->
             <div class="portlet-heading">
               <h3 class="portlet-title text-dark text-uppercase">
-                                                 排行榜(名次榜)
+                排行榜(名次榜)
               </h3>
               <div class="portlet-widgets">
                 <a href="javascript:void(0);">
@@ -135,8 +135,8 @@
             <div class="panel-collapse collapse in">
               <div class="portlet-body">
                 <div class="row">                 
-                  <div class="col-xs-6">  
-                    <div class="p-20">
+                  <div class="col-xs-12 col-sm-6">  
+                    <div>
                       <table class="table table-hover m-0">
                         <thead>
                           <tr>
@@ -193,29 +193,34 @@
                       </table>
                     </div>
                   </div>  
-                  <div class="col-xs-6 text-center p-20">
-                    <div class="col-xs-4" style="margin-top:30px">
-                      <div class="text-danger"><span class="bg-dark p-5 text-white">上升1位</span></div>
-                      <div class="text-info h4">8000</div>   
-                      <div class="rank-height2 bg-info over-hidden">
-                        <p class="h4 text-white" style="margin-top:130px">王文姗</p>
-                        <p class="h4 text-white" style="margin-top:10px">2</p>
-                      </div>
-                    </div>
-                    <div class="col-xs-4" style="margin-top:-20px">
-                      <div class="text-danger"><span class="bg-dark p-5 text-white">持平</span></div>
-                      <div class="text-success h4">10000</div>   
+                  <div class="col-xs-12 col-sm-6 text-center p-20">
+                    <div class="col-xs-4">
+                      <div class="text-success h4">
+                        <i class="glyphicon glyphicon-arrow-up"></i>
+                        <span class="h5">上升100名</span>                         
+                      </div>   
                       <div class="rank-height1 bg-success over-hidden">
                         <p class="h4 text-white" style="margin-top:180px">王文姗</p>
-                        <p class="h4 text-white" style="margin-top:10px">1</p>
+                        <p class="h4 text-white" style="margin-top:10px">12000</p>
                       </div>
-                    </div>                    
-                    <div class="col-xs-4" style="margin-top:80px">
-                      <div class="text-danger"><span class="bg-dark p-5 text-white">下降1位</span></div>
-                      <div class="text-danger h4">6000</div>   
+                    </div>
+                    <div class="col-xs-4" style="margin-top:50px">
+                      <div class="text-info h4">
+                        <i class="glyphicon glyphicon-arrow-up"></i>
+                        <span class="h5">上升80名</span> 
+                      </div>   
+                      <div class="rank-height2 bg-info over-hidden">
+                        <p class="h4 text-white" style="margin-top:130px">王文姗</p>
+                        <p class="h4 text-white" style="margin-top:10px">10000</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-4" style="margin-top:100px">
+                      <div class="text-danger h4"><i class="glyphicon glyphicon-arrow-up"></i>
+                        <span class="h5">上升60名</span> 
+                      </div>   
                       <div class="rank-height3 bg-danger over-hidden">
                         <p class="h4 text-white" style="margin-top:80px">王文姗</p>
-                        <p class="h4 text-white" style="margin-top:10px">3</p>
+                        <p class="h4 text-white" style="margin-top:10px">8000</p>
                       </div>
                     </div>
                   </div>

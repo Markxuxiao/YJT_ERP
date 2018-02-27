@@ -1734,3 +1734,33 @@ File: Pages
 .signup-signin-page {
   width: auto;
 }
+
+/* responsive.css */
+
+/* ====================================================================== */
+@media (min-width: 1025px) {
+  .left.side-menu{
+    display: block !important;
+  }
+}
+@media (max-width: 1024px) {
+  .left.side-menu{
+    display: none;
+  }
+  .content-page{
+    margin-left: 0;
+  }
+
+  .button-menu-mobile {
+    display: block;
+  }
+}
+@media (max-width: 750px) {
+  .logo span{
+    display: block;
+    width: 260px;  
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+}

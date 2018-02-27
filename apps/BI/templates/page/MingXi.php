@@ -3,8 +3,8 @@
   <div class="content">
     <div class="container">
       <!-- 表格 -->
-      <div class="row" style="position: relative;">
-        <div class="col-xs-12">
+      <div class="row" style="position: relative;overflow:auto;">
+        <div class="col-xs-12" style="min-width:750px;">
           <div class="card-box" style="position: absolute;top:0;left:10px;width:200px;min-height:544px;overflow: auto;">
             <ul id="tree3" class="mini-tree" expandOnLoad="0" showTreeIcon="false" textField="text" idField="id" >        
             </ul>

@@ -31,6 +31,12 @@ $('.portlet').Portlet();
 
 $('.slimscrollleft').niceScroll({cursorcolor:"#dcdcdc"});
 
+$(function () {
+    $('.open-left').click(function(){
+        $(".left.side-menu").toggle();
+    })
+})
+
 
 
 
