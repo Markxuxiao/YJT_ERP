@@ -233,10 +233,11 @@ body{
 	margin-bottom: 0px;
 }
 
-.link-content .link-content-link {
-	margin-left: 10px;
-	margin-right: 10px;
-	position: relative;
+.link-content .link-content-link a h6{
+    margin: 3px 0;
+    height: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .link-content h5 {
