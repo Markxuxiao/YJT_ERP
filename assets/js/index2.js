@@ -10,11 +10,19 @@ $(function(){
   }
   toggle.prototype.onclick = function() {
     if (this.unlock){
-      this.btn.find('i').removeClass('fa-eye-slash').addClass('fa-eye');
+      this.btn
+        .find("i")
+        .removeClass("fa-chevron-down")
+        .addClass("fa-chevron-up");
+      this.btn.find("span").text("收起");
       this.content.addClass('on');
       this.unlock = false;
     }else{
-      this.btn.find('i').removeClass('fa-eye').addClass('fa-eye-slash');
+      this.btn
+        .find("i")
+        .removeClass("fa-chevron-up")
+        .addClass("fa-chevron-down");
+      this.btn.find("span").text("更多");
       this.content.removeClass('on');
       this.unlock = true;
     }
