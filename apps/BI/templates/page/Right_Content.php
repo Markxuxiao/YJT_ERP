@@ -108,6 +108,16 @@
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="card-box">
+            <h4 class="text-dark  header-title m-t-0 m-b-30">访问量年度分析</h4>
+            <div class="widget-chart text-center">
+              <div id="lineChart3" style="width: 100%;height: 300px;"></div>              
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- 表格 -->
       <div class="row">
         <div class="col-xs-12">

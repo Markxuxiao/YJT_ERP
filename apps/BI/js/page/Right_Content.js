@@ -217,7 +217,22 @@ $(function(){
 			}
 		]
 	};
-	
+	var line_3 = { 
+		color: ["#5793f3", "#d14a61", "#675bba"],
+		tooltip: { trigger: "axis", axisPointer: { type: "cross" } },
+		// grid: { right: "20%" },
+		legend: { data: ["访问量", "访问人数"] },
+		xAxis: [{ type: "category", axisTick: { alignWithLabel: true },
+		data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"] }],
+		yAxis: [
+			{ type: "value", name: "访问量",position: "right"}, 
+			{ type: "value", name: "访问人数", position: "left"}
+		], 
+		series: [
+			{ name: "访问量", type: "bar", yAxisIndex: 0,data: [4233, 4545, 3566, 0, 0,0,0,0,0,0,0,0] }, 
+			{ name: "访问人数", type: "line", yAxisIndex: 1, data: [344, 356, 266, 0, 0,0,0,0,0,0,0,0] }
+		]
+	};
 	var pie_1 = {
 		title:{
 			subtext:"这里是总数100",
@@ -500,6 +515,7 @@ $(function(){
 	$('#lineChart1').data('echarts').Chart.on('click',function(params){console.log(params)})
 
 	$('#lineChart2').echarts_factory(line_2);
+	$("#lineChart3").echarts_factory(line_3);
 	$('#pieChart1').echarts_factory(pie_1);
 	$('#pieChart2').echarts_factory(pie_2);
 	$('#pieChart3').echarts_factory(pie_3);
