@@ -1738,12 +1738,12 @@ File: Pages
 /* responsive.css */
 
 /* ====================================================================== */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   .left.side-menu{
     display: block !important;
   }
-}
-@media (max-width: 1024px) {
+} */
+/* @media (max-width: 1024px) { */
   .left.side-menu{
     display: none;
   }
@@ -1754,8 +1754,8 @@ File: Pages
   .button-menu-mobile {
     display: block;
   }
-}
-@media (max-width: 750px) {
+/* } */
+/* @media (max-width: 750px) { */
   .logo span{
     display: block;
     width: 260px;  
@@ -1763,4 +1763,4 @@ File: Pages
     text-overflow:ellipsis;
     white-space: nowrap;
   }
-}
+/* } */
