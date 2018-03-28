@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="万维BI系统">
+		<title>万维BI系统</title>
+		<link href="http://oa.gzwebway.com:8888/oa/scripts/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css">
+		<link href="../BI/css/YHminiui.css" rel="stylesheet" type="text/css" />
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../assets/css/icons.css" rel="stylesheet" type="text/css" />
+		<link href="./css/core.css" rel="stylesheet" type="text/css" />
+		<link href="./css/components.css" rel="stylesheet" type="text/css" />
+		<link href="./css/bi_components.css" rel="stylesheet" type="text/css" />
+		<link href="./css/pages.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			#sidebar-menu{
+				padding-top: 0px;
+			}
+			.left.side-menu {
+				display: block;
+				width: 150px;
+				top: 0px;
+				padding-top: 0px;
+			}
+			/* .list-unstyled{
+				background-color: #F3F3F3;
+			} */
+			/* #wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > ul{
+				background-color: #F3F3F3;
+			} */
+			#wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > ul a{
+				background: transparent;
+			}
+			.open-left {
+				height: 35px;
+				text-align: center;
+				background-color: #F3F3F3;
+				cursor: pointer;
+			}
+			
+			.open-left:hover .button-menu-mobile {
+				color: #f60;
+			}
+			
+			.content-page {
+				margin-left: 150px;
+			}
+			
+			.content-page>.content {
+				margin-top: 0px;
+				padding-top: 0px;
+			}
+			
+			.portlet .portlet-heading {
+				padding-top: 20px;
+			}
+			
+			.button-menu-mobile {
+				color: #36404a;
+			}
+			/*设置表格头部标签层级*/			
+			.mini-grid-columns-view {
+				z-index: 1;
+			}
+			.mini-panel-header{
+				display: none !important;
+			}
+
+			.mini-panel-viewport{
+				background: none !important;
+			}
+			body {
+				overflow-x: hidden;
+				width: 100%;
+				height: 100%;
+				/*自定义滚动条样式*/
+				SCROLLBAR-SHADOW-COLOR: #C0C0C0;
+				SCROLLBAR-3DLIGHT-COLOR: #C0C0C0;
+				SCROLLBAR-ARROW-COLOR: #C0C0C0;
+				SCROLLBAR-TRACK-COLOR: #ffffff;
+				SCROLLBAR-BASE-COLOR: #ffffff;
+			}
+		</style>
+	</head>
+
+	<body class="fixed-left">
+
+		<!-- Begin page -->
+		<div id="wrapper" style="height:100%;">
+			<div class="left side-menu">
+				<div class="sidebar-inner slimscrollleft">
+					<!--- Divider -->
+					<div id="sidebar-menu">
+						<ul>
+							<li class="open-left text-center Jopen-left">
+								<span class="button-menu-mobile Jbutton-menu-mobile" style="line-height: 35px;display: block;font-size: 16px;">收起</span>
+							</li>
+							<li class="has_sub">
+								<a href="#" class="waves-effect subdrop"><i class="ti-home"></i> <span> 综合实例 </span> </a>	
+
+									<ul class="list-unstyled" style="display: block;">
+										
+										<li>
+											<div style="padding:10px;">
+												<div class="mini-tree" id="tree3" expandOnLoad="0" showTreeIcon="false" textField="text" idField="id">        
+												</div>
+											</div>
+										</li>
+									</ul>
+		
+							</li>
+							
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!-- Left Sidebar End -->
+			<!-- Start right Content here -->
+			<div class="content-page" style="height:100%;">
+				<!-- Start content -->
+				<div class="content" style="height:100%;padding:0;">
+					<div class="container" style="height:100%;">
+						<!-- 表格 -->
+						<div class="row" style="position: relative;overflow:auto;height:100%;">
+							<div class="col-xs-12" style="min-width:750px;height:100%;">
+								<!--<div class="card-box" style="position: absolute;top:0;left:10px;width:200px;min-height:544px;overflow: auto;">
+									<ul id="tree3" class="mini-tree" expandOnLoad="0" showTreeIcon="false" textField="text" idField="id">
+									</ul>
+								</div>-->
+								<div class="row" style="height:80%;">
+									<div class="col-xs-12" style="height:100%;">
+										<div class="portlet" style="height:100%;">
+											<div class="portlet-heading">
+												<h3 class="portlet-title text-uppercase color-orange">万维BI系统万维BI系统万维BI系统</h3>
+												<div class="pull-right">
+													<a class="mini-button mini-button-plain" href="javascript:void(0)"><span class="mini-button-text  mini-button-icon-text "><span class="mini-button-icon mini-iconfont icon-download" style=""></span>导出EXCEL文件</span>
+													</a>
+													<a class="mini-button mini-menubutton mini-button-plain" href="javascript:void(0)"><span class="mini-button-text ">更多操作</span><span class="mini-button-allow mini-button-menu"></span></a>
+													<span class="mini-textbox" id="key1" style="border-width: 0px; width: 150px; padding: 0px;"><span class="mini-textbox-border"><input type="text" class="mini-textbox-input" autocomplete="off" placeholder="" id="key1$text"></span><input type="hidden"></span>
+													<a class="mini-button" href="javascript:void(0)" id="searchgrid1"><span class="mini-button-text ">查询</span></a>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											<div class="panel-collapse collapse in" style="height:100%;">
+
+												<div class="portlet-body mini-fit">
+													<div id="grid1" class="mini-datagrid" style="width:100%;height:100%;" url="./data/AjaxDataGridcx_allfield.txt?method=SearchEmployees" idField="SYSTEM_ID" sizeList="[20,50,100,200,500,900]" pagesize="20">
+														<div property="columns">
+															<div name="日期" field="日期" headerAlign="center" align="center" width="85px" visible="true" dateFormat="yyyy-MM-dd" autoEscape="false" allowSort="true">日期</div>
+															<div name="单号" field="单号" headerAlign="center" width="130" visible="true" autoEscape="false" allowSort="true">单号</div>
+															<div name="工作类别" field="工作类别" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">工作类别</div>
+															<div name="负责人" field="负责人" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">负责人</div>
+															<div name="部门" field="部门" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">部门</div>
+															<div name="出勤记录审批" field="出勤记录审批" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">出勤记录审批</div>
+															<div name="审批类别" field="审批类别" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">审批类别</div>
+															<div name="工作量" field="工作量" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">工作量</div>
+															<div name="困难指数" field="困难指数" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">困难指数</div>
+															<div name="迷茫指数" field="迷茫指数" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">迷茫指数</div>
+															<div name="郁闷指数" field="郁闷指数" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">郁闷指数</div>
+															<div name="沟通扣分原因" field="沟通扣分原因" headerAlign="center" width="110" visible="true" autoEscape="false" allowSort="true">沟通扣分原因</div>
+															<div name="合计得分" field="合计得分" headerAlign="center" width="110" visible="true" align="right" summaryType="sum" autoEscape="false" allowSort="true">合计得分</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end col -->
+								</div>
+								<!-- end row -->
+							
+								<div class="row" style="height:20%;">
+									<div class="col-xs-12" style="height:100%;">
+										<div class="card-box" style="height:100%;margin-bottom: 0px;">
+											<div class="row" id="Jtbbox"></div>
+										</div>
+									</div>
+									<!-- end col -->
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+					<!-- container -->
+				</div>
+				<!-- content -->
+			</div>
+
+			<!-- End Right content here -->
+		</div>
+		<!-- END wrapper -->
+
+		<!-- jQuery  -->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=REnvTxZpnbxWN1H8RXxyNhafDLacomcY"></script>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/jquery.nicescroll.js"></script>
+
+		<script src="http://oa.gzwebway.com:8888/oa/scripts/miniui/miniui.js" type="text/javascript"></script>
+		<script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.min.js"></script>
+		<script src="./js/jquery.echart_rander.js"></script>
+		<script src="./js/jquery.slimscroll.js"></script>
+		<script src="./js/app.js"></script>
+
+		<!--<script src="./js/page/mingxi.js"></script>-->		
+		<script type="text/javascript">
+			$(function(){
+				// 模拟表格
+				mini.parse();
+			    var grid = mini.get("grid1");
+				grid.load();
+				// 模拟树形控件
+				var list = [
+			        { id: "base", text: "Base" },            
+			        { id: "ajax", text: "Ajax", pid: "base" },
+			        { id: "json", text: "JSON", pid: "base" },
+			        { id: "date", text: "Date", pid: "base" },
+			        { id: "control", text: "Control", pid: "base" },
+			        { id: "forms", text: "Forms", pid: "base" },
+			        { id: "button", text: "Button", pid: "forms" },
+			        { id: "listbox", text: "ListBox", pid: "forms" },
+			        { id: "checkboxlist", text: "CheckBoxList", pid: "forms" },
+			        { id: "lists", text: "Lists" },
+			        { id: "datagrid", text: "DataGrid", pid: "lists" },
+			        { id: "tree", text: "Tree", pid: "lists" },
+			        { id: "treegrid", text: "TreeGrid ", pid: "lists" }
+			    ];
+			    var tree3 = mini.get("tree3");
+    			tree3.loadList(list, "id", "pid");
+			    
+			    
+			    //展开收起左栏
+				(function () {
+					var on = true;
+					$('.Jopen-left').on('click',function(){
+						$('.Jbutton-menu-mobile').text(on ? '展开': '收起');
+						on = !on;
+					});
+				})();
+			    
+			   
+			});
+		
+		</script>
+	</body>
+
+</html>
