@@ -344,9 +344,9 @@ $(function(){
 				label: {
 					normal: {
 						formatter: [
-							'{a|{d}%}',
+							'{a|180%}',
 							'{b|目标值： 6000}',
-							'{b|完成值： 4000}'
+							'{b|完成值： 14000}'
 						].join('\n'),
 						rich: {
 							a: {
@@ -371,7 +371,7 @@ $(function(){
 					}
 				}
 			}, {
-				value: 2000,
+				value: 0,
 				itemStyle: {
 					normal: {
 						color: '#333',
