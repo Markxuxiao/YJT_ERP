@@ -30,12 +30,13 @@
   }();
 
   var freezeTable = function($table){
+    if(!$table.first('tr').find('td')) return "freezeTable";//防止表格不全
     var $wrap = $('<div style="overflow:hidden;position:absolute;top:0;border: 1px solid #ddd;"></div>')
     var $tb_clone = $table.clone();
-
+    $tb_clone.removeAttr("freezeTable");
     $wrap.css('width',getFreezeWidth($table))
     $tb_clone.css('width',$table.css('width'))
-
+    
     $wrap.append($tb_clone)
     $table.parent().wrap('<div style="position: relative;"></div>').append($wrap);
 
