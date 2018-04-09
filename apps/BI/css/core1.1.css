@@ -1188,11 +1188,11 @@ File: Topbar,Left-sidebar,Right-sidebar
   top: 50px;
 }
 body.fixed-left .side-menu.left {
-  bottom: 50px;
+  bottom: 0px;
   height: 100%;
   margin-bottom: -70px;
   margin-top: 0px;
-  padding-bottom: 70px;
+  padding-bottom: 0px;
   position: fixed;
 }
 .content-page {
@@ -1233,8 +1233,8 @@ body.fixed-left .side-menu.left {
   text-decoration: none;
 }
 #sidebar-menu {
-  padding-bottom: 30px;
-  padding-top: 30px;
+  /* padding-bottom: 30px;
+  padding-top: 30px; */
   width: 100%;
 }
 #sidebar-menu .nav > li > a .badge {
