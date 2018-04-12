@@ -13,7 +13,7 @@ include_once './config.php'
         <link rel="shortcut icon" href="<?PHP echo(ROOT_PATH) ?>assets/images/favicon_1.ico">
 
         <title>万维BI系统</title>
-        <link href="http://oa.gzwebway.com:8888/oa/scripts/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css">
+        <link href="../BI/css/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css">
         <link href="./css/YHminiui.css" rel="stylesheet" type="text/css" />
         <link href="<?PHP echo(ROOT_PATH) ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?PHP echo(ROOT_PATH) ?>assets/css/icons.css" rel="stylesheet" type="text/css" />
