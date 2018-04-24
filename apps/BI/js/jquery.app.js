@@ -33,7 +33,7 @@ $('.slimscrollleft').niceScroll({cursorcolor:"#dcdcdc"});
 
 $(function () {
     $('.open-left').click(function(){
-        $(".left.side-menu").toggle();
+        $(".left.side-menu").toggle("fast");
     })
 })
 
