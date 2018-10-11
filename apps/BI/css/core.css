@@ -1,18 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300);
-/*
-Template Name: UBold Dashboard
-Author: CoderThemes
-Email: coderthemes@gmail.com
-File: Common
-*/
+
 body {
   background: #ebeff2;
   font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   color: #797979;
-  min-width: 1200px;
+  /* min-width: 1200px; */
 }
 
 html {
@@ -95,11 +88,7 @@ a:focus {
   right: 0px;
   left: 240px;
 }
-#wrapper {
-  height: 100%;
-  overflow: hidden;
-  width: 100%;
-}
+
 .page {
   bottom: 0;
   left: 0;
@@ -1077,7 +1066,7 @@ File: Topbar,Left-sidebar,Right-sidebar
 .topbar .topbar-left {
   float: left;
   position: relative;
-  width: 240px;
+  /* width: 180px; */
   z-index: 1;
 }
 .topbar .topbar-left-sm {
@@ -1088,7 +1077,7 @@ File: Topbar,Left-sidebar,Right-sidebar
   font-size: 20px;
   font-weight: 700;
   letter-spacing: .05em;
-  line-height: 60px;
+  line-height: 50px;
   text-transform: uppercase;
 }
 .logo h1 {
@@ -1124,7 +1113,7 @@ File: Topbar,Left-sidebar,Right-sidebar
 }
 .nav > li > a {
   color: #ffffff !important;
-  line-height: 60px;
+  line-height: 50px;
   padding: 0px 15px;
   position: relative;
 }
@@ -1188,14 +1177,14 @@ File: Topbar,Left-sidebar,Right-sidebar
 .side-menu {
   bottom: 0;
   top: 0;
-  width: 240px;
-  z-index: 2;
+  width: 180px;
+  z-index: 10;
 }
 .side-menu.left {
   background: #ffffff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 15px rgba(53, 45, 45, 0.58);
   position: absolute;
-  top: 60px;
+  top: 50px;
 }
 body.fixed-left .side-menu.left {
   bottom: 50px;
@@ -1206,20 +1195,21 @@ body.fixed-left .side-menu.left {
   position: fixed;
 }
 .content-page {
-  margin-left: 240px;
+  margin-left: 180px;
   overflow: hidden;
 }
 .content-page > .content {
-  margin-bottom: 60px;
-  margin-top: 60px;
+  /* margin-bottom: 60px; */
+  margin-top: 50px;
   padding: 20px 5px 15px 5px;
 }
 .button-menu-mobile {
+  display: none;
   background: transparent;
   border: none;
   color: #cccccc;
   font-size: 21px;
-  line-height: 60px;
+  line-height: 50px;
   padding: 0px 15px;
 }
 .button-menu-mobile:hover {
@@ -1481,7 +1471,7 @@ body.fixed-left .side-menu.left {
 }
 #wrapper.enlarged .topbar .topbar-left .logo .icon-c-logo {
   display: block;
-  line-height: 60px;
+  line-height: 50px;
 }
 #wrapper.enlarged #sidebar-menu > ul > li:hover > a.open :after {
   display: none;
@@ -1530,7 +1520,7 @@ body.fixed-left .side-menu.left {
 .side-bar.right-bar {
   float: right !important;
   right: -266px;
-  top: 60px;
+  top: 50px;
 }
 .side-bar {
   -moz-transition: all 200ms ease-out;
@@ -1606,7 +1596,7 @@ body.fixed-left .side-menu.left {
 }
 .app-search {
   position: relative;
-  margin: 15px 0px 15px 10px;
+  margin: 10px 0px 10px 10px;
 }
 .app-search a {
   position: absolute;

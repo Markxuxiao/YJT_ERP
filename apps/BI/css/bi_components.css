@@ -19,3 +19,10 @@
 .bg-dark{
   background-color:#999;
 }
+.color-orange{
+	color: orange !important;
+}
+
+.portlet-heading .mini-button-text{
+	padding: 2px 8px 2px 8px;
+}

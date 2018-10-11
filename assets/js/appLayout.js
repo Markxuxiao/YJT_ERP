@@ -113,9 +113,12 @@ $(function () {
     // 更换权限
     $('#select-jurisdiction').on('changed.bs.select', function (e) {
         var data = $(this).val();
-        $.post("test.php", data ,function(){
-            tabs.getCurrentTab().refresh();
-        } );
+        var url = $(this).find("[value="+data+"]").data("url");
+        console.log(data);
+        console.log(url);
+        // $.post("test.php", data ,function(){
+        //     tabs.getCurrentTab().refresh();
+        // } );
     });
 
 })

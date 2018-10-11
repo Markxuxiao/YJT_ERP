@@ -589,9 +589,7 @@ body .mini-error .mini-textboxlist-border
     background:#f8f8f8;
     border-color:#ddd;
 }
-.mini-grid-headerCell{
-  border-right: 0px;
-}
+
 .mini-grid-headerCell-inner.mini-grid-headerCell-nowrap{
   text-align: left;
 }

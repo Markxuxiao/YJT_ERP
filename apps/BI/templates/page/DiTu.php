@@ -4,13 +4,13 @@
     <div class="container">
       <!-- 表格 -->
       <div class="row">
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
           <div class="card-box" >
             <div id="Jbaiduditu" style="width:100%;height:400px;">
             </div>
           </div>
         </div> <!-- end col -->
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
           <div class="card-box" >
             <div id="barChart1" style="width: 100%;height: 400px;">
             </div>
