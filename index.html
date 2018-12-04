@@ -39,9 +39,16 @@
         .bg-7 #sidebar-menu li{
             color: #333;
         }
-        .bg-7 #wrapper{
-            background:#33755a;
+        .bg-7 #wrapper,
+        .bg-7 .topbar .navbar{
+            background:#fff;
+            
         }
+        .bg-7 .topbar .navbar .navbar-img h2,
+        .bg-7 .nav > li > a i{
+            color: #333!important;
+        }
+
         </style>
     </head>
 
@@ -408,6 +415,14 @@
             </div>
         </div>
 
+        <!-- 签到弹窗提示 -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background: none;border: none;">
+                     <img src="./assets/images/loginModal.png" style="width: 420px;margin: 0 auto;display: block;margin-top: 22%;">
+                </div>
+            </div>
+        </div>
 
         <!-- common js  -->
         <script src="assets/js/jquery.min.js"></script>
@@ -496,12 +511,15 @@
             })
             
             $(function () {
-                setTimeout(() => {
-                    $('#myModal').modal('show')
-                }, 2000);
                 // setTimeout(() => {
-                //     $('#myModal').modal('hide')
-                // }, 8000);
+                //     $('#myModal').modal('show')
+                // }, 2000);
+
+                // 签到弹窗提示
+                $('#loginModal').modal('show')
+                // setTimeout(() => {
+                //     $('#loginModal').modal('hide')
+                // }, 2000);
             })
             
 
