@@ -206,6 +206,12 @@
                                                 工作清单
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="javascript:;" data-toggle="modal" data-target="#historyModal">
+                                                <i class="fa-fw fa fa-clock-o m-r-5"></i> 
+                                                历史操作
+                                            </a>
+                                        </li>
                                         
                                         <li role="separator" class="divider"></li>
 
@@ -442,6 +448,38 @@
                 </div>
             </div>
         </div>
+
+        <div id="historyModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">历史操作</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="hoverdown-menu" style="position: relative; display: block;float: none;box-shadow: none;opacity: 1;max-height: 400px;overflow: auto;">
+                            <li><a href="http://192.168.1.4:5500/apps/BI/data-detail.html" target="_blank">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 报表查询 工作查询</a></li>
+                            <li><a href="#">2018-12-12 12:12 报表查询 工作查询XXXX</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 销售订单</a></li>
+                            <li><a href="#">2018-12-12 12:12 报表查询 工作查询</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 报表查询 工作查询</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 报表查询 工作查询</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                            <li><a href="#">2018-12-12 12:12 单据操作 工作日志</a></li>
+                        </ul>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
 
         <!-- common js  -->
         <script src="assets/js/jquery.min.js"></script>
